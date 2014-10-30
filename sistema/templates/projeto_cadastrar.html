@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block principal %}
+    <h1>Projeto</h1>
+
+<form method='POST'> {% csrf_token %}
+
+{% for campo in novo_projeto %}
+
+
+{{ campo.errors}} <br>
+{{ campo.label }} {{ campo }} <br>
+
+{% endfor %}
+
+<button type='submit'>Enviar</button> <br><br>
+
+
+</form>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Etapa</th>
+        <th>Status</th>
+        <th>Descrição</th>
+        <th>Data de Início</th>
+    </tr>
+{% for projeto in lista_projetos %}
+
+    <tr>
+        <td>{{ projeto.nome }}</td>
+        <td>{{ projeto.etapa }}</td>
+        <td>{{ projeto.status }}</td>
+        <td>{{ projeto.descricao }}</td>
+        <td>{{ projeto.data_de_inicio }}</td>
+    </tr>
+
+{% endfor %}
+
+</table>
+
+
+{% endblock %}
+

@@ -10,5 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^home/$', 'sistema.views.home'),
+    url(r'^projeto_cadastrar/$', 'sistema.views.projeto_cadastrar'),
+    url(r'^projeto_editar/(?P<projeto_id>[0-9]+)/$', 'sistema.views.projeto_editar'),
 
 )
