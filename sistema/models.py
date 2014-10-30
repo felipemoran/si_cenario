@@ -49,14 +49,14 @@ class Membro(models.Model):
         verbose_name = "Membro"
         verbose_name_plural = "Membros"
 
-    nome = models.CharField("Nome", max_length=64, default='ERRADO')
-    sobrenome = models.CharField("Sobrenome", max_length=64, default='ERRADO')
-    email = models.EmailField(null=False, default='ERRADO')
+    nome = models.CharField("Nome", max_length=64)
+    sobrenome = models.CharField("Sobrenome", max_length=64)
+    email = models.EmailField(null=False)
     #verificar classe de referencia
     nucleo = models.ForeignKey(Nucleo, blank=True, null=True)
-    login = models.CharField("Login", max_length=64, default='ERRADO')
-    password = models.CharField("Password", max_length=64, default='ERRADO')
+    login = models.CharField("Login", max_length=64)
+    password = models.CharField("Password", max_length=64)
 
 
     def __unicode__(self):
-        pass
+        return self.nome

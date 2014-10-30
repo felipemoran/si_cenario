@@ -49,6 +49,9 @@ def cadastra_usuario(request):
         pass
     elif request.method == 'POST':
         novo_membro = MembroForm(request.POST)
-        novo_membro.save()
+        print '----------'
+        print novo_membro
+        if novo_membro.is_valid():
+            novo_membro.save()
 
     return render(request, 'cadastra_usuario.html', locals())

@@ -40,10 +40,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
-# Translations
-*.mo
-*.pot
-
 # Django stuff:
 *.log
 
@@ -52,3 +48,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Other
+.sqlite3
