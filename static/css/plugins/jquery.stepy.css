@@ -1,0 +1,47 @@
+.button-back {
+	float: left;
+}
+.button-next, .finish {
+	float: right;
+}
+
+/* ========== STEPY TITLE ========== */
+.stepy-titles {
+	overflow: hidden;
+	margin: 0;
+	padding: 0; 
+	border-bottom: 1px solid #e5e5e5;
+	background: #fcfcfc;
+	font-size: 12px;
+}
+.stepy-titles li {
+	list-style: none;
+	float: left;
+	position: relative; 
+	display: block;
+	float: left; 
+	padding: 8px;
+	background: #fcfcfc;
+	color: #ccc;
+	text-decoration: none;
+}
+.stepy-titles li.current-step {
+	background: #f5f5f5;
+	color: #444;
+}
+.stepy-titles li > div {
+	font-weight: bold;
+	font-size: 14px;
+}
+.stepy-titles li:first-child {
+	-webkit-border-radius: 3px 0px 0px 3px;
+  	-moz-border-radius: 3px 0px 0px 3px;
+  	border-radius: 3px 0px 0px 3px;
+}
+.stepy-titles li:hover {
+	color: #444;
+}
+/* ========== STEPY FORMS ========== */
+.custom-buttons .form-actions {
+	padding: 10px;
+}

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- ===================== TOUCH ICONS ===================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.min.css">
+		
+        <script src="js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="body5">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper" class="boxed">
+            <div id="wrapper-inner" class="pattern7">
+                
+                <!-- Start Main Header -->
+                <div id="main-header">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="title">
+                                	<h1>Admindo <small>v1.4</small></h1>
+                                </div>
+                                <!-- Start Header Panel -->
+                                <div class="header-panel">
+									<div id="dropdown-patterns" class="dropdown" rel="tooltip" data-placement="left" title="Theme Setting">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-cog"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<div class="title">Inner Content Pattern</div>
+											<ul class="patterns">
+												<li class="pattern1" data-menu="wrapperpattern"></li>
+												<li class="pattern2" data-menu="wrapperpattern"></li>
+												<li class="pattern3" data-menu="wrapperpattern"></li>
+												<li class="pattern4" data-menu="wrapperpattern"></li>
+												<li class="pattern5" data-menu="wrapperpattern"></li>
+												<li class="pattern6" data-menu="wrapperpattern"></li>
+												<li class="pattern7" data-menu="wrapperpattern"></li>
+												<li class="pattern8" data-menu="wrapperpattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Layout</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small" data-layout="default">Default</button> 
+												<button class="btn btn-small active" data-layout="boxed">Boxed</button> 
+												<button class="btn btn-small" data-layout="fixed">Fixed</button>
+											</div>
+											<ul class="patterns" style="margin-top:10px">
+												<li class="body1" data-menu="bodypattern"></li>
+												<li class="body2" data-menu="bodypattern"></li>
+												<li class="body3" data-menu="bodypattern"></li>
+												<li class="body4" data-menu="bodypattern"></li>
+												<li class="body5" data-menu="bodypattern"></li>
+												<li class="body6" data-menu="bodypattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Menu Type</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small active" data-menustyle="fancy">Fancy</button> 
+												<button class="btn btn-small" data-menustyle="simple">Simple</button>
+											</div>
+										</div>
+									</div>
+									<div id="dropdown-search" class="dropdown">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-search"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<form>
+												<input name="search" type="text" class="span12" placeholder="Enter keyword...">
+											</form>
+										</div>
+									</div>
+									<a href="#" class="menu" id="menu-phone" data-menu="mobile"><i class="icon iconfa-tasks"></i></a>
+								</div>
+                                <!-- End Header Panel -->
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- End Main Header -->
+                
+                <!-- Start Sidebar -->
+                <div id="sidebar">
+
+                    <!-- Start Profile Panel -->
+                    <div class="profile" data-detach="profile">
+                        <div class="profile-pic">
+							<div class="btn-group">
+								<img src="img/avatar/40x40/avatar5.png" class="dropdown-toggle" data-toggle="dropdown">
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="cion iconfa-pencil"></i> Edit Profile</a></li>
+									<li><a href="#"><i class="cion iconfa-cog"></i>  Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="cion iconfa-off"></i> Logout</a></li>
+								</ul>
+							</div>
+							<span class="caret"></span>
+						</div>
+                        <div class="profile-info">
+                            <span class="name">John Doe</span>
+                            <span class="job">Web Designer</span>
+						</div>
+                        <div class="profile-panel">
+                            <!-- Start Messages -->
+                            <div class="profile-panel-menu" id="panel-message">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-envelope"></i> 
+                                    <span class="text">Messages</span>
+                                    <span class="label label-important">13</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Your Message</li>
+                                    <div class="dropdown-menu-item" data-scroll="viewport">
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar1.png">
+                                            <div class="detail">
+                                                <span class="name">Jane Anderson</span>
+                                                <span class="message">Hi!.. How are you?...</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <img src="img/avatar/40x40/avatar2.png">
+                                            <div class="detail">
+                                                <span class="name">Johan Ahmad</span>
+                                                <span class="message">Hello john... I need your help</span>
+                                                <span class="datetime">Today 1.20am</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar3.png">
+                                            <div class="detail">
+                                                <span class="name">James Kimi</span>
+                                                <span class="message">Hey men. Meet me at this place asd asda asd</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar4.png">
+                                            <div class="detail">
+                                                <span class="name">Amanda Lim</span>
+                                                <span class="message">Good day john!</span>
+                                                <span class="datetime">yesterday 10.17am</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">More Message</a></li>
+                                </ul>
+                            </div><!-- End Messages -->
+                            
+                            <!-- Start Notification -->
+                            <div class="profile-panel-menu" id="panel-notification">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-bell"></i>
+                                    <span class="text">Notifications</span>
+                                    <span class="label label-important">30</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Notifications</li>
+                                    <div class="dropdown-menu-item">
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-alarm-clock-blue"></i>
+                                            <div class="detail">
+                                                <span class="message">Schedule backup complete</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <i class="icon iconfugue16-database"></i>
+                                            <div class="detail">
+                                                <span class="message">Check your database configurations</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-user-silhouette"></i>
+                                            <div class="detail">
+                                                <span class="message">Someone is trying to access your accound</span>
+                                                <span class="datetime">1 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-cheque"></i>
+                                            <div class="detail">
+                                                <span class="message">Cheque is sent</span>
+                                                <span class="datetime">3 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">Clear All</a></li>
+                                </ul>
+                            </div><!-- End Notification -->
+                        </div>
+                    </div><!-- End Profile Panel -->
+                    
+                    <!-- Start Main Menu -->
+                    <ul class="nav-mainmenu" id="nav-mainmenu">
+      
+                        <!-- Start GENERALS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#generals" class="active"><span class="icon iconfa-home"></span><span class="text">Generals</span><span class="badge pull-right">4</span></a>
+                            <!-- Start GENERALS Sub Menu -->
+                            <ul class="nav-submenu collapse in" id="generals">
+                                <li><a href="dashboard.html"><span class="icon iconfugue16-dashboard"></span> Dashboard</a></li>
+                                <li><a href="typography.html"><span class="icon iconfugue16-edit"></span> Typography</a></li>
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#generals" href="#icons" class="active"><span class="icon iconfugue16-bamboos"></span> Icons<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse in" id="icons">
+                                        <li><a href="icon-glyph.html"><span class="icon iconfugue16-edit-code"></span> Glyph icons</a></li>
+                                        <li><a href="icon-fugue.html" class="active"><span class="icon iconfugue16-edit-code"></span> Fugue Icon 16x16</a></li>
+                                        <li><a href="icon-elusive.html"><span class="icon iconfugue16-edit-code"></span> Elusive Icon</a></li>
+                                        <li><a href="icon-fontawesome.html"><span class="icon iconfugue16-edit-code"></span> Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="grids.html"><span class="icon iconfugue16-edit-alignment-justify-distribute"></span> Grids</a></li>
+                            </ul>
+                            <!-- End GENERALS Sub Menu -->
+                        </li>
+                        <!-- End GENERALS Menu -->
+                        
+                        <!-- Start COMPONENTS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#components"><span class="icon iconfa-beaker"></span><span class="text">Components</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="components">
+                                <li><a href="bootstrap.html"><span class="icon iconfugue16-application-ab"></span> Bootstrap</a></li>
+								<li><a href="jquery-ui.html"><span class="icon iconfugue16-abacus"></span> Jquery UI</a></li>
+                                <li><a href="widget.html"><span class="icon iconfugue16-application-resize-full"></span> Widgets</a></li>
+                                <li><a href="calendar.html"><span class="icon iconfugue16-calendar"></span> Calendar</a></li>
+                                <li><a href="gallery.html"><span class="icon iconfugue16-picture"></span> Images Gallery</a></li>
+                            </ul>
+                        </li>
+                        <!-- End COMPONENTS Menu -->
+                        
+                        <!-- Start FORMS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#forms"><span class="icon iconfa-reorder"></span><span class="text">Forms</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="forms">
+                                <li><a href="form-elements.html"><span class="icon iconfugue16-application-form"></span> Elements</a></li>
+                                <li><a href="form-layout.html"><span class="icon iconfugue16-application-detail"></span> Layout</a></li>
+                                <li><a href="form-validation.html"><span class="icon iconfugue16-application-ab"></span> Validation</a></li>
+                                <li><a href="file-upload.html"><span class="icon iconfugue16-inbox"></span> File Upload</a></li>
+                                <li><a href="form-wizard.html"><span class="icon iconfugue16-wand-hat"></span> Wizards</a></li>
+                            </ul>
+                        </li>
+                        <!-- End FORMS Menu -->
+                        
+                        <!-- Start STATICTICS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#statictics"><span class="icon iconfa-bar-chart"></span><span class="text">Statictics</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="statictics">
+                                <li><a href="chart-summary.html"><span class="icon iconfugue16-chart-up"></span> Custom Statistics</a></li>
+                                <li><a href="charts.html"><span class="icon iconfugue16-chart"></span> Charts</a></li>
+                            </ul>
+                        </li>
+                        <!-- End STATICTICS Menu -->
+                        
+                        <!-- Start PAGES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#pages"><span class="icon iconfa-paste"></span><span class="text">Pages</span><span class="badge pull-right">3</span></a>
+                            <!-- Start PAGES Sub Menu -->
+                            <ul class="nav-submenu collapse" id="pages">
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#page" href="#error-page"><span class="icon iconfugue16-exclamation"></span> Error Pages<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="error-page">
+                                        <li><a href="403.html"><span class="icon iconfugue16-edit-code"></span> 403 Page</a></li>
+                                        <li><a href="404.html"><span class="icon iconfugue16-edit-code"></span> 404 Page</a></li>
+                                        <li><a href="500.html"><span class="icon iconfugue16-edit-code"></span> 500 Page</a></li>
+                                        <li><a href="503.html"><span class="icon iconfugue16-edit-code"></span> 503 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-profile.html"><span class="icon iconfugue16-user-black"></span> Profile Page</a></li>
+                                <li><a href="page-invoice.html"><span class="icon iconfugue16-cheque"></span> Invoice Page</a></li>
+                            </ul><!-- End PAGES Sub Menu -->
+                        </li>
+                        <!-- End PAGES Menu -->
+                        
+                        <!-- Start TABLES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#tables"><span class="icon iconfa-table"></span><span class="text">Tables</span><span class="badge pull-right">3</span></a>
+                            <ul class="nav-submenu collapse" id="tables">
+                                <li><a href="table-static.html"><span class="icon iconfugue16-table"></span> Static Table</a></li>
+                                <li><a href="table-dynamic.html"><span class="icon iconfugue16-table--plus"></span> Dynamic Table</a></li>
+                                <li><a href="table-responsive.html"><span class="icon iconfugue16-table--pencil"></span> Responsive Table</a></li>
+                            </ul>
+                        </li>
+                        <!-- End TABLES Menu -->
+                        
+                        <!-- Start BONUS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#extras"><span class="icon iconfa-gift"></span><span class="text">Bonus</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="extras">
+                                <li><a href="custom-widget.html"><span class="icon iconfugue16-fire"></span> Custom Widget</a></li>
+                                <li><a href="contact-list.html"><span class="icon iconfugue16-card-address"></span> Contact List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Start BONUS Menu -->
+                        
+                    </ul><!-- End Main Menu -->
+
+                </div><!-- End Sidebar -->
+                
+                <!-- Start Main Content -->
+                <div id="main-content">
+                    <p>&nbsp;</p>
+
+                    <!-- Start Breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Admindo</a></li>
+                        <li><a href="#">Generals</a></li>
+						<li><a href="#">Icons</a></li>
+						<li><a href="#">Fugue Icons</a></li>
+                    </ul><!-- End Breadcrumb -->
+
+                    <h3><a href="http://p.yusukekamiyamane.com/" target="_new" title="Go to p.yusukekamiyamane.com">Fugue Icons</a> <small>500 fugue icons by Yusuke Kamiyamane - <span style="text-decoration: underline">p.yusukekamiyamane.com</span></small></h3>
+                    <hr class="style1">
+
+                    <div class="row-fluid">
+                        <!-- Start Fugue Icons -->
+                        <div class="span12">
+							<ul class="iconsample">
+								<li><i class="iconfugue16-application-monitor"></i> iconfugue16-application-monitor</li>
+								<li><i class="iconfugue16-application--plus"></i> iconfugue16-application--plus</li>
+								<li><i class="iconfugue16-application-resize"></i> iconfugue16-application-resize</li>
+								<li><i class="iconfugue16-application-resize-actual"></i> iconfugue16-application-resize-actual</li>
+								<li><i class="iconfugue16-application-resize-full"></i> iconfugue16-application-resize-full</li>
+								<li><i class="iconfugue16-arrow"></i> iconfugue16-arrow</li>
+								<li><i class="iconfugue16-arrow-045"></i> iconfugue16-arrow-045</li>
+								<li><i class="iconfugue16-arrow-090"></i> iconfugue16-arrow-090</li>
+								<li><i class="iconfugue16-arrow-135"></i> iconfugue16-arrow-135</li>
+								<li><i class="iconfugue16-arrow-180"></i> iconfugue16-arrow-180</li>
+								<li><i class="iconfugue16-arrow-225"></i> iconfugue16-arrow-225</li>
+								<li><i class="iconfugue16-arrow-270"></i> iconfugue16-arrow-270</li>
+								<li><i class="iconfugue16-arrow-315"></i> iconfugue16-arrow-315</li>
+								<li><i class="iconfugue16-arrow-curve"></i> iconfugue16-arrow-curve</li>
+								<li><i class="iconfugue16-arrow-curve-000-double"></i> iconfugue16-arrow-curve-000-double</li>
+								<li><i class="iconfugue16-arrow-curve-000-left"></i> iconfugue16-arrow-curve-000-left</li>
+								<li><i class="iconfugue16-arrow-curve-090"></i> iconfugue16-arrow-curve-090</li>
+								<li><i class="iconfugue16-arrow-curve-090-left"></i> iconfugue16-arrow-curve-090-left</li>
+								<li><i class="iconfugue16-arrow-curve-180"></i> iconfugue16-arrow-curve-180</li>
+								<li><i class="iconfugue16-arrow-curve-180-double"></i> iconfugue16-arrow-curve-180-double</li>
+								<li><i class="iconfugue16-arrow-curve-180-left"></i> iconfugue16-arrow-curve-180-left</li>
+								<li><i class="iconfugue16-arrow-curve-270"></i> iconfugue16-arrow-curve-270</li>
+								<li><i class="iconfugue16-arrow-curve-270-left"></i> iconfugue16-arrow-curve-270-left</li>
+								<li><i class="iconfugue16-arrow-merge-180"></i> iconfugue16-arrow-merge-180</li>
+								<li><i class="iconfugue16-at-sign"></i> iconfugue16-at-sign</li>
+								<li><i class="iconfugue16-balloon"></i> iconfugue16-balloon</li>
+								<li><i class="iconfugue16-balloon-box"></i> iconfugue16-balloon-box</li>
+								<li><i class="iconfugue16-balloons"></i> iconfugue16-balloons</li>
+								<li><i class="iconfugue16-bamboo"></i> iconfugue16-bamboo</li>
+								<li><i class="iconfugue16-bamboos"></i> iconfugue16-bamboos</li>
+								<li><i class="iconfugue16-bank"></i> iconfugue16-bank</li>
+								<li><i class="iconfugue16-bank--minus"></i> iconfugue16-bank--minus</li>
+								<li><i class="iconfugue16-bank--pencil"></i> iconfugue16-bank--pencil</li>
+								<li><i class="iconfugue16-bank--plus"></i> iconfugue16-bank--plus</li>
+								<li><i class="iconfugue16-barcode"></i> iconfugue16-barcode</li>
+								<li><i class="iconfugue16-barcode-2d"></i> iconfugue16-barcode-2d</li>
+								<li><i class="iconfugue16-battery"></i> iconfugue16-battery</li>
+								<li><i class="iconfugue16-battery-charge"></i> iconfugue16-battery-charge</li>
+								<li><i class="iconfugue16-battery-empty"></i> iconfugue16-battery-empty</li>
+								<li><i class="iconfugue16-battery-full"></i> iconfugue16-battery-full</li>
+								<li><i class="iconfugue16-battery-low"></i> iconfugue16-battery-low</li>
+								<li><i class="iconfugue16-bell"></i> iconfugue16-bell</li>
+								<li><i class="iconfugue16-bell--minus"></i> iconfugue16-bell--minus</li>
+								<li><i class="iconfugue16-bell--pencil"></i> iconfugue16-bell--pencil</li>
+								<li><i class="iconfugue16-bell--plus"></i> iconfugue16-bell--plus</li>
+								<li><i class="iconfugue16-blue-document"></i> iconfugue16-blue-document</li>
+								<li><i class="iconfugue16-blue-document--minus"></i> iconfugue16-blue-document--minus</li>
+								<li><i class="iconfugue16-blue-document--pencil"></i> iconfugue16-blue-document--pencil</li>
+								<li><i class="iconfugue16-blue-document--plus"></i> iconfugue16-blue-document--plus</li>
+								<li><i class="iconfugue16-blue-documents"></i> iconfugue16-blue-documents</li>
+								<li><i class="iconfugue16-blueprint"></i> iconfugue16-blueprint</li>
+								<li><i class="iconfugue16-blueprint--minus"></i> iconfugue16-blueprint--minus</li>
+								<li><i class="iconfugue16-blueprint--pencil"></i> iconfugue16-blueprint--pencil</li>
+								<li><i class="iconfugue16-blueprint--plus"></i> iconfugue16-blueprint--plus</li>
+								<li><i class="iconfugue16-blueprints"></i> iconfugue16-blueprints</li>
+								<li><i class="iconfugue16-bluetooth"></i> iconfugue16-bluetooth</li>
+								<li><i class="iconfugue16-book"></i> iconfugue16-book</li>
+								<li><i class="iconfugue16-book-bookmark"></i> iconfugue16-book-bookmark</li>
+								<li><i class="iconfugue16-book--minus"></i> iconfugue16-book--minus</li>
+								<li><i class="iconfugue16-book-open"></i> iconfugue16-book-open</li>
+								<li><i class="iconfugue16-book--pencil"></i> iconfugue16-book--pencil</li>
+								<li><i class="iconfugue16-book--plus"></i> iconfugue16-book--plus</li>
+								<li><i class="iconfugue16-border-all"></i> iconfugue16-border-all</li>
+								<li><i class="iconfugue16-box"></i> iconfugue16-box</li>
+								<li><i class="iconfugue16-box--minus"></i> iconfugue16-box--minus</li>
+								<li><i class="iconfugue16-bug--minus"></i> iconfugue16-bug--minus</li>
+								<li><i class="iconfugue16-bug"></i> iconfugue16-bug</li>
+								<li><i class="iconfugue16-bug--pencil"></i> iconfugue16-bug--pencil</li>
+								<li><i class="iconfugue16-box--pencil"></i> iconfugue16-box--pencil</li>
+								<li><i class="iconfugue16-box--plus"></i> iconfugue16-box--plus</li>
+								<li><i class="iconfugue16-bug--plus"></i> iconfugue16-bug--plus</li>
+								<li><i class="iconfugue16-calendar"></i> iconfugue16-calendar</li>
+								<li><i class="iconfugue16-calendar--minus"></i> iconfugue16-calendar--minus</li>
+								<li><i class="iconfugue16-calendar--pencil"></i> iconfugue16-calendar--pencil</li>
+								<li><i class="iconfugue16-camera"></i> iconfugue16-camera</li>
+								<li><i class="iconfugue16-calendar--plus"></i> iconfugue16-calendar--plus</li>
+								<li><i class="iconfugue16-camera--minus"></i> iconfugue16-camera--minus</li>
+								<li><i class="iconfugue16-camera--pencil"></i> iconfugue16-camera--pencil</li>
+								<li><i class="iconfugue16-camera--plus"></i> iconfugue16-camera--plus</li>
+								<li><i class="iconfugue16-card"></i> iconfugue16-card</li>
+								<li><i class="iconfugue16-card-address"></i> iconfugue16-card-address</li>
+								<li><i class="iconfugue16-card--minus"></i> iconfugue16-card--minus</li>
+								<li><i class="iconfugue16-card--pencil"></i> iconfugue16-card--pencil</li>
+								<li><i class="iconfugue16-card--plus"></i> iconfugue16-card--plus</li>
+								<li><i class="iconfugue16-category"></i> iconfugue16-category</li>
+								<li><i class="iconfugue16-chain"></i> iconfugue16-chain</li>
+								<li><i class="iconfugue16-chain--minus"></i> iconfugue16-chain--minus</li>
+								<li><i class="iconfugue16-chain--pencil"></i> iconfugue16-chain--pencil</li>
+								<li><i class="iconfugue16-chain--plus"></i> iconfugue16-chain--plus</li>
+								<li><i class="iconfugue16-chart"></i> iconfugue16-chart</li>
+								<li><i class="iconfugue16-chart-down"></i> iconfugue16-chart-down</li>
+								<li><i class="iconfugue16-chart-down-color"></i> iconfugue16-chart-down-color</li>
+								<li><i class="iconfugue16-chart--minus"></i> iconfugue16-chart--minus</li>
+								<li><i class="iconfugue16-chart--pencil"></i> iconfugue16-chart--pencil</li>
+								<li><i class="iconfugue16-chart-pie"></i> iconfugue16-chart-pie</li>
+								<li><i class="iconfugue16-chart-pie-separate"></i> iconfugue16-chart-pie-separate</li>
+								<li><i class="iconfugue16-chart--plus"></i> iconfugue16-chart--plus</li>
+								<li><i class="iconfugue16-chart-up"></i> iconfugue16-chart-up</li>
+								<li><i class="iconfugue16-chart-up-color"></i> iconfugue16-chart-up-color</li>
+								<li><i class="iconfugue16-cheque"></i> iconfugue16-cheque</li>
+								<li><i class="iconfugue16-cheque--minus"></i> iconfugue16-cheque--minus</li>
+								<li><i class="iconfugue16-cheque-pen"></i> iconfugue16-cheque-pen</li>
+								<li><i class="iconfugue16-cheque--plus"></i> iconfugue16-cheque--plus</li>
+								<li><i class="iconfugue16-chevron"></i> iconfugue16-chevron</li>
+								<li><i class="iconfugue16-chevron-expand"></i> iconfugue16-chevron-expand</li>
+								<li><i class="iconfugue16-clipboard"></i> iconfugue16-clipboard</li>
+								<li><i class="iconfugue16-clipboard--minus"></i> iconfugue16-clipboard--minus</li>
+								<li><i class="iconfugue16-clipboard--pencil"></i> iconfugue16-clipboard--pencil</li>
+								<li><i class="iconfugue16-clipboard--plus"></i> iconfugue16-clipboard--plus</li>
+								<li><i class="iconfugue16-clock"></i> iconfugue16-clock</li>
+								<li><i class="iconfugue16-clock--minus"></i> iconfugue16-clock--minus</li>
+								<li><i class="iconfugue16-clock--pencil"></i> iconfugue16-clock--pencil</li>
+								<li><i class="iconfugue16-clock--plus"></i> iconfugue16-clock--plus</li>
+								<li><i class="iconfugue16-color"></i> iconfugue16-color</li>
+								<li><i class="iconfugue16-color--minus"></i> iconfugue16-color--minus</li>
+								<li><i class="iconfugue16-color--pencil"></i> iconfugue16-color--pencil</li>
+								<li><i class="iconfugue16-color--plus"></i> iconfugue16-color--plus</li>
+								<li><i class="iconfugue16-compass"></i> iconfugue16-compass</li>
+								<li><i class="iconfugue16-compass--minus"></i> iconfugue16-compass--minus</li>
+								<li><i class="iconfugue16-compass--plus"></i> iconfugue16-compass--plus</li>
+								<li><i class="iconfugue16-compass--pencil"></i> iconfugue16-compass--pencil</li>
+								<li><i class="iconfugue16-compile"></i> iconfugue16-compile</li>
+								<li><i class="iconfugue16-compile-error"></i> iconfugue16-compile-error</li>
+								<li><i class="iconfugue16-compile-warning"></i> iconfugue16-compile-warning</li>
+								<li><i class="iconfugue16-control"></i> iconfugue16-control</li>
+								<li><i class="iconfugue16-control-090"></i> iconfugue16-control-090</li>
+								<li><i class="iconfugue16-control-180"></i> iconfugue16-control-180</li>
+								<li><i class="iconfugue16-control-270"></i> iconfugue16-control-270</li>
+								<li><i class="iconfugue16-control-double"></i> iconfugue16-control-double</li>
+								<li><i class="iconfugue16-control-double-090"></i> iconfugue16-control-double-090</li>
+								<li><i class="iconfugue16-control-double-180"></i> iconfugue16-control-double-180</li>
+								<li><i class="iconfugue16-control-double-270"></i> iconfugue16-control-double-270</li>
+								<li><i class="iconfugue16-control-eject"></i> iconfugue16-control-eject</li>
+								<li><i class="iconfugue16-control-pause"></i> iconfugue16-control-pause</li>
+								<li><i class="iconfugue16-control-power"></i> iconfugue16-control-power</li>
+								<li><i class="iconfugue16-control-record"></i> iconfugue16-control-record</li>
+								<li><i class="iconfugue16-control-skip"></i> iconfugue16-control-skip</li>
+								<li><i class="iconfugue16-control-skip-090"></i> iconfugue16-control-skip-090</li>
+								<li><i class="iconfugue16-control-skip-180"></i> iconfugue16-control-skip-180</li>
+								<li><i class="iconfugue16-control-skip-270"></i> iconfugue16-control-skip-270</li>
+								<li><i class="iconfugue16-control-stop"></i> iconfugue16-control-stop</li>
+								<li><i class="iconfugue16-control-stop-090"></i> iconfugue16-control-stop-090</li>
+								<li><i class="iconfugue16-control-stop-180"></i> iconfugue16-control-stop-180</li>
+								<li><i class="iconfugue16-control-stop-270"></i> iconfugue16-control-stop-270</li>
+								<li><i class="iconfugue16-control-stop-square"></i> iconfugue16-control-stop-square</li>
+								<li><i class="iconfugue16-credit-card"></i> iconfugue16-credit-card</li>
+								<li><i class="iconfugue16-credit-card--minus"></i> iconfugue16-credit-card--minus</li>
+								<li><i class="iconfugue16-credit-card--pencil"></i> iconfugue16-credit-card--pencil</li>
+								<li><i class="iconfugue16-credit-card--plus"></i> iconfugue16-credit-card--plus</li>
+								<li><i class="iconfugue16-cross"></i> iconfugue16-cross</li>
+								<li><i class="iconfugue16-cup"></i> iconfugue16-cup</li>
+								<li><i class="iconfugue16-cup--minus"></i> iconfugue16-cup--minus</li>
+								<li><i class="iconfugue16-cup--pencil"></i> iconfugue16-cup--pencil</li>
+								<li><i class="iconfugue16-cup--plus"></i> iconfugue16-cup--plus</li>
+								<li><i class="iconfugue16-currency"></i> iconfugue16-currency</li>
+								<li><i class="iconfugue16-currency-dollar-cad"></i> iconfugue16-currency-dollar-cad</li>
+								<li><i class="iconfugue16-currency-dollar-usd"></i> iconfugue16-currency-dollar-usd</li>
+								<li><i class="iconfugue16-currency-euro"></i> iconfugue16-currency-euro</li>
+								<li><i class="iconfugue16-currency-pound"></i> iconfugue16-currency-pound</li>
+								<li><i class="iconfugue16-currency-ruble"></i> iconfugue16-currency-ruble</li>
+								<li><i class="iconfugue16-currency-yen"></i> iconfugue16-currency-yen</li>
+								<li><i class="iconfugue16-cursor"></i> iconfugue16-cursor</li>
+								<li><i class="iconfugue16-dashboard"></i> iconfugue16-dashboard</li>
+								<li><i class="iconfugue16-currency-dollar-aud"></i> iconfugue16-currency-dollar-aud</li>
+								<li><i class="iconfugue16-currency-dollar-nzd"></i> iconfugue16-currency-dollar-nzd</li>
+								<li><i class="iconfugue16-dashboard--minus"></i> iconfugue16-dashboard--minus</li>
+								<li><i class="iconfugue16-dashboard--pencil"></i> iconfugue16-dashboard--pencil</li>
+								<li><i class="iconfugue16-dashboard--plus"></i> iconfugue16-dashboard--plus</li>
+								<li><i class="iconfugue16-database"></i> iconfugue16-database</li>
+								<li><i class="iconfugue16-database--minus"></i> iconfugue16-database--minus</li>
+								<li><i class="iconfugue16-database--pencil"></i> iconfugue16-database--pencil</li>
+								<li><i class="iconfugue16-database--plus"></i> iconfugue16-database--plus</li>
+								<li><i class="iconfugue16-direction--arrow"></i> iconfugue16-direction--arrow</li>
+								<li><i class="iconfugue16-disk"></i> iconfugue16-disk</li>
+								<li><i class="iconfugue16-disk-black"></i> iconfugue16-disk-black</li>
+								<li><i class="iconfugue16-disk--minus"></i> iconfugue16-disk--minus</li>
+								<li><i class="iconfugue16-disk--pencil"></i> iconfugue16-disk--pencil</li>
+								<li><i class="iconfugue16-disk--plus"></i> iconfugue16-disk--plus</li>
+								<li><i class="iconfugue16-door"></i> iconfugue16-door</li>
+								<li><i class="iconfugue16-door--arrow"></i> iconfugue16-door--arrow</li>
+								<li><i class="iconfugue16-door--minus"></i> iconfugue16-door--minus</li>
+								<li><i class="iconfugue16-door-open"></i> iconfugue16-door-open</li>
+								<li><i class="iconfugue16-door-open-in"></i> iconfugue16-door-open-in</li>
+								<li><i class="iconfugue16-door-open-out"></i> iconfugue16-door-open-out</li>
+								<li><i class="iconfugue16-door--pencil"></i> iconfugue16-door--pencil</li>
+								<li><i class="iconfugue16-drawer"></i> iconfugue16-drawer</li>
+								<li><i class="iconfugue16-door--plus"></i> iconfugue16-door--plus</li>
+								<li><i class="iconfugue16-drawer--plus"></i> iconfugue16-drawer--plus</li>
+								<li><i class="iconfugue16-drive"></i> iconfugue16-drive</li>
+								<li><i class="iconfugue16-drawer--minus"></i> iconfugue16-drawer--minus</li>
+								<li><i class="iconfugue16-drawer--pencil"></i> iconfugue16-drawer--pencil</li>
+								<li><i class="iconfugue16-drive--minus"></i> iconfugue16-drive--minus</li>
+								<li><i class="iconfugue16-drive--pencil"></i> iconfugue16-drive--pencil</li>
+								<li><i class="iconfugue16-drive--plus"></i> iconfugue16-drive--plus</li>
+								<li><i class="iconfugue16-edit"></i> iconfugue16-edit</li>
+								<li><i class="iconfugue16-edit-alignment"></i> iconfugue16-edit-alignment</li>
+								<li><i class="iconfugue16-edit-alignment-center"></i> iconfugue16-edit-alignment-center</li>
+								<li><i class="iconfugue16-edit-alignment-justify"></i> iconfugue16-edit-alignment-justify</li>
+								<li><i class="iconfugue16-edit-alignment-justify-distribute"></i> iconfugue16-edit-alignment-justify-distribute</li>
+								<li><i class="iconfugue16-edit-alignment-right"></i> iconfugue16-edit-alignment-right</li>
+								<li><i class="iconfugue16-edit-all-caps"></i> iconfugue16-edit-all-caps</li>
+								<li><i class="iconfugue16-edit-bold"></i> iconfugue16-edit-bold</li>
+								<li><i class="iconfugue16-edit-code"></i> iconfugue16-edit-code</li>
+								<li><i class="iconfugue16-edit-color"></i> iconfugue16-edit-color</li>
+								<li><i class="iconfugue16-edit-column"></i> iconfugue16-edit-column</li>
+								<li><i class="iconfugue16-edit-drop-cap"></i> iconfugue16-edit-drop-cap</li>
+								<li><i class="iconfugue16-edit-heading"></i> iconfugue16-edit-heading</li>
+								<li><i class="iconfugue16-edit-heading-1"></i> iconfugue16-edit-heading-1</li>
+								<li><i class="iconfugue16-edit-heading-2"></i> iconfugue16-edit-heading-2</li>
+								<li><i class="iconfugue16-edit-heading-3"></i> iconfugue16-edit-heading-3</li>
+								<li><i class="iconfugue16-edit-heading-4"></i> iconfugue16-edit-heading-4</li>
+								<li><i class="iconfugue16-edit-list"></i> iconfugue16-edit-list</li>
+								<li><i class="iconfugue16-edit-heading-5"></i> iconfugue16-edit-heading-5</li>
+								<li><i class="iconfugue16-edit-list-order"></i> iconfugue16-edit-list-order</li>
+								<li><i class="iconfugue16-edit-heading-6"></i> iconfugue16-edit-heading-6</li>
+								<li><i class="iconfugue16-edit-list-order-rtl"></i> iconfugue16-edit-list-order-rtl</li>
+								<li><i class="iconfugue16-edit-list-rtl"></i> iconfugue16-edit-list-rtl</li>
+								<li><i class="iconfugue16-envelope"></i> iconfugue16-envelope</li>
+								<li><i class="iconfugue16-envelope--minus"></i> iconfugue16-envelope--minus</li>
+								<li><i class="iconfugue16-envelope--pencil"></i> iconfugue16-envelope--pencil</li>
+								<li><i class="iconfugue16-envelope--plus"></i> iconfugue16-envelope--plus</li>
+								<li><i class="iconfugue16-equalizer"></i> iconfugue16-equalizer</li>
+								<li><i class="iconfugue16-equalizer--minus"></i> iconfugue16-equalizer--minus</li>
+								<li><i class="iconfugue16-equalizer--pencil"></i> iconfugue16-equalizer--pencil</li>
+								<li><i class="iconfugue16-equalizer--plus"></i> iconfugue16-equalizer--plus</li>
+								<li><i class="iconfugue16-eraser"></i> iconfugue16-eraser</li>
+								<li><i class="iconfugue16-eraser--minus"></i> iconfugue16-eraser--minus</li>
+								<li><i class="iconfugue16-eraser--pencil"></i> iconfugue16-eraser--pencil</li>
+								<li><i class="iconfugue16-eraser--plus"></i> iconfugue16-eraser--plus</li>
+								<li><i class="iconfugue16-exclamation"></i> iconfugue16-exclamation</li>
+								<li><i class="iconfugue16-eye"></i> iconfugue16-eye</li>
+								<li><i class="iconfugue16-eye-close"></i> iconfugue16-eye-close</li>
+								<li><i class="iconfugue16-eye-half"></i> iconfugue16-eye-half</li>
+								<li><i class="iconfugue16-eye--minus"></i> iconfugue16-eye--minus</li>
+								<li><i class="iconfugue16-eye--pencil"></i> iconfugue16-eye--pencil</li>
+								<li><i class="iconfugue16-eye--plus"></i> iconfugue16-eye--plus</li>
+								<li><i class="iconfugue16-eye-red"></i> iconfugue16-eye-red</li>
+								<li><i class="iconfugue16-feed"></i> iconfugue16-feed</li>
+								<li><i class="iconfugue16-feed--minus"></i> iconfugue16-feed--minus</li>
+								<li><i class="iconfugue16-feed--pencil"></i> iconfugue16-feed--pencil</li>
+								<li><i class="iconfugue16-feed--plus"></i> iconfugue16-feed--plus</li>
+								<li><i class="iconfugue16-film-cast"></i> iconfugue16-film-cast</li>
+								<li><i class="iconfugue16-fire"></i> iconfugue16-fire</li>
+								<li><i class="iconfugue16-fire--minus"></i> iconfugue16-fire--minus</li>
+								<li><i class="iconfugue16-fire--pencil"></i> iconfugue16-fire--pencil</li>
+								<li><i class="iconfugue16-flask"></i> iconfugue16-flask</li>
+								<li><i class="iconfugue16-fire--plus"></i> iconfugue16-fire--plus</li>
+								<li><i class="iconfugue16-flask-empty"></i> iconfugue16-flask-empty</li>
+								<li><i class="iconfugue16-flask--minus"></i> iconfugue16-flask--minus</li>
+								<li><i class="iconfugue16-flask--pencil"></i> iconfugue16-flask--pencil</li>
+								<li><i class="iconfugue16-flask--plus"></i> iconfugue16-flask--plus</li>
+								<li><i class="iconfugue16-folder-horizontal"></i> iconfugue16-folder-horizontal</li>
+								<li><i class="iconfugue16-folder-horizontal-open"></i> iconfugue16-folder-horizontal-open</li>
+								<li><i class="iconfugue16-globe"></i> iconfugue16-globe</li>
+								<li><i class="iconfugue16-globe-green"></i> iconfugue16-globe-green</li>
+								<li><i class="iconfugue16-globe--minus"></i> iconfugue16-globe--minus</li>
+								<li><i class="iconfugue16-globe--pencil"></i> iconfugue16-globe--pencil</li>
+								<li><i class="iconfugue16-globe--plus"></i> iconfugue16-globe--plus</li>
+								<li><i class="iconfugue16-gradient"></i> iconfugue16-gradient</li>
+								<li><i class="iconfugue16-hammer"></i> iconfugue16-hammer</li>
+								<li><i class="iconfugue16-hammer--minus"></i> iconfugue16-hammer--minus</li>
+								<li><i class="iconfugue16-hammer--pencil"></i> iconfugue16-hammer--pencil</li>
+								<li><i class="iconfugue16-hammer--plus"></i> iconfugue16-hammer--plus</li>
+								<li><i class="iconfugue16-hand"></i> iconfugue16-hand</li>
+								<li><i class="iconfugue16-hand-point"></i> iconfugue16-hand-point</li>
+								<li><i class="iconfugue16-hand-point-090"></i> iconfugue16-hand-point-090</li>
+								<li><i class="iconfugue16-hand-point-180"></i> iconfugue16-hand-point-180</li>
+								<li><i class="iconfugue16-hand-point-270"></i> iconfugue16-hand-point-270</li>
+								<li><i class="iconfugue16-heart"></i> iconfugue16-heart</li>
+								<li><i class="iconfugue16-heart-empty"></i> iconfugue16-heart-empty</li>
+								<li><i class="iconfugue16-heart--minus"></i> iconfugue16-heart--minus</li>
+								<li><i class="iconfugue16-heart--pencil"></i> iconfugue16-heart--pencil</li>
+								<li><i class="iconfugue16-heart--plus"></i> iconfugue16-heart--plus</li>
+								<li><i class="iconfugue16-home"></i> iconfugue16-home</li>
+								<li><i class="iconfugue16-home--minus"></i> iconfugue16-home--minus</li>
+								<li><i class="iconfugue16-home--pencil"></i> iconfugue16-home--pencil</li>
+								<li><i class="iconfugue16-home--plus"></i> iconfugue16-home--plus</li>
+								<li><i class="iconfugue16-hourglass"></i> iconfugue16-hourglass</li>
+								<li><i class="iconfugue16-hourglass--minus"></i> iconfugue16-hourglass--minus</li>
+								<li><i class="iconfugue16-hourglass--pencil"></i> iconfugue16-hourglass--pencil</li>
+								<li><i class="iconfugue16-hourglass--plus"></i> iconfugue16-hourglass--plus</li>
+								<li><i class="iconfugue16-image"></i> iconfugue16-image</li>
+								<li><i class="iconfugue16-image--minus"></i> iconfugue16-image--minus</li>
+								<li><i class="iconfugue16-image--pencil"></i> iconfugue16-image--pencil</li>
+								<li><i class="iconfugue16-image--plus"></i> iconfugue16-image--plus</li>
+								<li><i class="iconfugue16-inbox"></i> iconfugue16-inbox</li>
+								<li><i class="iconfugue16-inbox--minus"></i> iconfugue16-inbox--minus</li>
+								<li><i class="iconfugue16-inbox--pencil"></i> iconfugue16-inbox--pencil</li>
+								<li><i class="iconfugue16-inbox--plus"></i> iconfugue16-inbox--plus</li>
+								<li><i class="iconfugue16-information"></i> iconfugue16-information</li>
+								<li><i class="iconfugue16-information-button"></i> iconfugue16-information-button</li>
+								<li><i class="iconfugue16-key"></i> iconfugue16-key</li>
+								<li><i class="iconfugue16-key--minus"></i> iconfugue16-key--minus</li>
+								<li><i class="iconfugue16-key--pencil"></i> iconfugue16-key--pencil</li>
+								<li><i class="iconfugue16-key--plus"></i> iconfugue16-key--plus</li>
+								<li><i class="iconfugue16-key-solid"></i> iconfugue16-key-solid</li>
+								<li><i class="iconfugue16-leaf"></i> iconfugue16-leaf</li>
+								<li><i class="iconfugue16-leaf--minus"></i> iconfugue16-leaf--minus</li>
+								<li><i class="iconfugue16-layout-design"></i> iconfugue16-layout-design</li>
+								<li><i class="iconfugue16-leaf--pencil"></i> iconfugue16-leaf--pencil</li>
+								<li><i class="iconfugue16-leaf--plus"></i> iconfugue16-leaf--plus</li>
+								<li><i class="iconfugue16-leaf-red"></i> iconfugue16-leaf-red</li>
+								<li><i class="iconfugue16-leaf-wormhole"></i> iconfugue16-leaf-wormhole</li>
+								<li><i class="iconfugue16-leaf-yellow"></i> iconfugue16-leaf-yellow</li>
+								<li><i class="iconfugue16-lifebuoy"></i> iconfugue16-lifebuoy</li>
+								<li><i class="iconfugue16-lifebuoy--minus"></i> iconfugue16-lifebuoy--minus</li>
+								<li><i class="iconfugue16-lifebuoy--pencil"></i> iconfugue16-lifebuoy--pencil</li>
+								<li><i class="iconfugue16-lifebuoy--plus"></i> iconfugue16-lifebuoy--plus</li>
+								<li><i class="iconfugue16-light-bulb"></i> iconfugue16-light-bulb</li>
+								<li><i class="iconfugue16-light-bulb--minus"></i> iconfugue16-light-bulb--minus</li>
+								<li><i class="iconfugue16-light-bulb-off"></i> iconfugue16-light-bulb-off</li>
+								<li><i class="iconfugue16-light-bulb--pencil"></i> iconfugue16-light-bulb--pencil</li>
+								<li><i class="iconfugue16-light-bulb--plus"></i> iconfugue16-light-bulb--plus</li>
+								<li><i class="iconfugue16-lock"></i> iconfugue16-lock</li>
+								<li><i class="iconfugue16-lock--pencil"></i> iconfugue16-lock--pencil</li>
+								<li><i class="iconfugue16-lock--plus"></i> iconfugue16-lock--plus</li>
+								<li><i class="iconfugue16-lock-ssl"></i> iconfugue16-lock-ssl</li>
+								<li><i class="iconfugue16-mail"></i> iconfugue16-mail</li>
+								<li><i class="iconfugue16-lock-unlock"></i> iconfugue16-lock-unlock</li>
+								<li><i class="iconfugue16-mail-air"></i> iconfugue16-mail-air</li>
+								<li><i class="iconfugue16-mail-forward"></i> iconfugue16-mail-forward</li>
+								<li><i class="iconfugue16-magnifier--pencil"></i> iconfugue16-magnifier--pencil</li>
+								<li><i class="iconfugue16-magnifier-left"></i> iconfugue16-magnifier-left</li>
+								<li><i class="iconfugue16-magnifier"></i> iconfugue16-magnifier</li>
+								<li><i class="iconfugue16-mail-forward-all"></i> iconfugue16-mail-forward-all</li>
+								<li><i class="iconfugue16-mail--minus"></i> iconfugue16-mail--minus</li>
+								<li><i class="iconfugue16-mail-open"></i> iconfugue16-mail-open</li>
+								<li><i class="iconfugue16-magnifier--plus"></i> iconfugue16-magnifier--plus</li>
+								<li><i class="iconfugue16-mail--pencil"></i> iconfugue16-mail--pencil</li>
+								<li><i class="iconfugue16-mail--plus"></i> iconfugue16-mail--plus</li>
+								<li><i class="iconfugue16-magnifier--minus"></i> iconfugue16-magnifier--minus</li>
+								<li><i class="iconfugue16-lock--minus"></i> iconfugue16-lock--minus</li>
+								<li><i class="iconfugue16-mail-receive"></i> iconfugue16-mail-receive</li>
+								<li><i class="iconfugue16-mail-reply"></i> iconfugue16-mail-reply</li>
+								<li><i class="iconfugue16-mail-reply-all"></i> iconfugue16-mail-reply-all</li>
+								<li><i class="iconfugue16-mails"></i> iconfugue16-mails</li>
+								<li><i class="iconfugue16-mail-send"></i> iconfugue16-mail-send</li>
+								<li><i class="iconfugue16-mail-send-receive"></i> iconfugue16-mail-send-receive</li>
+								<li><i class="iconfugue16-map"></i> iconfugue16-map</li>
+								<li><i class="iconfugue16-map--minus"></i> iconfugue16-map--minus</li>
+								<li><i class="iconfugue16-map--pencil"></i> iconfugue16-map--pencil</li>
+								<li><i class="iconfugue16-map--plus"></i> iconfugue16-map--plus</li>
+								<li><i class="iconfugue16-marker"></i> iconfugue16-marker</li>
+								<li><i class="iconfugue16-marker--minus"></i> iconfugue16-marker--minus</li>
+								<li><i class="iconfugue16-marker--pencil"></i> iconfugue16-marker--pencil</li>
+								<li><i class="iconfugue16-marker--plus"></i> iconfugue16-marker--plus</li>
+								<li><i class="iconfugue16-medal"></i> iconfugue16-medal</li>
+								<li><i class="iconfugue16-medal-bronze"></i> iconfugue16-medal-bronze</li>
+								<li><i class="iconfugue16-medal-bronze-red"></i> iconfugue16-medal-bronze-red</li>
+								<li><i class="iconfugue16-medal--minus"></i> iconfugue16-medal--minus</li>
+								<li><i class="iconfugue16-medal--pencil"></i> iconfugue16-medal--pencil</li>
+								<li><i class="iconfugue16-medal--plus"></i> iconfugue16-medal--plus</li>
+								<li><i class="iconfugue16-medal-silver-red"></i> iconfugue16-medal-silver-red</li>
+								<li><i class="iconfugue16-minus"></i> iconfugue16-minus</li>
+								<li><i class="iconfugue16-mobile-phone"></i> iconfugue16-mobile-phone</li>
+								<li><i class="iconfugue16-mobile-phone--minus"></i> iconfugue16-mobile-phone--minus</li>
+								<li><i class="iconfugue16-mobile-phone--pencil"></i> iconfugue16-mobile-phone--pencil</li>
+								<li><i class="iconfugue16-mobile-phone--plus"></i> iconfugue16-mobile-phone--plus</li>
+								<li><i class="iconfugue16-mouse"></i> iconfugue16-mouse</li>
+								<li><i class="iconfugue16-mouse--minus"></i> iconfugue16-mouse--minus</li>
+								<li><i class="iconfugue16-mouse--pencil"></i> iconfugue16-mouse--pencil</li>
+								<li><i class="iconfugue16-mouse--plus"></i> iconfugue16-mouse--plus</li>
+								<li><i class="iconfugue16-navigation"></i> iconfugue16-navigation</li>
+								<li><i class="iconfugue16-navigation-090"></i> iconfugue16-navigation-090</li>
+								<li><i class="iconfugue16-navigation-180"></i> iconfugue16-navigation-180</li>
+								<li><i class="iconfugue16-navigation-270"></i> iconfugue16-navigation-270</li>
+								<li><i class="iconfugue16-network-status-busy"></i> iconfugue16-network-status-busy</li>
+								<li><i class="iconfugue16-pencil"></i> iconfugue16-pencil</li>
+								<li><i class="iconfugue16-pencil--minus"></i> iconfugue16-pencil--minus</li>
+								<li><i class="iconfugue16-picture--minus"></i> iconfugue16-picture--minus</li>
+								<li><i class="iconfugue16-picture--pencil"></i> iconfugue16-picture--pencil</li>
+								<li><i class="iconfugue16-picture--plus"></i> iconfugue16-picture--plus</li>
+								<li><i class="iconfugue16-picture-sunset"></i> iconfugue16-picture-sunset</li>
+								<li><i class="iconfugue16-pencil--plus"></i> iconfugue16-pencil--plus</li>
+								<li><i class="iconfugue16-pencil-prohibition"></i> iconfugue16-pencil-prohibition</li>
+								<li><i class="iconfugue16-photo-album"></i> iconfugue16-photo-album</li>
+								<li><i class="iconfugue16-picture"></i> iconfugue16-picture</li>
+								<li><i class="iconfugue16-photo-album--minus"></i> iconfugue16-photo-album--minus</li>
+								<li><i class="iconfugue16-photo-album--pencil"></i> iconfugue16-photo-album--pencil</li>
+								<li><i class="iconfugue16-photo-album--plus"></i> iconfugue16-photo-album--plus</li>
+								<li><i class="iconfugue16-pill"></i> iconfugue16-pill</li>
+								<li><i class="iconfugue16-pill--minus"></i> iconfugue16-pill--minus</li>
+								<li><i class="iconfugue16-pill--pencil"></i> iconfugue16-pill--pencil</li>
+								<li><i class="iconfugue16-pill--plus"></i> iconfugue16-pill--plus</li>
+								<li><i class="iconfugue16-pin"></i> iconfugue16-pin</li>
+								<li><i class="iconfugue16-pin--minus"></i> iconfugue16-pin--minus</li>
+								<li><i class="iconfugue16-pin--pencil"></i> iconfugue16-pin--pencil</li>
+								<li><i class="iconfugue16-pin--plus"></i> iconfugue16-pin--plus</li>
+								<li><i class="iconfugue16-plus-circle"></i> iconfugue16-plus-circle</li>
+								<li><i class="iconfugue16-present--pencil"></i> iconfugue16-present--pencil</li>
+								<li><i class="iconfugue16-present--minus"></i> iconfugue16-present--minus</li>
+								<li><i class="iconfugue16-present"></i> iconfugue16-present</li>
+								<li><i class="iconfugue16-present--plus"></i> iconfugue16-present--plus</li>
+								<li><i class="iconfugue16-price-tag"></i> iconfugue16-price-tag</li>
+								<li><i class="iconfugue16-price-tag--minus"></i> iconfugue16-price-tag--minus</li>
+								<li><i class="iconfugue16-price-tag--pencil"></i> iconfugue16-price-tag--pencil</li>
+								<li><i class="iconfugue16-price-tag--plus"></i> iconfugue16-price-tag--plus</li>
+								<li><i class="iconfugue16-prohibition"></i> iconfugue16-prohibition</li>
+								<li><i class="iconfugue16-projection-screen"></i> iconfugue16-projection-screen</li>
+								<li><i class="iconfugue16-projection-screen--pencil"></i> iconfugue16-projection-screen--pencil</li>
+								<li><i class="iconfugue16-projection-screen--minus"></i> iconfugue16-projection-screen--minus</li>
+								<li><i class="iconfugue16-projection-screen--plus"></i> iconfugue16-projection-screen--plus</li>
+								<li><i class="iconfugue16-projection-screen-presentation"></i> iconfugue16-projection-screen-presentation</li>
+								<li><i class="iconfugue16-question"></i> iconfugue16-question</li>
+								<li><i class="iconfugue16-report"></i> iconfugue16-report</li>
+								<li><i class="iconfugue16-report--minus"></i> iconfugue16-report--minus</li>
+								<li><i class="iconfugue16-report--pencil"></i> iconfugue16-report--pencil</li>
+								<li><i class="iconfugue16-report--plus"></i> iconfugue16-report--plus</li>
+								<li><i class="iconfugue16-reports"></i> iconfugue16-reports</li>
+								<li><i class="iconfugue16-ruler"></i> iconfugue16-ruler</li>
+								<li><i class="iconfugue16-ruler--minus"></i> iconfugue16-ruler--minus</li>
+								<li><i class="iconfugue16-ruler--pencil"></i> iconfugue16-ruler--pencil</li>
+								<li><i class="iconfugue16-ruler--plus"></i> iconfugue16-ruler--plus</li>
+								<li><i class="iconfugue16-shield"></i> iconfugue16-shield</li>
+								<li><i class="iconfugue16-shield--minus"></i> iconfugue16-shield--minus</li>
+								<li><i class="iconfugue16-shield--pencil"></i> iconfugue16-shield--pencil</li>
+								<li><i class="iconfugue16-shield--plus"></i> iconfugue16-shield--plus</li>
+								<li><i class="iconfugue16-shopping-basket"></i> iconfugue16-shopping-basket</li>
+								<li><i class="iconfugue16-shopping-basket--minus"></i> iconfugue16-shopping-basket--minus</li>
+								<li><i class="iconfugue16-shopping-basket--pencil"></i> iconfugue16-shopping-basket--pencil</li>
+								<li><i class="iconfugue16-shopping-basket--plus"></i> iconfugue16-shopping-basket--plus</li>
+								<li><i class="iconfugue16-star"></i> iconfugue16-star</li>
+								<li><i class="iconfugue16-star-empty"></i> iconfugue16-star-empty</li>
+								<li><i class="iconfugue16-star-half"></i> iconfugue16-star-half</li>
+								<li><i class="iconfugue16-star--minus"></i> iconfugue16-star--minus</li>
+								<li><i class="iconfugue16-star--pencil"></i> iconfugue16-star--pencil</li>
+								<li><i class="iconfugue16-star--plus"></i> iconfugue16-star--plus</li>
+								<li><i class="iconfugue16-status"></i> iconfugue16-status</li>
+								<li><i class="iconfugue16-status-away"></i> iconfugue16-status-away</li>
+								<li><i class="iconfugue16-status-busy"></i> iconfugue16-status-busy</li>
+								<li><i class="iconfugue16-status-offline"></i> iconfugue16-status-offline</li>
+								<li><i class="iconfugue16-sticky-note"></i> iconfugue16-sticky-note</li>
+								<li><i class="iconfugue16-sticky-note--minus"></i> iconfugue16-sticky-note--minus</li>
+								<li><i class="iconfugue16-sticky-note--pencil"></i> iconfugue16-sticky-note--pencil</li>
+								<li><i class="iconfugue16-sticky-note--plus"></i> iconfugue16-sticky-note--plus</li>
+								<li><i class="iconfugue16-store"></i> iconfugue16-store</li>
+								<li><i class="iconfugue16-store--minus"></i> iconfugue16-store--minus</li>
+								<li><i class="iconfugue16-store--pencil"></i> iconfugue16-store--pencil</li>
+								<li><i class="iconfugue16-store--plus"></i> iconfugue16-store--plus</li>
+								<li><i class="iconfugue16-system-monitor"></i> iconfugue16-system-monitor</li>
+								<li><i class="iconfugue16-system-monitor--minus"></i> iconfugue16-system-monitor--minus</li>
+								<li><i class="iconfugue16-system-monitor--pencil"></i> iconfugue16-system-monitor--pencil</li>
+								<li><i class="iconfugue16-system-monitor--plus"></i> iconfugue16-system-monitor--plus</li>
+								<li><i class="iconfugue16-table"></i> iconfugue16-table</li>
+								<li><i class="iconfugue16-table--minus"></i> iconfugue16-table--minus</li>
+								<li><i class="iconfugue16-table--pencil"></i> iconfugue16-table--pencil</li>
+								<li><i class="iconfugue16-table--plus"></i> iconfugue16-table--plus</li>
+								<li><i class="iconfugue16-tag"></i> iconfugue16-tag</li>
+								<li><i class="iconfugue16-tag--minus"></i> iconfugue16-tag--minus</li>
+								<li><i class="iconfugue16-tag--pencil"></i> iconfugue16-tag--pencil</li>
+								<li><i class="iconfugue16-tag--plus"></i> iconfugue16-tag--plus</li>
+								<li><i class="iconfugue16-terminal"></i> iconfugue16-terminal</li>
+								<li><i class="iconfugue16-terminal--minus"></i> iconfugue16-terminal--minus</li>
+								<li><i class="iconfugue16-terminal--pencil"></i> iconfugue16-terminal--pencil</li>
+								<li><i class="iconfugue16-terminal--plus"></i> iconfugue16-terminal--plus</li>
+								<li><i class="iconfugue16-thumb"></i> iconfugue16-thumb</li>
+								<li><i class="iconfugue16-thumb-up"></i> iconfugue16-thumb-up</li>
+								<li><i class="iconfugue16-tick"></i> iconfugue16-tick</li>
+								<li><i class="iconfugue16-toggle"></i> iconfugue16-toggle</li>
+								<li><i class="iconfugue16-toggle-expand"></i> iconfugue16-toggle-expand</li>
+								<li><i class="iconfugue16-user"></i> iconfugue16-user</li>
+								<li><i class="iconfugue16-user-black"></i> iconfugue16-user-black</li>
+								<li><i class="iconfugue16-user-black-female"></i> iconfugue16-user-black-female</li>
+								<li><i class="iconfugue16-user-business"></i> iconfugue16-user-business</li>
+								<li><i class="iconfugue16-user-detective"></i> iconfugue16-user-detective</li>
+								<li><i class="iconfugue16-user-medical"></i> iconfugue16-user-medical</li>
+								<li><i class="iconfugue16-user--minus"></i> iconfugue16-user--minus</li>
+								<li><i class="iconfugue16-user--pencil"></i> iconfugue16-user--pencil</li>
+								<li><i class="iconfugue16-user--plus"></i> iconfugue16-user--plus</li>
+								<li><i class="iconfugue16-user-silhouette"></i> iconfugue16-user-silhouette</li>
+								<li><i class="iconfugue16-user-silhouette-question"></i> iconfugue16-user-silhouette-question</li>
+								<li><i class="iconfugue16-wand"></i> iconfugue16-wand</li>
+								<li><i class="iconfugue16-wand-hat"></i> iconfugue16-wand-hat</li>
+								<li><i class="iconfugue16-wand--minus"></i> iconfugue16-wand--minus</li>
+								<li><i class="iconfugue16-wand--pencil"></i> iconfugue16-wand--pencil</li>
+								<li><i class="iconfugue16-wand--plus"></i> iconfugue16-wand--plus</li>
+								<li><i class="iconfugue16-wooden-box"></i> iconfugue16-wooden-box</li>
+								<li><i class="iconfugue16-wooden-box--minus"></i> iconfugue16-wooden-box--minus</li>
+								<li><i class="iconfugue16-wooden-box--pencil"></i> iconfugue16-wooden-box--pencil</li>
+								<li><i class="iconfugue16-wooden-box--plus"></i> iconfugue16-wooden-box--plus</li>
+								<li><i class="iconfugue16-wrench"></i> iconfugue16-wrench</li>
+								<li><i class="iconfugue16-wrench--minus"></i> iconfugue16-wrench--minus</li>
+								<li><i class="iconfugue16-wrench--pencil"></i> iconfugue16-wrench--pencil</li>
+								<li><i class="iconfugue16-wrench--plus"></i> iconfugue16-wrench--plus</li>
+								<li><i class="iconfugue16-wrench-screwdriver"></i> iconfugue16-wrench-screwdriver</li>
+								<li><i class="iconfugue16-abacus"></i> iconfugue16-abacus</li>
+								<li><i class="iconfugue16-address-book"></i> iconfugue16-address-book</li>
+								<li><i class="iconfugue16-alarm-clock-blue"></i> iconfugue16-alarm-clock-blue</li>
+								<li><i class="iconfugue16-alarm-clock--minus"></i> iconfugue16-alarm-clock--minus</li>
+								<li><i class="iconfugue16-alarm-clock--pencil"></i> iconfugue16-alarm-clock--pencil</li>
+								<li><i class="iconfugue16-alarm-clock--plus"></i> iconfugue16-alarm-clock--plus</li>
+								<li><i class="iconfugue16-android"></i> iconfugue16-android</li>
+								<li><i class="iconfugue16-application"></i> iconfugue16-application</li>
+								<li><i class="iconfugue16-application-detail"></i> iconfugue16-application-detail</li>
+								<li><i class="iconfugue16-application-form"></i> iconfugue16-application-form</li>
+								<li><i class="iconfugue16-application--minus"></i> iconfugue16-application--minus</li>
+								<li><i class="iconfugue16-application-ab"></i> iconfugue16-application-ab</li>
+							</ul>
+                        </div><!-- End Fugue Icons -->
+                    </div>
+					
+                </div><!-- End Main Content -->
+            
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+		
+        <!-- Plugins -->
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/jasny-bootstrap.min.js"></script>
+		<script src="js/plugins/jquery.placeholder.min.js"></script>
+        <script src="js/application.js"></script>
+		<script>
+		$(function() {
+			/* Twitter Bootstrap Tooltip
+			 *
+			 * Link Tooltips
+			/*====================================================================*/
+			$('[rel="tooltip"]').tooltip({
+				placement : 'top'
+			});
+		});
+		</script>
+    </body>
+</html>

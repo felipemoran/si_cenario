@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- ===================== TOUCH ICONS ===================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.min.css">
+		
+        <script src="js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="body5">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper" class="boxed">
+            <div id="wrapper-inner" class="pattern7">
+                
+                <!-- Start Main Header -->
+                <div id="main-header">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="title">
+                                	<h1>Admindo <small>v1.4</small></h1>
+                                </div>
+                                <!-- Start Header Panel -->
+                                <div class="header-panel">
+									<div id="dropdown-patterns" class="dropdown" rel="tooltip" data-placement="left" title="Theme Setting">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-cog"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<div class="title">Inner Content Pattern</div>
+											<ul class="patterns">
+												<li class="pattern1" data-menu="wrapperpattern"></li>
+												<li class="pattern2" data-menu="wrapperpattern"></li>
+												<li class="pattern3" data-menu="wrapperpattern"></li>
+												<li class="pattern4" data-menu="wrapperpattern"></li>
+												<li class="pattern5" data-menu="wrapperpattern"></li>
+												<li class="pattern6" data-menu="wrapperpattern"></li>
+												<li class="pattern7" data-menu="wrapperpattern"></li>
+												<li class="pattern8" data-menu="wrapperpattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Layout</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small" data-layout="default">Default</button> 
+												<button class="btn btn-small active" data-layout="boxed">Boxed</button> 
+												<button class="btn btn-small" data-layout="fixed">Fixed</button>
+											</div>
+											<ul class="patterns" style="margin-top:10px">
+												<li class="body1" data-menu="bodypattern"></li>
+												<li class="body2" data-menu="bodypattern"></li>
+												<li class="body3" data-menu="bodypattern"></li>
+												<li class="body4" data-menu="bodypattern"></li>
+												<li class="body5" data-menu="bodypattern"></li>
+												<li class="body6" data-menu="bodypattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Menu Type</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small active" data-menustyle="fancy">Fancy</button> 
+												<button class="btn btn-small" data-menustyle="simple">Simple</button>
+											</div>
+										</div>
+									</div>
+									<div id="dropdown-search" class="dropdown">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-search"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<form>
+												<input name="search" type="text" class="span12" placeholder="Enter keyword...">
+											</form>
+										</div>
+									</div>
+									<a href="#" class="menu" id="menu-phone" data-menu="mobile"><i class="icon iconfa-tasks"></i></a>
+								</div>
+                                <!-- End Header Panel -->
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- End Main Header -->
+                
+                <!-- Start Sidebar -->
+                <div id="sidebar">
+
+                    <!-- Start Profile Panel -->
+                    <div class="profile" data-detach="profile">
+                        <div class="profile-pic">
+							<div class="btn-group">
+								<img src="img/avatar/40x40/avatar5.png" class="dropdown-toggle" data-toggle="dropdown">
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="cion iconfa-pencil"></i> Edit Profile</a></li>
+									<li><a href="#"><i class="cion iconfa-cog"></i>  Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="cion iconfa-off"></i> Logout</a></li>
+								</ul>
+							</div>
+							<span class="caret"></span>
+						</div>
+                        <div class="profile-info">
+                            <span class="name">John Doe</span>
+                            <span class="job">Web Designer</span>
+						</div>
+                        <div class="profile-panel">
+                            <!-- Start Messages -->
+                            <div class="profile-panel-menu" id="panel-message">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-envelope"></i> 
+                                    <span class="text">Messages</span>
+                                    <span class="label label-important">13</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Your Message</li>
+                                    <div class="dropdown-menu-item" data-scroll="viewport">
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar1.png">
+                                            <div class="detail">
+                                                <span class="name">Jane Anderson</span>
+                                                <span class="message">Hi!.. How are you?...</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <img src="img/avatar/40x40/avatar2.png">
+                                            <div class="detail">
+                                                <span class="name">Johan Ahmad</span>
+                                                <span class="message">Hello john... I need your help</span>
+                                                <span class="datetime">Today 1.20am</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar3.png">
+                                            <div class="detail">
+                                                <span class="name">James Kimi</span>
+                                                <span class="message">Hey men. Meet me at this place asd asda asd</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar4.png">
+                                            <div class="detail">
+                                                <span class="name">Amanda Lim</span>
+                                                <span class="message">Good day john!</span>
+                                                <span class="datetime">yesterday 10.17am</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">More Message</a></li>
+                                </ul>
+                            </div><!-- End Messages -->
+                            
+                            <!-- Start Notification -->
+                            <div class="profile-panel-menu" id="panel-notification">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-bell"></i>
+                                    <span class="text">Notifications</span>
+                                    <span class="label label-important">30</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Notifications</li>
+                                    <div class="dropdown-menu-item">
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-alarm-clock-blue"></i>
+                                            <div class="detail">
+                                                <span class="message">Schedule backup complete</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <i class="icon iconfugue16-database"></i>
+                                            <div class="detail">
+                                                <span class="message">Check your database configurations</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-user-silhouette"></i>
+                                            <div class="detail">
+                                                <span class="message">Someone is trying to access your accound</span>
+                                                <span class="datetime">1 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-cheque"></i>
+                                            <div class="detail">
+                                                <span class="message">Cheque is sent</span>
+                                                <span class="datetime">3 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">Clear All</a></li>
+                                </ul>
+                            </div><!-- End Notification -->
+                        </div>
+                    </div><!-- End Profile Panel -->
+                    
+                    <!-- Start Main Menu -->
+                    <ul class="nav-mainmenu" id="nav-mainmenu">
+      
+                        <!-- Start GENERALS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#generals" class="active"><span class="icon iconfa-home"></span><span class="text">Generals</span><span class="badge pull-right">4</span></a>
+                            <!-- Start GENERALS Sub Menu -->
+                            <ul class="nav-submenu collapse in" id="generals">
+                                <li><a href="dashboard.html"><span class="icon iconfugue16-dashboard"></span> Dashboard</a></li>
+                                <li><a href="typography.html"><span class="icon iconfugue16-edit"></span> Typography</a></li>
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#generals" href="#icons" class="active"><span class="icon iconfugue16-bamboos"></span> Icons<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse in" id="icons">
+                                        <li><a href="icon-glyph.html"><span class="icon iconfugue16-edit-code"></span> Glyph icons</a></li>
+                                        <li><a href="icon-fugue.html"><span class="icon iconfugue16-edit-code"></span> Fugue Icon 16x16</a></li>
+                                        <li><a href="icon-elusive.html"><span class="icon iconfugue16-edit-code"></span> Elusive Icon</a></li>
+                                        <li><a href="icon-fontawesome.html" class="active"><span class="icon iconfugue16-edit-code"></span> Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="grids.html"><span class="icon iconfugue16-edit-alignment-justify-distribute"></span> Grids</a></li>
+                            </ul>
+                            <!-- End GENERALS Sub Menu -->
+                        </li>
+                        <!-- End GENERALS Menu -->
+                        
+                        <!-- Start COMPONENTS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#components"><span class="icon iconfa-beaker"></span><span class="text">Components</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="components">
+                                <li><a href="bootstrap.html"><span class="icon iconfugue16-application-ab"></span> Bootstrap</a></li>
+								<li><a href="jquery-ui.html"><span class="icon iconfugue16-abacus"></span> Jquery UI</a></li>
+                                <li><a href="widget.html"><span class="icon iconfugue16-application-resize-full"></span> Widgets</a></li>
+                                <li><a href="calendar.html"><span class="icon iconfugue16-calendar"></span> Calendar</a></li>
+                                <li><a href="gallery.html"><span class="icon iconfugue16-picture"></span> Images Gallery</a></li>
+                            </ul>
+                        </li>
+                        <!-- End COMPONENTS Menu -->
+                        
+                        <!-- Start FORMS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#forms"><span class="icon iconfa-reorder"></span><span class="text">Forms</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="forms">
+                                <li><a href="form-elements.html"><span class="icon iconfugue16-application-form"></span> Elements</a></li>
+                                <li><a href="form-layout.html"><span class="icon iconfugue16-application-detail"></span> Layout</a></li>
+                                <li><a href="form-validation.html"><span class="icon iconfugue16-application-ab"></span> Validation</a></li>
+                                <li><a href="file-upload.html"><span class="icon iconfugue16-inbox"></span> File Upload</a></li>
+                                <li><a href="form-wizard.html"><span class="icon iconfugue16-wand-hat"></span> Wizards</a></li>
+                            </ul>
+                        </li>
+                        <!-- End FORMS Menu -->
+                        
+                        <!-- Start STATICTICS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#statictics"><span class="icon iconfa-bar-chart"></span><span class="text">Statictics</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="statictics">
+                                <li><a href="chart-summary.html"><span class="icon iconfugue16-chart-up"></span> Custom Statistics</a></li>
+                                <li><a href="charts.html"><span class="icon iconfugue16-chart"></span> Charts</a></li>
+                            </ul>
+                        </li>
+                        <!-- End STATICTICS Menu -->
+                        
+                        <!-- Start PAGES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#pages"><span class="icon iconfa-paste"></span><span class="text">Pages</span><span class="badge pull-right">3</span></a>
+                            <!-- Start PAGES Sub Menu -->
+                            <ul class="nav-submenu collapse" id="pages">
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#page" href="#error-page"><span class="icon iconfugue16-exclamation"></span> Error Pages<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="error-page">
+                                        <li><a href="403.html"><span class="icon iconfugue16-edit-code"></span> 403 Page</a></li>
+                                        <li><a href="404.html"><span class="icon iconfugue16-edit-code"></span> 404 Page</a></li>
+                                        <li><a href="500.html"><span class="icon iconfugue16-edit-code"></span> 500 Page</a></li>
+                                        <li><a href="503.html"><span class="icon iconfugue16-edit-code"></span> 503 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-profile.html"><span class="icon iconfugue16-user-black"></span> Profile Page</a></li>
+                                <li><a href="page-invoice.html"><span class="icon iconfugue16-cheque"></span> Invoice Page</a></li>
+                            </ul><!-- End PAGES Sub Menu -->
+                        </li>
+                        <!-- End PAGES Menu -->
+                        
+                        <!-- Start TABLES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#tables"><span class="icon iconfa-table"></span><span class="text">Tables</span><span class="badge pull-right">3</span></a>
+                            <ul class="nav-submenu collapse" id="tables">
+                                <li><a href="table-static.html"><span class="icon iconfugue16-table"></span> Static Table</a></li>
+                                <li><a href="table-dynamic.html"><span class="icon iconfugue16-table--plus"></span> Dynamic Table</a></li>
+                                <li><a href="table-responsive.html"><span class="icon iconfugue16-table--pencil"></span> Responsive Table</a></li>
+                            </ul>
+                        </li>
+                        <!-- End TABLES Menu -->
+                        
+                        <!-- Start BONUS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#extras"><span class="icon iconfa-gift"></span><span class="text">Bonus</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="extras">
+                                <li><a href="custom-widget.html"><span class="icon iconfugue16-fire"></span> Custom Widget</a></li>
+                                <li><a href="contact-list.html"><span class="icon iconfugue16-card-address"></span> Contact List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Start BONUS Menu -->
+                        
+                    </ul><!-- End Main Menu -->
+
+                </div><!-- End Sidebar -->
+                
+                <!-- Start Main Content -->
+                <div id="main-content">
+                    <p>&nbsp;</p>
+
+                    <!-- Start Breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Admindo</a></li>
+                        <li><a href="#">Generals</a></li>
+						<li><a href="#">Icons</a></li>
+						<li><a href="#">Font Awesome Icons</a></li>
+                    </ul><!-- End Breadcrumb -->
+
+                    <h3><a href="http://fortawesome.github.com/Font-Awesome/" target="_new" title="Go to fortawesome.github.com/Font-Awesome/">Font Awesome Icons</a> <small>The iconic font designed for use with Twitter Bootstrap</small></h3>
+                    <hr class="style1">
+
+                    <!-- Start Font Sample -->
+                    <div class="row-fluid">
+                        <!-- Start Font Awesome Icons -->
+                        <div class="span12">
+							<h4>Web Application Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconfa-adjust"></i> iconfa-adjust</li>
+								<li><i class="iconfa-asterisk"></i> iconfa-asterisk</li>
+								<li><i class="iconfa-ban-circle"></i> iconfa-ban-circle</li>
+								<li><i class="iconfa-bar-chart"></i> iconfa-bar-chart</li>
+								<li><i class="iconfa-barcode"></i> iconfa-barcode</li>
+								<li><i class="iconfa-beaker"></i> iconfa-beaker</li>
+								<li><i class="iconfa-beer"></i> iconfa-beer</li>
+								<li><i class="iconfa-bell"></i> iconfa-bell</li>
+								<li><i class="iconfa-bell-alt"></i> iconfa-bell-alt</li>
+								<li><i class="iconfa-bolt"></i> iconfa-bolt</li>
+								<li><i class="iconfa-book"></i> iconfa-book</li>
+								<li><i class="iconfa-bookmark"></i> iconfa-bookmark</li>
+								<li><i class="iconfa-bookmark-empty"></i> iconfa-bookmark-empty</li>
+								<li><i class="iconfa-briefcase"></i> iconfa-briefcase</li>
+								<li><i class="iconfa-bullhorn"></i> iconfa-bullhorn</li>
+								<li><i class="iconfa-calendar"></i> iconfa-calendar</li>
+								<li><i class="iconfa-camera"></i> iconfa-camera</li>
+								<li><i class="iconfa-camera-retro"></i> iconfa-camera-retro</li>
+								<li><i class="iconfa-certificate"></i> iconfa-certificate</li>
+								<li><i class="iconfa-check"></i> iconfa-check</li>
+								<li><i class="iconfa-check-empty"></i> iconfa-check-empty</li>
+								<li><i class="iconfa-circle"></i> iconfa-circle</li>
+								<li><i class="iconfa-circle-blank"></i> iconfa-circle-blank</li>
+								<li><i class="iconfa-cloud"></i> iconfa-cloud</li>
+								<li><i class="iconfa-cloud-download"></i> iconfa-cloud-download</li>
+								<li><i class="iconfa-cloud-upload"></i> iconfa-cloud-upload</li>
+								<li><i class="iconfa-coffee"></i> iconfa-coffee</li>
+								<li><i class="iconfa-cog"></i> iconfa-cog</li>
+								<li><i class="iconfa-cogs"></i> iconfa-cogs</li>
+								<li><i class="iconfa-comment"></i> iconfa-comment</li>
+								<li><i class="iconfa-comment-alt"></i> iconfa-comment-alt</li>
+								<li><i class="iconfa-comments"></i> iconfa-comments</li>
+								<li><i class="iconfa-comments-alt"></i> iconfa-comments-alt</li>
+								<li><i class="iconfa-credit-card"></i> iconfa-credit-card</li>
+								<li><i class="iconfa-dashboard"></i> iconfa-dashboard</li>
+								<li><i class="iconfa-desktop"></i> iconfa-desktop</li>
+								<li><i class="iconfa-download"></i> iconfa-download</li>
+								<li><i class="iconfa-download-alt"></i> iconfa-download-alt</li>
+								
+								<li><i class="iconfa-edit"></i> iconfa-edit</li>
+								<li><i class="iconfa-envelope"></i> iconfa-envelope</li>
+								<li><i class="iconfa-envelope-alt"></i> iconfa-envelope-alt</li>
+								<li><i class="iconfa-exchange"></i> iconfa-exchange</li>
+								<li><i class="iconfa-exclamation-sign"></i> iconfa-exclamation-sign</li>
+								<li><i class="iconfa-external-link"></i> iconfa-external-link</li>
+								<li><i class="iconfa-eye-close"></i> iconfa-eye-close</li>
+								<li><i class="iconfa-eye-open"></i> iconfa-eye-open</li>
+								<li><i class="iconfa-facetime-video"></i> iconfa-facetime-video</li>
+								<li><i class="iconfa-fighter-jet"></i> iconfa-fighter-jet</li>
+								<li><i class="iconfa-film"></i> iconfa-film</li>
+								<li><i class="iconfa-filter"></i> iconfa-filter</li>
+								<li><i class="iconfa-fire"></i> iconfa-fire</li>
+								<li><i class="iconfa-flag"></i> iconfa-flag</li>
+								<li><i class="iconfa-folder-close"></i> iconfa-folder-close</li>
+								<li><i class="iconfa-folder-open"></i> iconfa-folder-open</li>
+								<li><i class="iconfa-folder-close-alt"></i> iconfa-folder-close-alt</li>
+								<li><i class="iconfa-folder-open-alt"></i> iconfa-folder-open-alt</li>
+								<li><i class="iconfa-food"></i> iconfa-food</li>
+								<li><i class="iconfa-gift"></i> iconfa-gift</li>
+								<li><i class="iconfa-glass"></i> iconfa-glass</li>
+								<li><i class="iconfa-globe"></i> iconfa-globe</li>
+								<li><i class="iconfa-group"></i> iconfa-group</li>
+								<li><i class="iconfa-hdd"></i> iconfa-hdd</li>
+								<li><i class="iconfa-headphones"></i> iconfa-headphones</li>
+								<li><i class="iconfa-heart"></i> iconfa-heart</li>
+								<li><i class="iconfa-heart-empty"></i> iconfa-heart-empty</li>
+								<li><i class="iconfa-home"></i> iconfa-home</li>
+								<li><i class="iconfa-inbox"></i> iconfa-inbox</li>
+								<li><i class="iconfa-info-sign"></i> iconfa-info-sign</li>
+								<li><i class="iconfa-key"></i> iconfa-key</li>
+								<li><i class="iconfa-leaf"></i> iconfa-leaf</li>
+								<li><i class="iconfa-laptop"></i> iconfa-laptop</li>
+								<li><i class="iconfa-legal"></i> iconfa-legal</li>
+								<li><i class="iconfa-lemon"></i> iconfa-lemon</li>
+								<li><i class="iconfa-lightbulb"></i> iconfa-lightbulb</li>
+								<li><i class="iconfa-lock"></i> iconfa-lock</li>
+								<li><i class="iconfa-unlock"></i> iconfa-unlock</li>
+								
+								<li><i class="iconfa-magic"></i> iconfa-magic</li>
+								<li><i class="iconfa-magnet"></i> iconfa-magnet</li>
+								<li><i class="iconfa-map-marker"></i> iconfa-map-marker</li>
+								<li><i class="iconfa-minus"></i> iconfa-minus</li>
+								<li><i class="iconfa-minus-sign"></i> iconfa-minus-sign</li>
+								<li><i class="iconfa-mobile-phone"></i> iconfa-mobile-phone</li>
+								<li><i class="iconfa-money"></i> iconfa-money</li>
+								<li><i class="iconfa-move"></i> iconfa-move</li>
+								<li><i class="iconfa-music"></i> iconfa-music</li>
+								<li><i class="iconfa-off"></i> iconfa-off</li>
+								<li><i class="iconfa-ok"></i> iconfa-ok</li>
+								<li><i class="iconfa-ok-circle"></i> iconfa-ok-circle</li>
+								<li><i class="iconfa-ok-sign"></i> iconfa-ok-sign</li>
+								<li><i class="iconfa-pencil"></i> iconfa-pencil</li>
+								<li><i class="iconfa-picture"></i> iconfa-picture</li>
+								<li><i class="iconfa-plane"></i> iconfa-plane</li>
+								<li><i class="iconfa-plus"></i> iconfa-plus</li>
+								<li><i class="iconfa-plus-sign"></i> iconfa-plus-sign</li>
+								<li><i class="iconfa-print"></i> iconfa-print</li>
+								<li><i class="iconfa-pushpin"></i> iconfa-pushpin</li>
+								<li><i class="iconfa-qrcode"></i> iconfa-qrcode</li>
+								<li><i class="iconfa-question-sign"></i> iconfa-question-sign</li>
+								<li><i class="iconfa-quote-left"></i> iconfa-quote-left</li>
+								<li><i class="iconfa-quote-right"></i> iconfa-quote-right</li>
+								<li><i class="iconfa-random"></i> iconfa-random</li>
+								<li><i class="iconfa-refresh"></i> iconfa-refresh</li>
+								<li><i class="iconfa-remove"></i> iconfa-remove</li>
+								<li><i class="iconfa-remove-circle"></i> iconfa-remove-circle</li>
+								<li><i class="iconfa-remove-sign"></i> iconfa-remove-sign</li>
+								<li><i class="iconfa-reorder"></i> iconfa-reorder</li>
+								<li><i class="iconfa-reply"></i> iconfa-reply</li>
+								<li><i class="iconfa-resize-horizontal"></i> iconfa-resize-horizontal</li>
+								<li><i class="iconfa-resize-vertical"></i> iconfa-resize-vertical</li>
+								<li><i class="iconfa-retweet"></i> iconfa-retweet</li>
+								<li><i class="iconfa-road"></i> iconfa-road</li>
+								<li><i class="iconfa-rss"></i> iconfa-rss</li>
+								<li><i class="iconfa-screenshot"></i> iconfa-screenshot</li>
+								<li><i class="iconfa-search"></i> iconfa-search</li>
+								
+								<li><i class="iconfa-share"></i> iconfa-share</li>
+								<li><i class="iconfa-share-alt"></i> iconfa-share-alt</li>
+								<li><i class="iconfa-shopping-cart"></i> iconfa-shopping-cart</li>
+								<li><i class="iconfa-signal"></i> iconfa-signal</li>
+								<li><i class="iconfa-signin"></i> iconfa-signin</li>
+								<li><i class="iconfa-signout"></i> iconfa-signout</li>
+								<li><i class="iconfa-sitemap"></i> iconfa-sitemap</li>
+								<li><i class="iconfa-sort"></i> iconfa-sort</li>
+								<li><i class="iconfa-sort-down"></i> iconfa-sort-down</li>
+								<li><i class="iconfa-sort-up"></i> iconfa-sort-up</li>
+								<li><i class="iconfa-spinner"></i> iconfa-spinner</li>
+								<li><i class="iconfa-star"></i> iconfa-star</li>
+								<li><i class="iconfa-star-empty"></i> iconfa-star-empty</li>
+								<li><i class="iconfa-star-half"></i> iconfa-star-half</li>
+								<li><i class="iconfa-tablet"></i> iconfa-tablet</li>
+								<li><i class="iconfa-tag"></i> iconfa-tag</li>
+								<li><i class="iconfa-tags"></i> iconfa-tags</li>
+								<li><i class="iconfa-tasks"></i> iconfa-tasks</li>
+								<li><i class="iconfa-thumbs-down"></i> iconfa-thumbs-down</li>
+								<li><i class="iconfa-thumbs-up"></i> iconfa-thumbs-up</li>
+								<li><i class="iconfa-time"></i> iconfa-time</li>
+								<li><i class="iconfa-tint"></i> iconfa-tint</li>
+								<li><i class="iconfa-trash"></i> iconfa-trash</li>
+								<li><i class="iconfa-trophy"></i> iconfa-trophy</li>
+								<li><i class="iconfa-truck"></i> iconfa-truck</li>
+								<li><i class="iconfa-umbrella"></i> iconfa-umbrella</li>
+								<li><i class="iconfa-upload"></i> iconfa-upload</li>
+								<li><i class="iconfa-upload-alt"></i> iconfa-upload-alt</li>
+								<li><i class="iconfa-user"></i> iconfa-user</li>
+								<li><i class="iconfa-user-md"></i> iconfa-user-md</li>
+								<li><i class="iconfa-volume-off"></i> iconfa-volume-off</li>
+								<li><i class="iconfa-volume-down"></i> iconfa-volume-down</li>
+								<li><i class="iconfa-volume-up"></i> iconfa-volume-up</li>
+								<li><i class="iconfa-warning-sign"></i> iconfa-warning-sign</li>
+								<li><i class="iconfa-wrench"></i> iconfa-wrench</li>
+								<li><i class="iconfa-zoom-in"></i> iconfa-zoom-in</li>
+								<li><i class="iconfa-zoom-out"></i> iconfa-zoom-out</li>
+							</ul>
+                        </div><!-- End Font Awesome Icons -->
+					</div><!-- End Font Sample -->
+					
+					<hr>
+							
+					<div class="row-fluid">
+                        <!-- Start Font Awesome Icons -->
+                        <div class="span12">
+							<h4>Text Editor Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconfa-file"></i> iconfa-file</li>
+								<li><i class="iconfa-file-alt"></i> iconfa-file-alt</li>
+								<li><i class="iconfa-cut"></i> iconfa-cut</li>
+								<li><i class="iconfa-copy"></i> iconfa-copy</li>
+								<li><i class="iconfa-paste"></i> iconfa-paste</li>
+								<li><i class="iconfa-save"></i> iconfa-save</li>
+								<li><i class="iconfa-undo"></i> iconfa-undo</li>
+								<li><i class="iconfa-repeat"></i> iconfa-repeat</li>
+								<li><i class="iconfa-text-height"></i> iconfa-text-height</li>
+								<li><i class="iconfa-text-width"></i> iconfa-text-width</li>
+								<li><i class="iconfa-align-left"></i> iconfa-align-left</li>
+								<li><i class="iconfa-align-center"></i> iconfa-align-center</li>
+								<li><i class="iconfa-align-right"></i> iconfa-align-right</li>
+								<li><i class="iconfa-align-justify"></i> iconfa-align-justify</li>
+								<li><i class="iconfa-indent-left"></i> iconfa-indent-left</li>
+								<li><i class="iconfa-indent-right"></i> iconfa-indent-right</li>
+								<li><i class="iconfa-font"></i> iconfa-font</li>
+								<li><i class="iconfa-bold"></i> iconfa-bold</li>
+								<li><i class="iconfa-italic"></i> iconfa-italic</li>
+								<li><i class="iconfa-strikethrough"></i> iconfa-strikethrough</li>
+								<li><i class="iconfa-underline"></i> iconfa-underline</li>
+								<li><i class="iconfa-link"></i> iconfa-link</li>
+								<li><i class="iconfa-paper-clip"></i> iconfa-paper-clip</li>
+								<li><i class="iconfa-columns"></i> iconfa-columns</li>
+								<li><i class="iconfa-table"></i> iconfa-table</li>
+								<li><i class="iconfa-th-large"></i> iconfa-th-large</li>
+								<li><i class="iconfa-th"></i> iconfa-th</li>
+								<li><i class="iconfa-th-list"></i> iconfa-th-list</li>
+								<li><i class="iconfa-list"></i> iconfa-list</li>
+								<li><i class="iconfa-list-ol"></i> iconfa-list-ol</li>
+								<li><i class="iconfa-list-ul"></i> iconfa-list-ul</li>
+								<li><i class="iconfa-list-alt"></i> iconfa-list-alt</li>
+							</ul>
+                        </div><!-- End Font Awesome Icons -->
+                    </div><!-- End Font Sample -->
+					
+					<hr>
+							
+					<div class="row-fluid">
+                        <!-- Start Font Awesome Icons -->
+                        <div class="span12">
+							<h4>Directional Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconfa-angle-left"></i> iconfa-angle-left</li>
+								<li><i class="iconfa-angle-right"></i> iconfa-angle-right</li>
+								<li><i class="iconfa-angle-up"></i> iconfa-angle-up</li>
+								<li><i class="iconfa-angle-down"></i> iconfa-angle-down</li>
+								<li><i class="iconfa-arrow-down"></i> iconfa-arrow-down</li>
+								<li><i class="iconfa-arrow-left"></i> iconfa-arrow-left</li>
+								<li><i class="iconfa-arrow-right"></i> iconfa-arrow-right</li>
+								<li><i class="iconfa-arrow-up"></i> iconfa-arrow-up</li>
+								<li><i class="iconfa-caret-down"></i> iconfa-caret-down</li>
+								<li><i class="iconfa-caret-left"></i> iconfa-caret-left</li>
+								<li><i class="iconfa-caret-right"></i> iconfa-caret-right</li>
+								<li><i class="iconfa-caret-up"></i> iconfa-caret-up</li>
+								<li><i class="iconfa-chevron-down"></i> iconfa-chevron-down</li>
+								<li><i class="iconfa-chevron-left"></i> iconfa-chevron-left</li>
+								<li><i class="iconfa-chevron-right"></i> iconfa-chevron-right</li>
+								<li><i class="iconfa-chevron-up"></i> iconfa-chevron-up</li>
+								<li><i class="iconfa-circle-arrow-down"></i> iconfa-circle-arrow-down</li>
+								<li><i class="iconfa-circle-arrow-left"></i> iconfa-circle-arrow-left</li>
+								<li><i class="iconfa-circle-arrow-right"></i> iconfa-circle-arrow-right</li>
+								<li><i class="iconfa-circle-arrow-up"></i> iconfa-circle-arrow-up</li>
+								<li><i class="iconfa-double-angle-left"></i> iconfa-double-angle-left</li>
+								<li><i class="iconfa-double-angle-right"></i> iconfa-double-angle-right</li>
+								<li><i class="iconfa-double-angle-up"></i> iconfa-double-angle-up</li>
+								<li><i class="iconfa-double-angle-down"></i> iconfa-double-angle-down</li>
+								<li><i class="iconfa-hand-down"></i> iconfa-hand-down</li>
+								<li><i class="iconfa-hand-left"></i> iconfa-hand-left</li>
+								<li><i class="iconfa-hand-right"></i> iconfa-hand-right</li>
+								<li><i class="iconfa-hand-up"></i> iconfa-hand-up</li>
+								<li><i class="iconfa-circle"></i> iconfa-circle</li>
+								<li><i class="iconfa-circle-blank"></i> iconfa-circle-blank</li>
+							</ul>
+                        </div><!-- End Font Awesome Icons -->
+                    </div><!-- End Font Sample -->
+					
+					<hr>
+							
+					<div class="row-fluid">
+                        <!-- Start Font Awesome Icons -->
+                        <div class="span12">
+							<h4>Video Player Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconfa-play-circle"></i> iconfa-play-circle</li>
+								<li><i class="iconfa-play"></i> iconfa-play</li>
+								<li><i class="iconfa-pause"></i> iconfa-pause</li>
+								<li><i class="iconfa-stop"></i> iconfa-stop</li>
+								<li><i class="iconfa-step-backward"></i> iconfa-step-backward</li>
+								<li><i class="iconfa-fast-backward"></i> iconfa-fast-backward</li>
+								<li><i class="iconfa-backward"></i> iconfa-backward</li>
+								<li><i class="iconfa-forward"></i> iconfa-forward</li>
+								<li><i class="iconfa-fast-forward"></i> iconfa-fast-forward</li>
+								<li><i class="iconfa-step-forward"></i> iconfa-step-forward</li>
+								<li><i class="iconfa-eject"></i> iconfa-eject</li>
+								<li><i class="iconfa-fullscreen"></i> iconfa-fullscreen</li>
+								<li><i class="iconfa-resize-full"></i> iconfa-resize-full</li>
+								<li><i class="iconfa-resize-small"></i> iconfa-resize-small</li>
+							</ul>
+                        </div><!-- End Font Awesome Icons -->
+                    </div><!-- End Font Sample -->
+					
+					<hr>
+							
+					<div class="row-fluid">
+                        <!-- Start Font Awesome Icons -->
+                        <div class="span12">
+							<h4>Social Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconfa-phone"></i> iconfa-phone</li>
+								<li><i class="iconfa-phone-sign"></i> iconfa-phone-sign</li>
+								<li><i class="iconfa-facebook"></i> iconfa-facebook</li>
+								<li><i class="iconfa-facebook-sign"></i> iconfa-facebook-sign</li>
+								<li><i class="iconfa-twitter"></i> iconfa-twitter</li>
+								<li><i class="iconfa-twitter-sign"></i> iconfa-twitter-sign</li>
+								<li><i class="iconfa-github"></i> iconfa-github</li>
+								<li><i class="iconfa-github-alt"></i> iconfa-github-alt</li>
+								<li><i class="iconfa-github-sign"></i> iconfa-github-sign</li>
+								<li><i class="iconfa-linkedin"></i> iconfa-linkedin</li>
+								<li><i class="iconfa-linkedin-sign"></i> iconfa-linkedin-sign</li>
+								<li><i class="iconfa-pinterest"></i> iconfa-pinterest</li>
+								<li><i class="iconfa-pinterest-sign"></i> iconfa-pinterest-sign</li>
+								<li><i class="iconfa-google-plus"></i> iconfa-google-plus</li>
+								<li><i class="iconfa-google-plus-sign"></i> iconfa-google-plus-sign</li>
+								<li><i class="iconfa-sign-blank"></i> iconfa-sign-blank</li>
+							</ul>
+                        </div><!-- End Font Awesome Icons -->
+                    </div><!-- End Font Sample -->
+
+                </div><!-- End Main Content -->
+            
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+		
+        <!-- Plugins -->
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/jasny-bootstrap.min.js"></script>
+		<script src="js/plugins/jquery.placeholder.min.js"></script>
+        <script src="js/application.js"></script>
+		<script>
+		$(function() {
+			/* Twitter Bootstrap Tooltip
+			 *
+			 * Link Tooltips
+			/*====================================================================*/
+			$('[rel="tooltip"]').tooltip({
+				placement : 'top'
+			});
+		});
+		</script>
+    </body>
+</html>

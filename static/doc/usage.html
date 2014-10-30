@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/plugins/jquery.snippet.css">
+        <link rel="stylesheet" type="text/css" href="../css/plugins/jquery.chocolat.css">
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="../css/jui/jquery.ui.min.css">
+		
+        <style>
+		.affix {
+    		position: fixed;
+    		top: 0;
+    		width: 22.404255319148934%;
+		}
+		</style>
+        <script src="../js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Start Main Header -->
+        <div id="main-header">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="title">
+                            <h1>Admindo Documentation - Usage<small style="left:470px;">v1.4</small></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Header -->
+        
+        <div class="container-fluid">
+        	<!-- Intro -->
+            <div class="row-fluid" style="margin-top:20px;">
+            	<div class="span6">
+                	<h3>Item Detail</h3>
+                	<p>Admindo Admin Template v1.1</p>
+                    <p>Development Start : December 2012</p>
+                    <p>Author : pampersdry</p>
+                </div>
+            	<div class="span6">
+                	<h3>Many Thanks!</h3>
+                	<p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page at <a href="http://themeforest.net/user/pampersdry">Theme Forest</a> or follow my twitter <a href="http://twitter.com/pampersdry">@pampersdry</a></p>
+                </div>
+            </div>
+            
+            <hr class="style2">
+            
+            <!-- Start Documentation -->
+        	<div class="row-fluid" style="margin-top:20px;">
+            	<div class="span3">
+                	<div id="mainmenu">
+                        <h4>Table Of Content</h4>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#typography">Typography</a></li>
+                            <li><a href="#icons">Icons</a></li>
+                            <li><a href="#grids">Grids</a></li>
+                            <li><a href="#bootstrap">Bootstrap</a></li>
+                            <li><a href="#jqueryui">Jquery UI</a></li>
+                            <li><a href="#widget">Widget</a></li>
+                            <li><a href="#calendar">Full Calendar</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+							<li><a href="#gallery-filter">Gallery Filtering <span class="label label-warning">new</span></a></li>
+                            <li><a href="#form">Form</a></li>
+							<li><a href="#chart">Chart &amp; Statistic</a></li>
+							<li><a href="#tables">Tables</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="span9">
+                    
+                	<div class="row-fluid">
+                    	<div class="span12" id="typography">
+                        	<h4>Typography - <a href="#top">top</a></h4>
+                            <p>The use of fonts and text on this template.</p>
+							<p>Example use of typography can be found at <a href="../typography.html">typography.html</a><p>
+<pre class="htmlcode">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;strong&gt;Strong&lt;/strong&gt;
+...
+</pre><br>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="icons">
+                        	<h4>Icons - <a href="#top">top</a></h4>
+                            <p>This template have 4 different icon library. Wrap all the icon with the <code>i</code> tag. Below is the list of available icon</p>
+							<ol>
+								<li><a href="../icon-glyph.html">Glyph Icon - Bootstrap default</a></li>
+								<li><a href="../icon-elusive.html">Elusive Icon</a></li>
+								<li><a href="../icon-fugue.html">Fugue Icon</a></li>
+								<li><a href="../icon-fontawesome.html">Font Awesome Icon</a></li>
+							</ol>
+							<p>For an example see the below code.<p>
+<pre class="htmlcode">
+&lt;i class=&quot;icon icon-cog&quot;&gt;&lt;/i&gt; // Glyph icon
+&lt;i class=&quot;icon iconfa-cog&quot;&gt;&lt;/i&gt; // Font Awesome icon
+&lt;i class=&quot;icon iconelusive-cog&quot;&gt;&lt;/i&gt; // Elusive icon
+&lt;i class=&quot;icon iconfugue16-balloon&quot;&gt;&lt;/i&gt; // Fugue icon
+</pre><br>
+							<p>The CSS File</p>
+<pre class="htmlcode">
+&lt;!-- ===================== ICONS CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icon/fugue.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icon/elusive.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icon/font-awesome.min.css&quot;&gt;
+</pre><br>							
+                        </div>
+                    </div>
+                    
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="grids">
+                        	<h4>Grids - <a href="#top">top</a></h4>
+                            <p>This template use twitter bootstrap grids.</p>
+							<p>Plese refer to <a href="http://twitter.github.com/bootstrap/scaffolding.html#gridSystem">twitter bootstrap</a> for more detail on how to use the grid<p>
+<pre class="htmlcode">
+&lt;div class=&quot;row-fluid&quot;&gt;
+    &lt;div class=&quot;span1&quot;&gt;
+		...
+	&lt;/div&gt;
+    &lt;div class=&quot;span1&quot;&gt;
+		...
+	&lt;/div&gt;
+	...
+&lt;/div&gt;
+</pre><br>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="bootstrap">
+                        	<h4>Bootstrap - <a href="#top">top</a></h4>
+                            <p>This template use twitter bootstrap elements such as button, tabs, modal and more.</p>
+							<p>Plese refer to <a href="http://twitter.github.com/bootstrap/">twitter bootstrap</a> for more detail on how to use this elements<p>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="jqueryui">
+                        	<h4>Jquery UI - <a href="#top">top</a></h4>
+                            <p>jQuery UI is a JavaScript library that provides abstractions for low-level interaction and animation, advanced and effects. Below is the list of available jQuery UI element that have been integrated with this theme.</p>
+							<ol>
+								<li>Accordion</li>
+								<li>Date Picker</li>
+								<li>Time Picker</li>
+								<li>Menu</li>
+								<li>Autocomplete</li>
+								<li>Slider</li>
+								<li>Tabs</li>
+								<li>Dialog</li>
+							</ol>
+							<p>Plese refer to <a href="../jquery-ui.html">jquery-ui.html</a> for more detail on how to use this library.<p>
+							<p class="text-error"><strong>Important</strong> - Please include the CSS and the javascript file if you want to use this library</p>
+							<p><strong>CSS File</strong><p>
+							
+<pre class="htmlcode">
+&lt;!-- ===================== JQUERY UI CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/jui/jquery.ui.min.css&quot;&gt;
+</pre><br>
+							<p><strong>Javascript File</strong><p>
+<pre class="htmlcode">
+&lt;!-- Vendors --&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+</pre><br>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="widget">
+                        	<h4>Widget - <a href="#top">top</a></h4>
+                            <p>This template have widget with tone of customization. Example widget with toolbar.</p>
+							<p>Plese refer to <a href="../widget.html">widget.html</a> for more detail on how to use this great component.<p>
+							<p>This below code show the basic example on how to use the widget component.<p>
+<pre class="htmlcode">
+&lt;div class=&quot;widget&quot;&gt;
+	&lt;div class=&quot;widget-content&quot;&gt;
+		&lt;div class=&quot;widget-content-inner&quot;&gt;
+			&lt;h4&gt;Widget With No Header&lt;/h4&gt;
+			&lt;p&gt;When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre><br>
+							<p>The Output</p>
+							<div class="row-fluid">
+								<div class="span6">
+									<div class="widget">
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<h4>Widget With No Header</h4>
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="calendar">
+                        	<h4>Full Calendar - <a href="#top">top</a></h4>
+                            <p>This template have a full calendar and popup calendar(datepicker)</p>
+							<p>Plese refer to <a href="../calendar.html">calendar.html</a> for more detail on how to use calendar component.<p>
+							<p class="text-error"><strong>Important</strong> - Please include the CSS and the javascript file if you want to use this component</p>
+							<p><strong>CSS File</strong><p>
+<pre class="htmlcode">
+&lt;!-- ===================== PLUGINS CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins/jquery.fullcalendar.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins/jquery.fullcalendar.print.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins/jquery.fullcalendar.custom.css&quot;&gt;
+
+&lt;!-- ===================== JQUERY UI CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/jui/jquery.ui.min.css&quot;&gt;
+</pre><br>
+						<p><strong>Javascript File</strong><p>
+<pre class="htmlcode">
+&lt;!-- Vendors --&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Plugins --&gt;
+&lt;script src=&quot;js/plugins/jquery.fullcalendar.min.js&quot;&gt;&lt;/script&gt;
+</pre><br>
+						<p><strong>Example HTML Code</strong><p>
+<pre class="htmlcode">
+&lt;div id=&quot;calendar&quot;&gt;&lt;/div&gt;
+</pre><br>
+						<p><strong>Example Javascript Code</strong><p>
+<pre class="jscode">
+$(function() {
+	var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+	
+	$('#calendar').fullCalendar({
+		theme: true,
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay'
+		},
+		editable: true,
+		events: [
+			{
+				title: 'Long Event',
+				start: new Date(y, m, d-5),
+				end: new Date(y, m, d-2)
+			}
+		]
+	});
+});
+</pre><br>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="gallery">
+                        	<h4>Gallery - <a href="#top">top</a></h4>
+							<p>Plese refer to <a href="../gallery.html">gallery.html</a> for more detail on how to use this great component.<p>
+							<p class="text-error"><strong>Important</strong> - Please include the CSS and the javascript file if you want to use this component</p>
+							<p><strong>CSS File</strong><p>
+<pre class="htmlcode">
+&lt;!-- ===================== PLUGINS CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins/jquery.chocolat.css&quot;&gt;
+</pre><br>
+							<p><strong>Javascript File</strong><p>
+<pre class="htmlcode">
+&lt;!-- Plugins --&gt;
+&lt;script src=&quot;js/plugins/jquery.chocolat.min.js&quot;&gt;&lt;/script&gt;
+</pre><br>
+
+							<p><strong>Usage Example</strong><p>
+							<p>just add <code>data-gallery="chocolat"</code></p>
+<pre class="htmlcode">
+&lt;a href=&quot;img/gallery/image8.jpg&quot; class=&quot;button&quot; data-gallery=&quot;chocolat&quot; rel=&quot;image&quot; title=&quot;Image Description&quot;&gt;&lt;i class=&quot;icon icon-white icon-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+</pre><br>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="gallery-filter">
+                        	<h4>Gallery Image Filter - <a href="#top">top</a></h4>
+							<p>Plese refer to <a href="../gallery.html">gallery.html</a> for more detail on how to use this great component.<p>
+							<p class="text-error"><strong>Important</strong> - Please include the CSS and the javascript file if you want to use this component</p>
+							<p><strong>Javascript File</strong><p>
+<pre class="htmlcode">
+&lt;!-- Plugins --&gt;
+&lt;script src=&quot;js/plugins/jquery.shuffle.min.js&quot;&gt;&lt;/script&gt;
+</pre><br>
+
+							<p><strong>Sample Script</strong><p>
+<pre class="jscode">
+$(function() {
+	// Button Type Filter
+	$('#filter-button button').on('click', function() {
+		var $this = $(this),
+			$gallery = $('#gallery');
+
+		// Filter elements
+		$gallery.shuffle($this.data('group'));
+	});
+	
+	// Instantiate the plugin
+	$('#gallery').shuffle({
+		group : 'all',
+		speed : 800,
+		easing : 'ease-out'
+	});
+});
+</pre><br>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="form">
+                        	<h4>Forms - <a href="#top">top</a></h4>
+							<p>for example use of the form element and it plugins, please see the example page below.<p>
+							<ol>
+								<li><a href="../form-elements.html">Form Elements <span class="label label-success">update</span></a></li>
+								<li><a href="../form-layout.html">Form Layouts</a></li>
+								<li><a href="../form-validation.html">Form Validation</a></li>
+								<li><a href="../form-wizard.html">Form Wizards</a></li>
+							</ol>
+                        </div>
+                    </div>
+					
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="chart">
+                        	<h4>Chart &amp; Statistic - <a href="#top">top</a></h4>
+							<h4>Statistic</h4>
+							<p>Plese refer to <a href="../chart-summary.html">chart-summary.html</a> for more detail on how to use this great component.<p>
+							<p>This component must be use within widget. see example code<p>
+<pre class="htmlcode">
+&lt;div class=&quot;widget&quot;&gt;
+	&lt;div class=&quot;widget-content&quot;&gt;
+		&lt;div class=&quot;widget-content-inner&quot;&gt;
+			&lt;div class=&quot;chart-summary&quot;&gt;
+				&lt;span class=&quot;title&quot;&gt;Visits&lt;/span&gt;
+				&lt;span class=&quot;value&quot;&gt;8,098&lt;/span&gt;
+				&lt;span class=&quot;description&quot;&gt;753 Unique Visits&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre><br>
+							<p>The Output</p>
+							<div class="row-fluid">
+								<div class="span3">
+									<div class="widget">
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<div class="chart-summary">
+													<span class="title">Visits</span>
+													<span class="value">8,098</span>
+													<span class="description">753 Unique Visits</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+
+					<h4>Chart</h4>
+					<p>This component use flot plugin. Read more about flot at <a href="http://www.flotcharts.org/">here</a>. You can view the sample code <a href="../chart.html">here</a></p>
+					<p class="text-error"><strong>Important</strong> - Please include javascript file if you want to use this component</p>
+<pre class="htmlcode">
+&lt;!-- Flot Plugins --&gt;
+&lt;script src=&quot;js/plugins/flot/jquery.flot.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/plugins/flot/jquery.flot.pie.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/plugins/flot/jquery.flot.categories.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/plugins/flot/jquery.flot.stack.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/plugins/flot/jquery.flot.tooltip.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/plugins/flot/jquery.flot.resize.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.flot.sample.js&quot;&gt;&lt;/script&gt;
+</pre><br>
+					<p><strong>Usage Example - The HTML</strong></p>
+<pre class="htmlcode">
+&lt;div class=&quot;span6&quot;&gt;
+	&lt;div class=&quot;widget&quot;&gt;
+		&lt;div class=&quot;widget-content&quot;&gt;
+			&lt;div class=&quot;widget-content-inner&quot;&gt;
+				&lt;div class=&quot;chart&quot; id=&quot;chart1&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre><br>
+					<p><strong>Usage Example - The Javascript</strong></p>
+<pre class="jscode">
+$(function () {
+   var data = [{
+       label : 'Population',
+       color : '#B74231',
+       shadowSize : 0,
+       data : [["Jan", 450],["Feb", 550],["Mar", 320],["Apr", 700],["May", 200],["Jun", 330],["Jul", 900],["Aug", 140],["Sep", 300],["Nov", 500],["Dec", 300]]
+   }]
+   
+   $.plot($("#chart1"), data, {
+       series: {
+           bars: {
+               show: true,
+               barWidth: 0.3,
+               align: "center" ,
+               fill: .8
+           }
+       },
+       grid: {
+           borderWidth: 0, 
+           hoverable: true 
+       },
+       tooltip: true,
+       tooltipOpts: {
+           content: "%x : %y"
+       },
+       xaxis: {
+           mode: "categories",
+           tickLength: 0
+       }
+   });
+});
+</pre><br>				
+					<hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="tables">
+                        	<h4>Tables - <a href="#top">top</a></h4>
+                            <p>There are 3 type of table available in this theme.</p>
+							<ol>
+								<li><a href="../table-static.html">Static Table</a></li>
+								<li><a href="../table-dynamic.html">Dynamic Table</a> require javascript plugin</li>
+								<li><a href="../table-responsive.html">Responsive Table</a> require javascript plugin</li>
+							</ol>
+							<p>you can navigate to the sample page to see how to use the table.</p>					
+                        </div>
+                    </div>
+					
+                </div>                
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+        <!-- Plugins -->
+		<script src="../js/jasny-bootstrap.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+		<script src="../js/application.js"></script>
+        <script src="../js/plugins/jquery.snippet.min.js"></script>
+        <script src="../js/plugins/jquery.chocolat.min.js"></script>
+        <script>
+			$(function() {
+				$("pre.htmlcode").snippet("html",{style:"typical",showNum:false});
+				$("pre.jscode").snippet("js",{style:"typical",showNum:false});
+				$("pre.phpcode").snippet("php",{style:"typical",showNum:false});
+			});
+			$(function() {
+				$('#mainmenu').affix({
+    				offset: $('#mainmenu').position()
+				});
+			});
+		</script>
+    </body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="../css/plugins/jquery.snippet.css">
+        <link rel="stylesheet" type="text/css" href="../css/plugins/jquery.chocolat.css">
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="../css/jui/jquery.ui.min.css">
+		
+        <style>
+		.affix {
+    		position: fixed;
+    		top: 0;
+    		width: 22.404255319148934%;
+		}
+		</style>
+        <script src="../js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Start Main Header -->
+        <div id="main-header">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="title">
+                            <h1>Admindo Documentation - Structure<small style="left:500px;">v1.4</small></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Header -->
+        
+        <div class="container-fluid">
+        	<!-- Intro -->
+            <div class="row-fluid" style="margin-top:20px;">
+            	<div class="span6">
+                	<h3>Item Detail</h3>
+                	<p>Admindo Admin Template v1.2</p>
+                    <p>Development Start : December 2012</p>
+                    <p>Author : pampersdry</p>
+                </div>
+            	<div class="span6">
+                	<h3>Many Thanks!</h3>
+                	<p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page at <a href="http://themeforest.net/user/pampersdry">Theme Forest</a> or follow my twitter <a href="http://twitter.com/pampersdry">@pampersdry</a></p>
+                </div>
+            </div>
+			
+			<hr class="style2">
+            
+            <!-- Start Documentation -->
+        	<div class="row-fluid" style="margin-top:20px;">
+            	<div class="span3">
+                	<div id="mainmenu">
+                        <h4>Table Of Content</h4>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#theme-layout">Theme Layout</a></li>
+                            <li><a href="#css-structure">CSS File Structure</a></li>
+                            <li><a href="#js-structure">Javascript File Structure</a></li>
+                            <li><a href="#theme-header">Theme Header</a></li>
+                            <li><a href="#header-panel">Header Panel</a></li>
+                            <li><a href="#theme-sidebar">Theme Sidebar</a></li>
+                            <li><a href="#profile-panel">Sidebar Profile Panel</a></li>
+                            <li><a href="#sidebar-menu-fancy">Sidebar Menu(fancy)</a></li>
+							<li><a href="#sidebar-menu-simple">Sidebar Menu(simple) <span class="label label-warning">new</span></a></li>
+							<li><a href="#fixed-menu-header">Fixed Menu + Header Position <span class="label label-warning">new</span></a></li>
+                            <li><a href="#jquery-plugin">Javascript Plugins</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="span9">
+                	
+                    <div class="row-fluid">
+                    	<div class="span12" id="theme-layout">
+                        	<h4>Theme Layout</h4>
+                            <p><strong>Liquid Layout - Full</strong></p>
+							<p>The most relaxed method of providing a dynamically expanding or contracting design makes use of the ever-popular percentage (%) unit measurement. This layout type has gained mass popularity because it is the ultimate way of allowing the total opposite of a fixed layout where the content will simply take whatever space is available to it.</p>
+                            <div class="row-fluid">
+                            	<div class="span12"><img src="img/layout-full.jpg" class="img-polaroid"></div>
+                            </div><br>
+                            <p><strong>Fluid Layout - Boxed</strong></p>
+                            <div class="row-fluid">
+                            	<div class="span12"><img src="img/layout-boxed.jpg" class="img-polaroid"></div>
+                            </div><br>
+                            <p class="text-success"><strong>NOTE</strong> - add <code>boxed</code> class to admindo theme <code>wrapper</code> element to enable/use the <strong>boxed</strong> fluid layout. See below code.</p>
+<pre class="htmlcode">
+&lt;div id=&quot;wrapper&quot; class=&quot;boxed&quot;&gt;
+...
+&lt;/div&gt;
+</pre><br>
+							<p class="text-success"><strong>NOTE</strong> - to enable background pattern/image for the boxed fluid layout, add background pattern/image class to the page <code>body</code> element. See below code.</p>
+<pre class="htmlcode">
+&lt;body class=&quot;body1&quot;&gt;
+...
+&lt;/div&gt;
+</pre><br>   
+							<p>There are 6 background pattern/image classes available in this theme - <small>more to be add on the next update</small></p> 
+                            <div class="row-fluid">
+                            	<div class="span2">
+                                	<h5>.body1</h5>
+                                    <div class="img-polaroid body1" style="width:70px;height:70px;"></div>
+                                </div>
+                                <div class="span2">
+                                	<h5>.body2</h5>
+                                    <div class="img-polaroid body2" style="width:70px;height:70px;"></div>
+                                </div>
+                                <div class="span2">
+                                	<h5>.body3</h5>
+                                    <div class="img-polaroid body3" style="width:70px;height:70px;"></div>
+                                </div>
+                                <div class="span2">
+                                	<h5>.body4</h5>
+                                    <div class="img-polaroid body4" style="width:70px;height:70px;"></div>
+                                </div>
+                                <div class="span2">
+                                	<h5>.body5</h5>
+                                    <div class="img-polaroid body5" style="width:70px;height:70px;"></div>
+                                </div>
+                                <div class="span2">
+                                	<h5>.body6</h5>
+                                    <div class="img-polaroid body6" style="width:70px;height:70px;"></div>
+                                </div>
+                            </div><br>
+                            <p><strong>Content Section Patterns</strong></p> 
+                            <div class="row-fluid">
+                            	<div class="span12"><img src="img/content-pattern.jpg" class="img-polaroid"></div>
+                            </div><br>
+                            <p>The above image show that the <strong>Content Section</strong> has a pattern. This theme provide and easy markup to enable the pattern. Simply add a pattern class to the theme <code>wrapper-inner</code>. See an example at the code below.</p>             
+<pre class="htmlcode">
+&lt;div id=&quot;wrapper&quot;&gt;
+    &lt;div id=&quot;wrapper-inner&quot; class=&quot;pattern1&quot;&gt;
+	...
+    &lt;/div&gt;
+&lt;/div&gt; 
+</pre><br>  
+							<p>There are 8 background pattern/image classes for the <strong>Content Section</strong> available in this theme - <small>more to be add on the next update</small></p>
+                        	<div class="row-fluid">
+                            	<div class="span1">
+                                	<h5>.pattern1</h5>
+                                    <div class="img-polaroid pattern1" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern2</h5>
+                                    <div class="img-polaroid pattern2" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern3</h5>
+                                    <div class="img-polaroid pattern3" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern4</h5>
+                                    <div class="img-polaroid pattern4" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern5</h5>
+                                    <div class="img-polaroid pattern5" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern6</h5>
+                                    <div class="img-polaroid pattern6" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern7</h5>
+                                    <div class="img-polaroid pattern7" style="width:40px;height:40px;"></div>
+                                </div>
+                                <div class="span1">
+                                	<h5>.pattern8</h5>
+                                    <div class="img-polaroid pattern8" style="width:40px;height:40px;"></div>
+                                </div>
+                            </div><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                	<div class="row-fluid">
+                    	<div class="span12" id="css-structure">
+                        	<h4>CSS File Structure - <a href="#top">top</a></h4>
+                            <p>Below code shows the example of required CSS file that use in this themes. The CSS file must be included in the sequence below.</p>
+                            <p>Required CSS File can be found in <strong>css folder</strong>.</p>
+                            <ol>
+                            	<li>MASTER CSS</li>
+                                <ul>
+                                	<li>jasny-bootstrap.css</li>
+                                    <li>bootstrap.css</li>
+                                </ul>
+                                <li>ICONS CSS</li>
+                                <ul>
+                                	<li>fugue.css</li>
+                                    <li>elusive.css</li>
+                                    <li>font-awesome.css</li>
+                                </ul>
+                                <li>SITE CSS</li>
+                                <ul>
+                                	<li>default.css</li>
+                                    <li>default.responsive.css</li>
+                                </ul>
+                                <li>PLUGIN CSS</li>
+                                <ul>
+                                	<li><span class="text-error">Important!</span> the plugin CSS file is require if you're using javascript plugin. Example if an image gallery plugin is use, you need to include the plugin CSS file. See <a href="#jquery-plugin">Plugin Dependencies</a> for more detail.</li>
+                                </ul>
+                                <li>JQUERY UI CSS</li>
+                                <ul>
+                                	<li>jquery.ui.css</li>
+                                </ul>
+                            </ol>
+                            <p class="text-success"><strong>TIPS</strong> include the minify version of CSS file(filename.min.css) to reduce load time.</p>
+<pre class="htmlcode">
+&lt;!-- ===================== MASTER CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/jasny-bootstrap.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/bootstrap.min.css&quot;&gt;
+  
+&lt;!-- ===================== ICONS CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icon/fugue.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icon/elusive.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icon/font-awesome.min.css&quot;&gt;
+  
+&lt;!-- ===================== SITE CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/default.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/default.responsive.min.css&quot;&gt;
+  
+&lt;!-- ===================== PLUGINS CSS ===================== --&gt;
+  
+&lt;!-- ===================== JQUERY UI CSS ===================== --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/jui/jquery.ui.min.css&quot;&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    	<div class="row-fluid">
+                    	<div class="span12" id="js-structure">
+                        	<h4>Javascript File Structure - <a href="#top">top</a></h4>
+                            <p>The javascript file is located in <strong>js folder</strong>. The are two type of javascript file, minify(filename.min.js) and development(filename.js). The development file is located in <strong>src folder</strong>.</p>
+                            <p>Note that the below javascript file is require in this theme. Include the javascript file at bottom of the page. If you using for an example calendar plugin, you must include the plugin file(javascript) at the plugin section. See the below code example.</p>
+                            <p class="text-success"><strong>TIPS</strong> include the minify version of Javascript file(filename.min.js) to reduce load time.</p>
+<pre class="htmlcode">
+&lt;!-- Vendors --&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+  
+&lt;!-- Site --&gt;
+&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jasny-bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/application.js&quot;&gt;&lt;/script&gt;
+  
+&lt;!-- Plugin --&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                    <div class="row-fluid">
+                    	<div class="span12" id="theme-header">
+                        	<h4>Theme Header - <a href="#top">top</a> | <a href="img/screen/theme-header.png" data-gallery="chocolat" title="Theme header sample image">Image</a></h4>
+                            <p class="text-info"><strong>Note</strong> - Refer <a href="../page-sample.html">sample page</a> for complete code.</p>
+<pre class="htmlcode">
+&lt;!-- Start Main Header --&gt;
+&lt;div id=&quot;main-header&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;
+            &lt;div class=&quot;span12&quot;&gt;
+                &lt;div class=&quot;title&quot;&gt;
+                    &lt;h1&gt;Admindo &lt;small&gt;v1.0&lt;/small&gt;&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;!-- Start Header Panel --&gt;
+                &lt;div class=&quot;header-panel&quot;&gt;
+                ...
+                &lt;/div&gt;
+                &lt;!-- End Header Panel --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Main Header --&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="row-fluid">
+                    	<div class="span12" id="header-panel">
+                        	<h4>Header Panel - <a href="#top">top</a> | <a href="img/screen/header-panel.png" data-gallery="chocolat" title="Header panel sample image">Image</a></h4>
+                            <p class="text-info"><strong>Note</strong> - Refer <a href="../page-sample.html">sample page</a> for complete code.</p>
+<pre class="htmlcode">
+&lt;!-- Start Header Panel --&gt;
+&lt;div class=&quot;header-panel&quot;&gt;
+    &lt;div id=&quot;dropdown-patterns&quot; class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;menu dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;icon iconelusive-leaf&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu pull-right&quot; role=&quot;menu&quot;&gt;
+            &lt;div class=&quot;title&quot;&gt;Inner Content Pattern&lt;/div&gt;
+            &lt;ul class=&quot;patterns&quot;&gt;
+                &lt;li class=&quot;pattern1&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern2&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern3&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern4&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern5&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern6&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern7&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;pattern8&quot; data-menu=&quot;wrapperpattern&quot;&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;hr&gt;
+            &lt;div class=&quot;title&quot;&gt;Admindo Layout&lt;/div&gt;
+            &lt;button class=&quot;btn btn-small&quot; data-layout=&quot;boxed&quot;&gt;Boxed&lt;/button&gt; &lt;button class=&quot;btn btn-small&quot; data-layout=&quot;full&quot;&gt;Full&lt;/button&gt;
+            &lt;ul class=&quot;patterns&quot; style=&quot;margin-top:10px&quot;&gt;
+                &lt;li class=&quot;body1&quot; data-menu=&quot;bodypattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;body2&quot; data-menu=&quot;bodypattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;body3&quot; data-menu=&quot;bodypattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;body4&quot; data-menu=&quot;bodypattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;body5&quot; data-menu=&quot;bodypattern&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;body6&quot; data-menu=&quot;bodypattern&quot;&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;dropdown-search&quot; class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;menu dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;icon iconelusive-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu pull-right&quot; role=&quot;menu&quot;&gt;
+            &lt;form&gt;
+                &lt;input name=&quot;search&quot; type=&quot;text&quot; class=&quot;span12&quot; placeholder=&quot;Enter keyword...&quot;&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;#&quot; class=&quot;menu&quot; rel=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Log Out&quot;&gt;&lt;i class=&quot;icon iconelusive-off&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;menu&quot; id=&quot;menu-phone&quot; data-menu=&quot;mobile&quot;&gt;&lt;i class=&quot;icon iconelusive-tasks&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- End Header Panel --&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="row-fluid">
+                    	<div class="span12" id="theme-sidebar">
+                        	<h4>Theme Sidebar - <a href="#top">top</a> | <a href="img/screen/theme-sidebar.png" data-gallery="chocolat" title="Theme sidebar sample image">Image</a></h4>
+                            <p class="text-info"><strong>Note</strong> - Refer <a href="../page-sample.html">sample page</a> for complete code.</p>
+<pre class="htmlcode">
+&lt;!-- Start Sidebar --&gt;
+&lt;div id=&quot;sidebar&quot;&gt;
+
+    &lt;!-- Start Profile --&gt;
+    &lt;div class=&quot;profile&quot; data-detach=&quot;profile&quot;&gt;
+        ...
+        ...
+        &lt;div class=&quot;profile-panel&quot;&gt;
+            &lt;!-- Start Messages --&gt;
+            &lt;div class=&quot;profile-panel-menu&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;!-- End Messages --&gt;
+            
+            &lt;!-- Start Notification --&gt;
+            &lt;div class=&quot;profile-panel-menu&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;!-- End Notification --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- End Profile --&gt;
+    
+    &lt;!-- Start Main Menu --&gt;
+    &lt;ul class=&quot;nav-mainmenu&quot; id=&quot;nav-mainmenu&quot;&gt;
+
+        &lt;!-- Start GENERALS Menu --&gt;
+        &lt;li class=&quot;accordion-group&quot;&gt;
+            &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#nav-mainmenu&quot; href=&quot;#generals&quot; class=&quot;active&quot;&gt;
+            	&lt;span class=&quot;icon iconfa-home&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;text&quot;&gt;Generals&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;!-- Start GENERALS Sub Menu --&gt;
+            &lt;ul class=&quot;nav-submenu collapse in&quot; id=&quot;generals&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;dashboard.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-dashboard&quot;&gt;&lt;/span&gt; Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;typography.html&quot; class=&quot;active&quot;&gt;&lt;span class=&quot;icon iconfugue16-edit&quot;&gt;&lt;/span&gt; Typography&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;accordion-group&quot;&gt;
+                    &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#generals&quot; href=&quot;#icons&quot;&gt;
+                    	&lt;span class=&quot;icon iconfugue16-bamboos&quot;&gt;&lt;/span&gt; 
+                        Icons
+                        &lt;span class=&quot;caret pull-right&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul class=&quot;nav-subitem collapse&quot; id=&quot;icons&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;icon-glyph.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-edit-code&quot;&gt;&lt;/span&gt; Glyph icons&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;icon-fugue.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-edit-code&quot;&gt;&lt;/span&gt; Fugue Icon 16x16&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;icon-elusive.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-edit-code&quot;&gt;&lt;/span&gt; Elusive Icon&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;icon-fontawesome.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-edit-code&quot;&gt;&lt;/span&gt; Font Awesome Icon&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;grids.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-edit-alignment-justify-distribute&quot;&gt;&lt;/span&gt; Grids&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- End GENERALS Sub Menu --&gt;
+        &lt;/li&gt;
+        &lt;!-- End GENERALS Menu --&gt;
+		...
+    &lt;/ul&gt;
+    &lt;!-- End Main Menu --&gt;
+&lt;/div&gt;
+&lt;!-- End Sidebar --&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="row-fluid">
+                    	<div class="span12" id="profile-panel">
+                        	<h4>Sidebar Profile Panel - <a href="#top">top</a> | <a href="img/screen/profile-panel.png" data-gallery="chocolat" title="Profile panel sample image">Image</a></h4>
+                            <p class="text-info"><strong>Note</strong> - Refer <a href="../page-sample.html">sample page</a> for complete code.</p>
+<pre class="htmlcode">
+&lt;!-- Start Profile Panel --&gt;
+&lt;div class=&quot;profile&quot; data-detach=&quot;profile&quot;&gt;
+    &lt;div class=&quot;profile-pic&quot;&gt;&lt;img src=&quot;img/avatar/40x40/avatar5.png&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;profile-info&quot;&gt;
+        &lt;span class=&quot;name&quot;&gt;John Doe&lt;/span&gt;
+        &lt;span class=&quot;job&quot;&gt;Web Designer&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;profile-panel&quot;&gt;
+        &lt;!-- Start Messages --&gt;
+        &lt;div class=&quot;profile-panel-menu&quot; id=&quot;panel-message&quot;&gt;
+            &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;menu&quot;&gt;
+                &lt;i class=&quot;icon icon-envelope&quot;&gt;&lt;/i&gt; 
+                &lt;span class=&quot;text&quot;&gt;Messages&lt;/span&gt;
+                &lt;span class=&quot;label label-important&quot;&gt;13&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+                &lt;li class=&quot;header&quot;&gt;Your Message&lt;/li&gt;
+                &lt;div class=&quot;dropdown-menu-item&quot; data-scroll=&quot;viewport&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            &lt;img src=&quot;img/avatar/40x40/avatar1.png&quot;&gt;
+                            &lt;div class=&quot;detail&quot;&gt;
+                                &lt;span class=&quot;name&quot;&gt;Jane Anderson&lt;/span&gt;
+                                &lt;span class=&quot;message&quot;&gt;Hi!.. How are you?...&lt;/span&gt;
+                                &lt;span class=&quot;datetime&quot;&gt;Today 3.50pm&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    ...
+                    &lt;li class=&quot;loader&quot;&gt;&lt;img src=&quot;img/spinner/103.gif&quot;&gt;&lt;/li&gt;
+                &lt;/div&gt;
+                &lt;li class=&quot;footer&quot;&gt;&lt;a href=&quot;#&quot;&gt;More Message&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- End Messages --&gt;
+        
+        &lt;!-- Start Notification --&gt;
+        &lt;div class=&quot;profile-panel-menu&quot; id=&quot;panel-notification&quot;&gt;
+            &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; class=&quot;menu&quot;&gt;
+                &lt;i class=&quot;icon icon-bell&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;text&quot;&gt;Notifications&lt;/span&gt;
+                &lt;span class=&quot;label label-important&quot;&gt;30&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+                &lt;li class=&quot;header&quot;&gt;Notifications&lt;/li&gt;
+                &lt;div class=&quot;dropdown-menu-item&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;icon iconfugue16-alarm-clock-blue&quot;&gt;&lt;/i&gt;
+                            &lt;div class=&quot;detail&quot;&gt;
+                                &lt;span class=&quot;message&quot;&gt;Schedule backup complete&lt;/span&gt;
+                                &lt;span class=&quot;datetime&quot;&gt;15 Minute ago&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    ...
+                    &lt;li class=&quot;loader&quot;&gt;&lt;img src=&quot;img/spinner/103.gif&quot;&gt;&lt;/li&gt;
+                &lt;/div&gt;
+                &lt;li class=&quot;footer&quot;&gt;&lt;a href=&quot;#&quot;&gt;Clear All&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- End Notification --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Profile Panel --&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="row-fluid">
+                    	<div class="span12" id="sidebar-menu-fancy">
+                        	<h4>Sidebar Menu(fancy) - <a href="#top">top</a> | <a href="img/screen/sidebar-menu.png" data-gallery="chocolat" title="Theme sidebar menu sample image">Image</a></h4>
+                            <p class="text-info"><strong>Note</strong> - Refer <a href="../page-sample.html">sample page</a> for complete code.</p>
+<pre class="htmlcode">
+&lt;!-- Start Main Menu --&gt;
+&lt;ul class=&quot;nav-mainmenu&quot; id=&quot;nav-mainmenu&quot;&gt;
+    
+    &lt;!-- Start TABLES Menu --&gt;
+    &lt;li class=&quot;accordion-group&quot;&gt;
+        &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#nav-mainmenu&quot; href=&quot;#tables&quot;&gt;&lt;span class=&quot;icon iconfa-table&quot;&gt;&lt;/span&gt;&lt;span class=&quot;text&quot;&gt;Tables&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class=&quot;nav-submenu collapse&quot; id=&quot;tables&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;table-static.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-table&quot;&gt;&lt;/span&gt; Static Table&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;table-dynamic.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-table--plus&quot;&gt;&lt;/span&gt; Dynamic Table&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;table-responsive.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-table--pencil&quot;&gt;&lt;/span&gt; Responsive Table&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;!-- End TABLES Menu --&gt;
+    
+    &lt;!-- Start BONUS Menu --&gt;
+    &lt;li class=&quot;accordion-group&quot;&gt;
+        &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#nav-mainmenu&quot; href=&quot;#extras&quot;&gt;&lt;span class=&quot;icon iconfa-gift&quot;&gt;&lt;/span&gt;&lt;span class=&quot;text&quot;&gt;Bonus&lt;/span&gt;&lt;/a&gt;
+        &lt;ul class=&quot;nav-submenu collapse&quot; id=&quot;extras&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;custom-widget.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-fire&quot;&gt;&lt;/span&gt; Custom Widget&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;contact-list.html&quot;&gt;&lt;span class=&quot;icon iconfugue16-card-address&quot;&gt;&lt;/span&gt; Contact List&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;!-- Start BONUS Menu --&gt;
+     
+&lt;/ul&gt;
+&lt;!-- End Main Menu --&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="sidebar-menu-simple">
+                        	<h4>Sidebar Menu(simple) - <a href="#top">top</a> | <a href="img/screen/sidebar-menu-simple.png" data-gallery="chocolat" title="Theme sidebar menu sample image">Image</a></h4>
+                            <p class="text-info"><strong>Note</strong> To use this menu, simply add <code>.simple</code> to <code>#sidebar</code> and <code>#main-content</code>. Refer below code.</p>
+<pre class="htmlcode">
+&lt;div id=&quot;sidebar&quot; class=&quot;simple&quot;&gt;
+	...
+&lt;/div&gt;
+</pre><br>
+
+<pre class="htmlcode">
+&lt;div id=&quot;main-content&quot; class=&quot;simple&quot;&gt;
+	...
+&lt;/div&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+					
+					<div class="row-fluid">
+                    	<div class="span12" id="fixed-menu-header">
+                        	<h4>Fixed Menu + Header Position - <a href="#top">top</a></h4>
+                            <p class="text-info"><strong>Note</strong> To use this feature, simply add <code>.fixed</code> to <code>#wrapper</code>. Refer below code.</p>
+<pre class="htmlcode">
+&lt;div id=&quot;wrapper&quot; class=&quot;fixed&quot;&gt;
+	...
+&lt;/div&gt;
+</pre><br>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="row-fluid">
+                    	<div class="span12" id="jquery-plugin">
+                        	<h4>Javascript Plugins - <a href="#top">top</a></h4>
+                            <p>Note that the highlighted row are the require file for this theme. Include the file in every page is a must.</p>
+							<p class="text-error"><strong>Important</strong> - Please make sure you have include the vendor script first before use the below plugins.</p>
+<pre class="htmlcode">
+&lt;!-- Vendors --&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+</pre><br>
+                            <table class="table table-hover">
+                            	<thead>
+                                	<tr>
+                                    	<th>Description</th>
+                                    	<th>Javascript File</th>
+                                        <th>CSS Dependencies</th>
+                                        <th>Source &amp; Credits</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                	<tr class="error">
+                                    	<td>Twitter Bootstrap</td>
+                                    	<td>js/bootstrap.js</td>
+                                        <td>css/bootstrap.css</td>
+                                        <td><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></td>
+                                    </tr>
+                                    <tr class="error">
+                                    	<td>Jasny Bootstrap</td>
+                                    	<td>js/jasny-bootstrap.js</td>
+                                        <td>css/jasny-bootstrap.css</td>
+                                        <td><a href="http://jasny.github.com/bootstrap/">Jasny Bootstrap</a></td>
+                                    </tr>
+									<tr class="error">
+                                    	<td>Application</td>
+                                    	<td>js/application.js</td>
+                                        <td>none</td>
+                                        <td>custom</td>
+                                    </tr>
+									<tr>
+                                    	<td>Time Picker</td>
+                                    	<td>js/plugins/jquery.timepicker.js</td>
+                                        <td>css/jui/jquery.ui.css</td>
+                                        <td><a href="http://trentrichardson.com/examples/timepicker/">jQuery Timepicker</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Image Lightbox</td>
+                                    	<td>js/plugins/jquery.chocolat.js</td>
+                                        <td>css/plugins/jquery.chocolat.css</td>
+                                        <td><a href="http://chocolat.insipi.de/">Chocolat</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>WYSIWYG Editor</td>
+                                    	<td>js/plugins/jquery.cleditor.js</td>
+                                        <td>css/plugins/jquery.cleditor.css</td>
+                                        <td><a href="http://premiumsoftware.net/cleditor/">CLEditor</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Datatable</td>
+                                    	<td>js/plugins/jquery.datatables.js<br>js/plugins/jquery.datatables.extend.js</td>
+                                        <td>none</td>
+                                        <td><a href="http://www.datatables.net/">jQuery Datatable</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Full Calendar</td>
+                                    	<td>js/plugins/jquery.fullcalendar.js</td>
+                                        <td>css/plugins/jquery.fullcalendar.css<br>css/plugins/jquery.fullcalendar.custom.css<br>css/plugins/jquery.fullcalendar.print.css</td>
+                                        <td><a href="http://arshaw.com/fullcalendar/">jQuery Fullcalendar</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Invoice Page</td>
+                                    	<td>js/plugins/jquery.invoice.js</td>
+                                        <td>none</td>
+                                        <td>custom</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Responsive Table</td>
+                                    	<td>js/plugins/jquery.responsivetables.js</td>
+                                        <td>none</td>
+                                        <td>custom</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Contact List</td>
+                                    	<td>js/plugins/jquery.slidernav.js</td>
+                                        <td>css/plugins/jquery.slidernav.css</td>
+                                        <td><a href="http://devgrow.com/slidernav/">Slidernav</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Code Snippet</td>
+                                    	<td>js/plugins/jquery.snippet.js</td>
+                                        <td>css/plugins/jquery.snippet.css</td>
+                                        <td><a href="http://www.steamdev.com/snippet/">jQuery Code Snippet</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Mini Charting - Sparkline</td>
+                                    	<td>js/plugins/jquery.sparkline.js</td>
+                                        <td>none</td>
+                                        <td><a href="http://omnipotent.net/jquery.sparkline/">jQuery Sparklines</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Form Wizard</td>
+                                    	<td>js/plugins/jquery.stepy.js</td>
+                                        <td>css/plugins/jquery.stepy.css</td>
+                                        <td><a href="http://www.wbotelhos.com/stepy/">jQuery Stepy</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Form Element Styling</td>
+                                    	<td>js/plugins/jquery.uniform.js</td>
+                                        <td>css/plugins/uniform.default.css</td>
+                                        <td><a href="http://uniformjs.com/">jQuery Uniformjs</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Form Validation 1</td>
+                                    	<td>js/plugins/jquery.validate.js</td>
+                                        <td>none</td>
+                                        <td><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">jQuery Form Validation</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Form Validation 2</td>
+                                    	<td>js/plugins/jquery.validation.engine.js<br>js/plugins/jquery.validation.engine-en.js</td>
+                                        <td>css/plugins/jquery.validation.engine.css</td>
+                                        <td><a href="http://www.position-absolute.com/articles/jquery-form-validator-because-form-validation-is-a-mess/">jQuery Form Validation Engine</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>Chart - Flot</td>
+                                    	<td>js/plugins/flot/jquery.flot.js<br>js/plugins/flot/jquery.flot.pie.js<br>js/plugins/flot/jquery.flot.categories.js<br>js/plugins/flot/jquery.flot.stack.js<br>js/plugins/flot/jquery.flot.tooltip.js<br>js/plugins/flot/jquery.flot.resize.js<br></td>
+                                        <td>none</td>
+                                        <td><a href="http://www.flotcharts.org/">jQuery Flot</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td>File Upload</td>
+                                    	<td>js/plugins/plupload/plupload.full.js</td>
+                                        <td>css/plugins/jquery.plupload.custom.css</td>
+                                        <td><a href="http://www.plupload.com/">Plupload</a></td>
+                                    </tr>
+									<tr>
+                                    	<td>Image Gallery Filter(Isotope Alike)</td>
+                                    	<td>js/plugins/jquery.shuffle.min.js</td>
+                                        <td>none</td>
+                                        <td>Custom</td>
+                                    </tr>
+									<tr>
+                                    	<td>Fancy Select</td>
+                                    	<td>js/plugins/jquery.chosen.min.js</td>
+                                        <td>css/plugins/jquery.chosen.css</td>
+                                        <td><a href="http://harvesthq.github.com/chosen/">jQuery Chosen</a></td>
+                                    </tr>
+									<tr>
+                                    	<td>jQuery Placeholder</td>
+                                    	<td>js/plugins/jquery.placeholder.min.js</td>
+                                        <td>none</td>
+                                        <td>Custom</td>
+                                    </tr>
+                                </tbody>
+                            </table><br>
+                        </div>
+                    </div>
+ 
+                </div>                
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        
+        <!-- Plugins -->
+		<script src="../js/jasny-bootstrap.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+		<script src="../js/application.js"></script>
+        <script src="../js/plugins/jquery.snippet.min.js"></script>
+        <script src="../js/plugins/jquery.chocolat.min.js"></script>
+        <script>
+			$(function() {
+				$("pre.htmlcode").snippet("html",{style:"typical",showNum:false});
+				$("pre.jscode").snippet("js",{style:"typical",showNum:false});
+				$("pre.phpcode").snippet("php",{style:"typical",showNum:false});
+			});
+			$(function() {
+				$('#mainmenu').affix({
+    				offset: $('#mainmenu').position()
+				});
+			});
+		</script>
+    </body>
+</html>

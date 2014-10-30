@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- ===================== TOUCH ICONS ===================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.min.css">
+		
+        <script src="js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="body5">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper" class="boxed">
+            <div id="wrapper-inner" class="pattern7">
+                
+                <!-- Start Main Header -->
+                <div id="main-header">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="title">
+                                	<h1>Admindo <small>v1.4</small></h1>
+                                </div>
+                                <!-- Start Header Panel -->
+                                <div class="header-panel">
+									<div id="dropdown-patterns" class="dropdown" rel="tooltip" data-placement="left" title="Theme Setting">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-cog"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<div class="title">Inner Content Pattern</div>
+											<ul class="patterns">
+												<li class="pattern1" data-menu="wrapperpattern"></li>
+												<li class="pattern2" data-menu="wrapperpattern"></li>
+												<li class="pattern3" data-menu="wrapperpattern"></li>
+												<li class="pattern4" data-menu="wrapperpattern"></li>
+												<li class="pattern5" data-menu="wrapperpattern"></li>
+												<li class="pattern6" data-menu="wrapperpattern"></li>
+												<li class="pattern7" data-menu="wrapperpattern"></li>
+												<li class="pattern8" data-menu="wrapperpattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Layout</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small" data-layout="default">Default</button> 
+												<button class="btn btn-small active" data-layout="boxed">Boxed</button> 
+												<button class="btn btn-small" data-layout="fixed">Fixed</button>
+											</div>
+											<ul class="patterns" style="margin-top:10px">
+												<li class="body1" data-menu="bodypattern"></li>
+												<li class="body2" data-menu="bodypattern"></li>
+												<li class="body3" data-menu="bodypattern"></li>
+												<li class="body4" data-menu="bodypattern"></li>
+												<li class="body5" data-menu="bodypattern"></li>
+												<li class="body6" data-menu="bodypattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Menu Type</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small active" data-menustyle="fancy">Fancy</button> 
+												<button class="btn btn-small" data-menustyle="simple">Simple</button>
+											</div>
+										</div>
+									</div>
+									<div id="dropdown-search" class="dropdown">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-search"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<form>
+												<input name="search" type="text" class="span12" placeholder="Enter keyword...">
+											</form>
+										</div>
+									</div>
+									<a href="#" class="menu" id="menu-phone" data-menu="mobile"><i class="icon iconfa-tasks"></i></a>
+								</div>
+                                <!-- End Header Panel -->
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- End Main Header -->
+                
+                <!-- Start Sidebar -->
+                <div id="sidebar">
+
+                    <!-- Start Profile Panel -->
+                    <div class="profile" data-detach="profile">
+                        <div class="profile-pic">
+							<div class="btn-group">
+								<img src="img/avatar/40x40/avatar5.png" class="dropdown-toggle" data-toggle="dropdown">
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="cion iconfa-pencil"></i> Edit Profile</a></li>
+									<li><a href="#"><i class="cion iconfa-cog"></i>  Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="cion iconfa-off"></i> Logout</a></li>
+								</ul>
+							</div>
+							<span class="caret"></span>
+						</div>
+                        <div class="profile-info">
+                            <span class="name">John Doe</span>
+                            <span class="job">Web Designer</span>
+						</div>
+                        <div class="profile-panel">
+                            <!-- Start Messages -->
+                            <div class="profile-panel-menu" id="panel-message">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-envelope"></i> 
+                                    <span class="text">Messages</span>
+                                    <span class="label label-important">13</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Your Message</li>
+                                    <div class="dropdown-menu-item" data-scroll="viewport">
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar1.png">
+                                            <div class="detail">
+                                                <span class="name">Jane Anderson</span>
+                                                <span class="message">Hi!.. How are you?...</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <img src="img/avatar/40x40/avatar2.png">
+                                            <div class="detail">
+                                                <span class="name">Johan Ahmad</span>
+                                                <span class="message">Hello john... I need your help</span>
+                                                <span class="datetime">Today 1.20am</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar3.png">
+                                            <div class="detail">
+                                                <span class="name">James Kimi</span>
+                                                <span class="message">Hey men. Meet me at this place asd asda asd</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar4.png">
+                                            <div class="detail">
+                                                <span class="name">Amanda Lim</span>
+                                                <span class="message">Good day john!</span>
+                                                <span class="datetime">yesterday 10.17am</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">More Message</a></li>
+                                </ul>
+                            </div><!-- End Messages -->
+                            
+                            <!-- Start Notification -->
+                            <div class="profile-panel-menu" id="panel-notification">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-bell"></i>
+                                    <span class="text">Notifications</span>
+                                    <span class="label label-important">30</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Notifications</li>
+                                    <div class="dropdown-menu-item">
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-alarm-clock-blue"></i>
+                                            <div class="detail">
+                                                <span class="message">Schedule backup complete</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <i class="icon iconfugue16-database"></i>
+                                            <div class="detail">
+                                                <span class="message">Check your database configurations</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-user-silhouette"></i>
+                                            <div class="detail">
+                                                <span class="message">Someone is trying to access your accound</span>
+                                                <span class="datetime">1 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-cheque"></i>
+                                            <div class="detail">
+                                                <span class="message">Cheque is sent</span>
+                                                <span class="datetime">3 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">Clear All</a></li>
+                                </ul>
+                            </div><!-- End Notification -->
+                        </div>
+                    </div><!-- End Profile Panel -->
+                    
+                    <!-- Start Main Menu -->
+                    <ul class="nav-mainmenu" id="nav-mainmenu">
+      
+                        <!-- Start GENERALS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#generals" class="active"><span class="icon iconfa-home"></span><span class="text">Generals</span><span class="badge pull-right">4</span></a>
+                            <!-- Start GENERALS Sub Menu -->
+                            <ul class="nav-submenu collapse in" id="generals">
+                                <li><a href="dashboard.html"><span class="icon iconfugue16-dashboard"></span> Dashboard</a></li>
+                                <li><a href="typography.html"><span class="icon iconfugue16-edit"></span> Typography</a></li>
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#generals" href="#icons" class="active"><span class="icon iconfugue16-bamboos"></span> Icons<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse in" id="icons">
+                                        <li><a href="icon-glyph.html" class="active"><span class="icon iconfugue16-edit-code"></span> Glyph icons</a></li>
+                                        <li><a href="icon-fugue.html"><span class="icon iconfugue16-edit-code"></span> Fugue Icon 16x16</a></li>
+                                        <li><a href="icon-elusive.html"><span class="icon iconfugue16-edit-code"></span> Elusive Icon</a></li>
+                                        <li><a href="icon-fontawesome.html"><span class="icon iconfugue16-edit-code"></span> Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="grids.html"><span class="icon iconfugue16-edit-alignment-justify-distribute"></span> Grids</a></li>
+                            </ul>
+                            <!-- End GENERALS Sub Menu -->
+                        </li>
+                        <!-- End GENERALS Menu -->
+                        
+                        <!-- Start COMPONENTS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#components"><span class="icon iconfa-beaker"></span><span class="text">Components</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="components">
+                                <li><a href="bootstrap.html"><span class="icon iconfugue16-application-ab"></span> Bootstrap</a></li>
+								<li><a href="jquery-ui.html"><span class="icon iconfugue16-abacus"></span> Jquery UI</a></li>
+                                <li><a href="widget.html"><span class="icon iconfugue16-application-resize-full"></span> Widgets</a></li>
+                                <li><a href="calendar.html"><span class="icon iconfugue16-calendar"></span> Calendar</a></li>
+                                <li><a href="gallery.html"><span class="icon iconfugue16-picture"></span> Images Gallery</a></li>
+                            </ul>
+                        </li>
+                        <!-- End COMPONENTS Menu -->
+                        
+                        <!-- Start FORMS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#forms"><span class="icon iconfa-reorder"></span><span class="text">Forms</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="forms">
+                                <li><a href="form-elements.html"><span class="icon iconfugue16-application-form"></span> Elements</a></li>
+                                <li><a href="form-layout.html"><span class="icon iconfugue16-application-detail"></span> Layout</a></li>
+                                <li><a href="form-validation.html"><span class="icon iconfugue16-application-ab"></span> Validation</a></li>
+                                <li><a href="file-upload.html"><span class="icon iconfugue16-inbox"></span> File Upload</a></li>
+                                <li><a href="form-wizard.html"><span class="icon iconfugue16-wand-hat"></span> Wizards</a></li>
+                            </ul>
+                        </li>
+                        <!-- End FORMS Menu -->
+                        
+                        <!-- Start STATICTICS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#statictics"><span class="icon iconfa-bar-chart"></span><span class="text">Statictics</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="statictics">
+                                <li><a href="chart-summary.html"><span class="icon iconfugue16-chart-up"></span> Custom Statistics</a></li>
+                                <li><a href="charts.html"><span class="icon iconfugue16-chart"></span> Charts</a></li>
+                            </ul>
+                        </li>
+                        <!-- End STATICTICS Menu -->
+                        
+                        <!-- Start PAGES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#pages"><span class="icon iconfa-paste"></span><span class="text">Pages</span><span class="badge pull-right">3</span></a>
+                            <!-- Start PAGES Sub Menu -->
+                            <ul class="nav-submenu collapse" id="pages">
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#page" href="#error-page"><span class="icon iconfugue16-exclamation"></span> Error Pages<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="error-page">
+                                        <li><a href="403.html"><span class="icon iconfugue16-edit-code"></span> 403 Page</a></li>
+                                        <li><a href="404.html"><span class="icon iconfugue16-edit-code"></span> 404 Page</a></li>
+                                        <li><a href="500.html"><span class="icon iconfugue16-edit-code"></span> 500 Page</a></li>
+                                        <li><a href="503.html"><span class="icon iconfugue16-edit-code"></span> 503 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-profile.html"><span class="icon iconfugue16-user-black"></span> Profile Page</a></li>
+                                <li><a href="page-invoice.html"><span class="icon iconfugue16-cheque"></span> Invoice Page</a></li>
+                            </ul><!-- End PAGES Sub Menu -->
+                        </li>
+                        <!-- End PAGES Menu -->
+                        
+                        <!-- Start TABLES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#tables"><span class="icon iconfa-table"></span><span class="text">Tables</span><span class="badge pull-right">3</span></a>
+                            <ul class="nav-submenu collapse" id="tables">
+                                <li><a href="table-static.html"><span class="icon iconfugue16-table"></span> Static Table</a></li>
+                                <li><a href="table-dynamic.html"><span class="icon iconfugue16-table--plus"></span> Dynamic Table</a></li>
+                                <li><a href="table-responsive.html"><span class="icon iconfugue16-table--pencil"></span> Responsive Table</a></li>
+                            </ul>
+                        </li>
+                        <!-- End TABLES Menu -->
+                        
+                        <!-- Start BONUS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#extras"><span class="icon iconfa-gift"></span><span class="text">Bonus</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="extras">
+                                <li><a href="custom-widget.html"><span class="icon iconfugue16-fire"></span> Custom Widget</a></li>
+                                <li><a href="contact-list.html"><span class="icon iconfugue16-card-address"></span> Contact List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Start BONUS Menu -->
+                        
+                    </ul><!-- End Main Menu -->
+
+                </div><!-- End Sidebar -->
+                
+                <!-- Start Main Content -->
+                <div id="main-content">
+                    <p>&nbsp;</p>
+
+                    <!-- Start Breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Admindo</a></li>
+                        <li><a href="#">Generals</a></li>
+						<li><a href="#">Icons</a></li>
+						<li><a href="#">Glyph Icons</a></li>
+                    </ul><!-- End Breadcrumb -->
+
+                    <h3><a href="http://glyphicons.com/" target="_new" title="Go to glyphicons.com">Glyph Icons</a> <small>Precisely prepared monochromatic icons and symbols, created with an emphasis on simplicity and easy orientation.</small></h3>
+                    <hr class="style1">
+
+                    <div class="row-fluid">
+                        <!-- Start Glyph Icons -->
+                        <div class="span12">
+							<ul class="iconsample">
+								<li><i class="icon-glass"></i> icon-glass</li>
+								<li><i class="icon-music"></i> icon-music</li>
+								<li><i class="icon-search"></i> icon-search</li>
+								<li><i class="icon-envelope"></i> icon-envelope</li>
+								<li><i class="icon-heart"></i> icon-heart</li>
+								<li><i class="icon-star"></i> icon-star</li>
+								<li><i class="icon-star-empty"></i> icon-star-empty</li>
+								<li><i class="icon-user"></i> icon-user</li>
+								<li><i class="icon-film"></i> icon-film</li>
+								<li><i class="icon-th-large"></i> icon-th-large</li>
+								<li><i class="icon-th"></i> icon-th</li>
+								<li><i class="icon-th-list"></i> icon-th-list</li>
+								<li><i class="icon-ok"></i> icon-ok</li>
+								<li><i class="icon-remove"></i> icon-remove</li>
+								<li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+								<li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+								<li><i class="icon-off"></i> icon-off</li>
+								<li><i class="icon-signal"></i> icon-signal</li>
+								<li><i class="icon-cog"></i> icon-cog</li>
+								<li><i class="icon-trash"></i> icon-trash</li>
+								<li><i class="icon-home"></i> icon-home</li>
+								<li><i class="icon-file"></i> icon-file</li>
+								<li><i class="icon-time"></i> icon-time</li>
+								<li><i class="icon-road"></i> icon-road</li>
+								<li><i class="icon-download-alt"></i> icon-download-alt</li>
+								<li><i class="icon-download"></i> icon-download</li>
+								<li><i class="icon-upload"></i> icon-upload</li>
+								<li><i class="icon-inbox"></i> icon-inbox</li>
+					
+								<li><i class="icon-play-circle"></i> icon-play-circle</li>
+								<li><i class="icon-repeat"></i> icon-repeat</li>
+								<li><i class="icon-refresh"></i> icon-refresh</li>
+								<li><i class="icon-list-alt"></i> icon-list-alt</li>
+								<li><i class="icon-lock"></i> icon-lock</li>
+								<li><i class="icon-flag"></i> icon-flag</li>
+								<li><i class="icon-headphones"></i> icon-headphones</li>
+								<li><i class="icon-volume-off"></i> icon-volume-off</li>
+								<li><i class="icon-volume-down"></i> icon-volume-down</li>
+								<li><i class="icon-volume-up"></i> icon-volume-up</li>
+								<li><i class="icon-qrcode"></i> icon-qrcode</li>
+								<li><i class="icon-barcode"></i> icon-barcode</li>
+								<li><i class="icon-tag"></i> icon-tag</li>
+								<li><i class="icon-tags"></i> icon-tags</li>
+								<li><i class="icon-book"></i> icon-book</li>
+								<li><i class="icon-bookmark"></i> icon-bookmark</li>
+								<li><i class="icon-print"></i> icon-print</li>
+								<li><i class="icon-camera"></i> icon-camera</li>
+								<li><i class="icon-font"></i> icon-font</li>
+								<li><i class="icon-bold"></i> icon-bold</li>
+								<li><i class="icon-italic"></i> icon-italic</li>
+								<li><i class="icon-text-height"></i> icon-text-height</li>
+								<li><i class="icon-text-width"></i> icon-text-width</li>
+								<li><i class="icon-align-left"></i> icon-align-left</li>
+								<li><i class="icon-align-center"></i> icon-align-center</li>
+								<li><i class="icon-align-right"></i> icon-align-right</li>
+								<li><i class="icon-align-justify"></i> icon-align-justify</li>
+								<li><i class="icon-list"></i> icon-list</li>
+					
+								<li><i class="icon-indent-left"></i> icon-indent-left</li>
+								<li><i class="icon-indent-right"></i> icon-indent-right</li>
+								<li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+								<li><i class="icon-picture"></i> icon-picture</li>
+								<li><i class="icon-pencil"></i> icon-pencil</li>
+								<li><i class="icon-map-marker"></i> icon-map-marker</li>
+								<li><i class="icon-adjust"></i> icon-adjust</li>
+								<li><i class="icon-tint"></i> icon-tint</li>
+								<li><i class="icon-edit"></i> icon-edit</li>
+								<li><i class="icon-share"></i> icon-share</li>
+								<li><i class="icon-check"></i> icon-check</li>
+								<li><i class="icon-move"></i> icon-move</li>
+								<li><i class="icon-step-backward"></i> icon-step-backward</li>
+								<li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+								<li><i class="icon-backward"></i> icon-backward</li>
+								<li><i class="icon-play"></i> icon-play</li>
+								<li><i class="icon-pause"></i> icon-pause</li>
+								<li><i class="icon-stop"></i> icon-stop</li>
+								<li><i class="icon-forward"></i> icon-forward</li>
+								<li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+								<li><i class="icon-step-forward"></i> icon-step-forward</li>
+								<li><i class="icon-eject"></i> icon-eject</li>
+								<li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+								<li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+								<li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+								<li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+								<li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+								<li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+					
+								<li><i class="icon-question-sign"></i> icon-question-sign</li>
+								<li><i class="icon-info-sign"></i> icon-info-sign</li>
+								<li><i class="icon-screenshot"></i> icon-screenshot</li>
+								<li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+								<li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+								<li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+								<li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+								<li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+								<li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+								<li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+								<li><i class="icon-share-alt"></i> icon-share-alt</li>
+								<li><i class="icon-resize-full"></i> icon-resize-full</li>
+								<li><i class="icon-resize-small"></i> icon-resize-small</li>
+								<li><i class="icon-plus"></i> icon-plus</li>
+								<li><i class="icon-minus"></i> icon-minus</li>
+								<li><i class="icon-asterisk"></i> icon-asterisk</li>
+								<li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+								<li><i class="icon-gift"></i> icon-gift</li>
+								<li><i class="icon-leaf"></i> icon-leaf</li>
+								<li><i class="icon-fire"></i> icon-fire</li>
+								<li><i class="icon-eye-open"></i> icon-eye-open</li>
+								<li><i class="icon-eye-close"></i> icon-eye-close</li>
+								<li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+								<li><i class="icon-plane"></i> icon-plane</li>
+								<li><i class="icon-calendar"></i> icon-calendar</li>
+								<li><i class="icon-random"></i> icon-random</li>
+								<li><i class="icon-comment"></i> icon-comment</li>
+								<li><i class="icon-magnet"></i> icon-magnet</li>
+					
+								<li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+								<li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+								<li><i class="icon-retweet"></i> icon-retweet</li>
+								<li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+								<li><i class="icon-folder-close"></i> icon-folder-close</li>
+								<li><i class="icon-folder-open"></i> icon-folder-open</li>
+								<li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+								<li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+								<li><i class="icon-hdd"></i> icon-hdd</li>
+								<li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+								<li><i class="icon-bell"></i> icon-bell</li>
+								<li><i class="icon-certificate"></i> icon-certificate</li>
+								<li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+								<li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+								<li><i class="icon-hand-right"></i> icon-hand-right</li>
+								<li><i class="icon-hand-left"></i> icon-hand-left</li>
+								<li><i class="icon-hand-up"></i> icon-hand-up</li>
+								<li><i class="icon-hand-down"></i> icon-hand-down</li>
+								<li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+								<li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+								<li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+								<li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+								<li><i class="icon-globe"></i> icon-globe</li>
+								<li><i class="icon-wrench"></i> icon-wrench</li>
+								<li><i class="icon-tasks"></i> icon-tasks</li>
+								<li><i class="icon-filter"></i> icon-filter</li>
+								<li><i class="icon-briefcase"></i> icon-briefcase</li>
+								<li><i class="icon-fullscreen"></i> icon-fullscreen</li>
+							</ul>
+                        </div><!-- End Glyph Icons -->
+                    </div>
+
+                </div><!-- End Main Content-->
+            
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        
+        <!-- Site -->
+		<script src="js/jasny-bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/plugins/jquery.placeholder.min.js"></script>
+		<script src="js/application.js"></script>
+		<script>
+		$(function() {
+			/* Twitter Bootstrap Tooltip
+			 *
+			 * Link Tooltips
+			/*====================================================================*/
+			$('[rel="tooltip"]').tooltip({
+				placement : 'top'
+			});
+		});
+		</script>
+    </body>
+</html>

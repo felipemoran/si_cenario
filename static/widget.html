@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- ===================== TOUCH ICONS ===================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.min.css">
+		
+        <script src="js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="body5">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper" class="boxed">
+            <div id="wrapper-inner" class="pattern7">
+                
+                <!-- Start Main Header -->
+                <div id="main-header">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="title">
+                                	<h1>Admindo <small>v1.4</small></h1>
+                                </div>
+                                <!-- Start Header Panel -->
+                                <div class="header-panel">
+									<div id="dropdown-patterns" class="dropdown" rel="tooltip" data-placement="left" title="Theme Setting">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-cog"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<div class="title">Inner Content Pattern</div>
+											<ul class="patterns">
+												<li class="pattern1" data-menu="wrapperpattern"></li>
+												<li class="pattern2" data-menu="wrapperpattern"></li>
+												<li class="pattern3" data-menu="wrapperpattern"></li>
+												<li class="pattern4" data-menu="wrapperpattern"></li>
+												<li class="pattern5" data-menu="wrapperpattern"></li>
+												<li class="pattern6" data-menu="wrapperpattern"></li>
+												<li class="pattern7" data-menu="wrapperpattern"></li>
+												<li class="pattern8" data-menu="wrapperpattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Layout</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small" data-layout="default">Default</button> 
+												<button class="btn btn-small active" data-layout="boxed">Boxed</button> 
+												<button class="btn btn-small" data-layout="fixed">Fixed</button>
+											</div>
+											<ul class="patterns" style="margin-top:10px">
+												<li class="body1" data-menu="bodypattern"></li>
+												<li class="body2" data-menu="bodypattern"></li>
+												<li class="body3" data-menu="bodypattern"></li>
+												<li class="body4" data-menu="bodypattern"></li>
+												<li class="body5" data-menu="bodypattern"></li>
+												<li class="body6" data-menu="bodypattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Menu Type</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small active" data-menustyle="fancy">Fancy</button> 
+												<button class="btn btn-small" data-menustyle="simple">Simple</button>
+											</div>
+										</div>
+									</div>
+									<div id="dropdown-search" class="dropdown">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-search"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<form>
+												<input name="search" type="text" class="span12" placeholder="Enter keyword...">
+											</form>
+										</div>
+									</div>
+									<a href="#" class="menu" id="menu-phone" data-menu="mobile"><i class="icon iconfa-tasks"></i></a>
+								</div>
+                                <!-- End Header Panel -->
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- End Main Header -->
+                
+                <!-- Start Sidebar -->
+                <div id="sidebar">
+
+                    <!-- Start Profile Panel -->
+                    <div class="profile" data-detach="profile">
+                        <div class="profile-pic">
+							<div class="btn-group">
+								<img src="img/avatar/40x40/avatar5.png" class="dropdown-toggle" data-toggle="dropdown">
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="cion iconfa-pencil"></i> Edit Profile</a></li>
+									<li><a href="#"><i class="cion iconfa-cog"></i>  Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="cion iconfa-off"></i> Logout</a></li>
+								</ul>
+							</div>
+							<span class="caret"></span>
+						</div>
+                        <div class="profile-info">
+                            <span class="name">John Doe</span>
+                            <span class="job">Web Designer</span>
+						</div>
+                        <div class="profile-panel">
+                            <!-- Start Messages -->
+                            <div class="profile-panel-menu" id="panel-message">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-envelope"></i> 
+                                    <span class="text">Messages</span>
+                                    <span class="label label-important">13</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Your Message</li>
+                                    <div class="dropdown-menu-item" data-scroll="viewport">
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar1.png">
+                                            <div class="detail">
+                                                <span class="name">Jane Anderson</span>
+                                                <span class="message">Hi!.. How are you?...</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <img src="img/avatar/40x40/avatar2.png">
+                                            <div class="detail">
+                                                <span class="name">Johan Ahmad</span>
+                                                <span class="message">Hello john... I need your help</span>
+                                                <span class="datetime">Today 1.20am</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar3.png">
+                                            <div class="detail">
+                                                <span class="name">James Kimi</span>
+                                                <span class="message">Hey men. Meet me at this place asd asda asd</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar4.png">
+                                            <div class="detail">
+                                                <span class="name">Amanda Lim</span>
+                                                <span class="message">Good day john!</span>
+                                                <span class="datetime">yesterday 10.17am</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">More Message</a></li>
+                                </ul>
+                            </div><!-- End Messages -->
+                            
+                            <!-- Start Notification -->
+                            <div class="profile-panel-menu" id="panel-notification">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-bell"></i>
+                                    <span class="text">Notifications</span>
+                                    <span class="label label-important">30</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Notifications</li>
+                                    <div class="dropdown-menu-item">
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-alarm-clock-blue"></i>
+                                            <div class="detail">
+                                                <span class="message">Schedule backup complete</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <i class="icon iconfugue16-database"></i>
+                                            <div class="detail">
+                                                <span class="message">Check your database configurations</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-user-silhouette"></i>
+                                            <div class="detail">
+                                                <span class="message">Someone is trying to access your accound</span>
+                                                <span class="datetime">1 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-cheque"></i>
+                                            <div class="detail">
+                                                <span class="message">Cheque is sent</span>
+                                                <span class="datetime">3 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">Clear All</a></li>
+                                </ul>
+                            </div><!-- End Notification -->
+                        </div>
+                    </div><!-- End Profile Panel -->
+                    
+                    <!-- Start Main Menu -->
+                    <ul class="nav-mainmenu" id="nav-mainmenu">
+      
+                        <!-- Start GENERALS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#generals"><span class="icon iconfa-home"></span><span class="text">Generals</span><span class="badge pull-right">4</span></a>
+                            <!-- Start GENERALS Sub Menu -->
+                            <ul class="nav-submenu collapse" id="generals">
+                                <li><a href="dashboard.html"><span class="icon iconfugue16-dashboard"></span> Dashboard</a></li>
+                                <li><a href="typography.html"><span class="icon iconfugue16-edit"></span> Typography</a></li>
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#generals" href="#icons"><span class="icon iconfugue16-bamboos"></span> Icons<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="icons">
+                                        <li><a href="icon-glyph.html"><span class="icon iconfugue16-edit-code"></span> Glyph icons</a></li>
+                                        <li><a href="icon-fugue.html"><span class="icon iconfugue16-edit-code"></span> Fugue Icon 16x16</a></li>
+                                        <li><a href="icon-elusive.html"><span class="icon iconfugue16-edit-code"></span> Elusive Icon</a></li>
+                                        <li><a href="icon-fontawesome.html"><span class="icon iconfugue16-edit-code"></span> Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="grids.html"><span class="icon iconfugue16-edit-alignment-justify-distribute"></span> Grids</a></li>
+                            </ul>
+                            <!-- End GENERALS Sub Menu -->
+                        </li>
+                        <!-- End GENERALS Menu -->
+                        
+                        <!-- Start COMPONENTS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#components" class="active"><span class="icon iconfa-beaker"></span><span class="text">Components</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse in" id="components">
+                                <li><a href="bootstrap.html"><span class="icon iconfugue16-application-ab"></span> Bootstrap</a></li>
+								<li><a href="jquery-ui.html"><span class="icon iconfugue16-abacus"></span> Jquery UI</a></li>
+                                <li><a href="widget.html" class="active"><span class="icon iconfugue16-application-resize-full"></span> Widgets</a></li>
+                                <li><a href="calendar.html"><span class="icon iconfugue16-calendar"></span> Calendar</a></li>
+                                <li><a href="gallery.html"><span class="icon iconfugue16-picture"></span> Images Gallery</a></li>
+                            </ul>
+                        </li>
+                        <!-- End COMPONENTS Menu -->
+                        
+                        <!-- Start FORMS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#forms"><span class="icon iconfa-reorder"></span><span class="text">Forms</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="forms">
+                                <li><a href="form-elements.html"><span class="icon iconfugue16-application-form"></span> Elements</a></li>
+                                <li><a href="form-layout.html"><span class="icon iconfugue16-application-detail"></span> Layout</a></li>
+                                <li><a href="form-validation.html"><span class="icon iconfugue16-application-ab"></span> Validation</a></li>
+                                <li><a href="file-upload.html"><span class="icon iconfugue16-inbox"></span> File Upload</a></li>
+                                <li><a href="form-wizard.html"><span class="icon iconfugue16-wand-hat"></span> Wizards</a></li>
+                            </ul>
+                        </li>
+                        <!-- End FORMS Menu -->
+                        
+                        <!-- Start STATICTICS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#statictics"><span class="icon iconfa-bar-chart"></span><span class="text">Statictics</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="statictics">
+                                <li><a href="chart-summary.html"><span class="icon iconfugue16-chart-up"></span> Custom Statistics</a></li>
+                                <li><a href="charts.html"><span class="icon iconfugue16-chart"></span> Charts</a></li>
+                            </ul>
+                        </li>
+                        <!-- End STATICTICS Menu -->
+                        
+                        <!-- Start PAGES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#pages"><span class="icon iconfa-paste"></span><span class="text">Pages</span><span class="badge pull-right">3</span></a>
+                            <!-- Start PAGES Sub Menu -->
+                            <ul class="nav-submenu collapse" id="pages">
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#page" href="#error-page"><span class="icon iconfugue16-exclamation"></span> Error Pages<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="error-page">
+                                        <li><a href="403.html"><span class="icon iconfugue16-edit-code"></span> 403 Page</a></li>
+                                        <li><a href="404.html"><span class="icon iconfugue16-edit-code"></span> 404 Page</a></li>
+                                        <li><a href="500.html"><span class="icon iconfugue16-edit-code"></span> 500 Page</a></li>
+                                        <li><a href="503.html"><span class="icon iconfugue16-edit-code"></span> 503 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-profile.html"><span class="icon iconfugue16-user-black"></span> Profile Page</a></li>
+                                <li><a href="page-invoice.html"><span class="icon iconfugue16-cheque"></span> Invoice Page</a></li>
+                            </ul><!-- End PAGES Sub Menu -->
+                        </li>
+                        <!-- End PAGES Menu -->
+                        
+                        <!-- Start TABLES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#tables"><span class="icon iconfa-table"></span><span class="text">Tables</span><span class="badge pull-right">3</span></a>
+                            <ul class="nav-submenu collapse" id="tables">
+                                <li><a href="table-static.html"><span class="icon iconfugue16-table"></span> Static Table</a></li>
+                                <li><a href="table-dynamic.html"><span class="icon iconfugue16-table--plus"></span> Dynamic Table</a></li>
+                                <li><a href="table-responsive.html"><span class="icon iconfugue16-table--pencil"></span> Responsive Table</a></li>
+                            </ul>
+                        </li>
+                        <!-- End TABLES Menu -->
+                        
+                        <!-- Start BONUS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#extras"><span class="icon iconfa-gift"></span><span class="text">Bonus</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="extras">
+                                <li><a href="custom-widget.html"><span class="icon iconfugue16-fire"></span> Custom Widget</a></li>
+                                <li><a href="contact-list.html"><span class="icon iconfugue16-card-address"></span> Contact List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Start BONUS Menu -->
+                        
+                    </ul><!-- End Main Menu -->
+
+                </div><!-- End Sidebar -->
+                
+                <!-- Start Main Content -->
+                <div id="main-content">
+                    <p>&nbsp;</p>
+
+                    <!-- Start Breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Admindo</a></li>
+                        <li><a href="#">Components</a></li>
+						<li><a href="#">Widget</a></li>
+                    </ul><!-- End Breadcrumb -->
+
+                    <h3>Widget <small>Element of a graphical user interface (GUI) that displays an information arrangement.</small></h3>
+                    <hr class="style1">
+
+                    <!-- Start -->
+                    <div class="row-fluid">
+						<div class="span12">
+                        
+							<div class="row-fluid">
+								<!-- Start Widget With No Header -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<h4>Widget With No Header</h4>
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With No Header -->
+								
+								<!-- Start Default Widget -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head"><span class="title">Widget with header</span></div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Default Widget -->
+								
+								<!-- Start Dark Widget -->
+								<div class="span4">
+									<div class="widget dark">
+										<div class="widget-head"><span class="title">Dark Widget</span></div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Dark Widget -->
+							</div>
+							<hr>
+								
+							<div class="row-fluid">
+								<!-- Start Widget Header With Badge -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title">Widget Header With Badge</span>
+											<div class="toolbar">
+												<span class="badge badge-success">100%</span>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget Header With Badge -->
+								
+								<!-- Start Widget Header With Label -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title">Widget Header With Label</span>
+											<div class="toolbar">
+												<span class="label label-important">10%</span>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget Header With Label -->
+								
+								<!-- Start Widget Header With Label -->
+								<div class="span4">
+									<div class="widget dark">
+										<div class="widget-head">
+											<span class="title">Header + Label &amp; Badge</span>
+											<div class="toolbar">
+												<span class="label label-important">10%</span>
+												<span class="badge badge-success">100%</span>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget Header With Label -->
+							</div>
+							<hr>
+									
+							<div class="row-fluid">
+								<!-- Start Widget With Icon -->
+								<div class="span6">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title"><i class="icon iconfugue16-color"></i> Widget With Icon</span>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+											   <p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Icon -->
+								
+								<!-- Start Widget With No Padding -->
+								<div class="span6">
+									<div class="widget dark">
+										<div class="widget-head"><span class="title">Widget With No Padding</span></div>
+										<div class="widget-content no-padding">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With No Padding -->
+							</div>
+							<hr>
+							
+							<h4>Widget With Progress Bar</h4>
+							<div class="row-fluid">
+								<!-- Start Widget With Progress Bar -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title"></span>
+											<div class="toolbar">
+												<div class="progress-container">
+													<div class="progress mini progress-striped active">
+														<div class="bar bar-blue" style="width: 60%;"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Progress Bar -->
+								
+								<!-- Start Widget With Progress Bar -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title"></span>
+											<div class="toolbar">
+												<div class="progress-container">
+													<div class="progress small">
+														<div class="bar bar-success" style="width: 60%;"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Progress Bar -->
+								
+								<!-- Start Widget With Progress Bar -->
+								<div class="span4">	
+									<div class="widget dark">
+										<div class="widget-head">
+											<span class="title"></span>
+											<div class="toolbar">
+												<div class="progress-container">
+													<div class="progress-bar">
+														<div class="bar blue" style="width: 60%;"><span class="text">text</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Progress Bar -->
+							</div>
+							<hr>
+									
+							<div class="row-fluid">
+								<!-- Start Widget With Panel -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title">Widget With Panel</span>
+										</div>
+										<div class="widget-panel">
+											<div class="widget-panel-inner">
+												<p>Widget Panel</p>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Panel -->
+								
+								<!-- Start Widget With Button Panel -->
+								<div class="span4">
+									<div class="widget dark">
+										<div class="widget-head">
+											<span class="title">Widget With Button Panel</span>
+										</div>
+										<div class="widget-panel">
+											<div class="widget-panel-inner no-padding">
+												<div class="btn-group">
+													<button class="btn"><i class="iconfugue16-user--plus"></i> Add</button>
+													<button class="btn"><i class="iconfugue16-user--minus"></i> Remove</button>
+													<button class="btn"><i class="iconfugue16-user--pencil"></i> Edit</button>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Button Panel -->
+								
+								<!-- Start Widget With Collapse Panel -->
+								<div class="span4">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title">Widget With Collapse Panel</span>
+											<div class="toolbar">
+												<button class="btn" data-toggle="collapse" data-target="#wpanel1"><i class="icon-chevron-down"></i></button>
+											</div>
+										</div>
+										<div class="widget-panel collapse" id="wpanel1">
+											<div class="widget-panel-inner no-padding">
+												<div class="btn-group">
+													<button class="btn"><i class="iconfugue16-user--plus"></i> Add</button>
+													<button class="btn"><i class="iconfugue16-user--minus"></i> Remove</button>
+													<button class="btn"><i class="iconfugue16-user--pencil"></i> Edit</button>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Collapse Panel -->
+							</div>
+							<hr>
+							
+							<!-- Start Widget With Toolbar -->	
+							<div class="row-fluid">
+								<div class="span6">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title">Widget With Toolbar</span>
+											<div class="toolbar">
+												<button class="btn"><i class="icon-th-list"></i></button>
+												<button class="btn"><i class="iconfugue16-category"></i></button>
+												<div class="btn-group">
+													<a href="#" class="btn" data-toggle="dropdown">Setting <span class="caret"></span></a>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+														<li><a tabindex="-1" href="#"><i class="icon-eye-open"></i> View</a></li>
+														<li><a tabindex="-1" href="#"><i class="icon-trash"></i> Delete</a></li>
+														<li class="divider"></li>
+														<li><a tabindex="-1" href="#"><i class="icon-off"></i> Logout</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Toolbar -->
+								
+								<!-- Start Dark Widget With Toolbar -->
+								<div class="span6">
+									<div class="widget dark">
+										<div class="widget-head">
+											<span class="title">Widget With Toolbar</span>
+											<div class="toolbar">
+												<button class="btn"><i class="icon-white icon-th-list"></i></button>
+												<button class="btn"><i class="iconfugue16-category"></i></button>
+												<div class="btn-group">
+													<a href="#" class="btn" data-toggle="dropdown">Setting <span class="caret"></span></a>
+													<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+														<li><a tabindex="-1" href="#"><i class="icon-eye-open"></i> View</a></li>
+														<li><a tabindex="-1" href="#"><i class="icon-trash"></i> Delete</a></li>
+														<li class="divider"></li>
+														<li><a tabindex="-1" href="#"><i class="icon-off"></i> Logout</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="widget-content">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Dark Widget With Toolbar -->
+							</div>
+							<hr>
+							
+							<h4>Widget With Collapsable Content</h4>
+							
+							<div class="row-fluid">
+								 <!-- Start Widget With Collapsable Content -->
+								<div class="span6">
+									<div class="widget">
+										<div class="widget-head">
+											<span class="title">Widget With Collapsable Content - Close by default</span>
+											<div class="toolbar">
+												<button class="btn" data-toggle="collapse" data-target="#wcontent1"><i class="icon-chevron-down"></i></button>
+											</div>
+										</div>
+										<div class="widget-content collapse" id="wcontent1">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Collapsable Content -->
+								
+								<!-- Start Widget With Collapsable Content -->
+								<div class="span6">
+									<div class="widget dark">
+										<div class="widget-head">
+											<span class="title">Widget With Collapsable Content - Open by default</span>
+											<div class="toolbar">
+												<button class="btn" data-toggle="collapse" data-target="#wcontent2"><i class="icon-white icon-chevron-down"></i></button>
+											</div>
+										</div>
+										<div class="widget-content collapse in" id="wcontent2">
+											<div class="widget-content-inner">
+												<p>When, an hour later, a Martian appeared beyond the Clock Tower and waded down the river, nothing but wreckage floated above Limehouse.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- End Widget With Collapsable Content -->
+							</div>
+							<p>&nbsp;</p>
+							
+						</div>
+                    </div><!-- End -->
+
+                </div><!-- End Main Content -->
+            
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        
+        <!-- Plugins -->
+		<script src="js/jasny-bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/plugins/jquery.placeholder.min.js"></script>
+		<script src="js/application.js"></script>
+		<script>
+		$(function() {
+			/* Twitter Bootstrap Tooltip
+			 *
+			 * Link Tooltips
+			/*====================================================================*/
+			$('[rel="tooltip"]').tooltip({
+				placement : 'top'
+			});
+		});
+		</script>
+    </body>
+</html>

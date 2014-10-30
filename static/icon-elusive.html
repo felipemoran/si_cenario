@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- ===================== TOUCH ICONS ===================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+		
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.min.css">
+		
+        <script src="js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="body5">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper" class="boxed">
+            <div id="wrapper-inner" class="pattern7">
+                
+                <!-- Start Main Header -->
+                <div id="main-header">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="title">
+                                	<h1>Admindo <small>v1.4</small></h1>
+                                </div>
+                                <!-- Start Header Panel -->
+                                <div class="header-panel">
+									<div id="dropdown-patterns" class="dropdown" rel="tooltip" data-placement="left" title="Theme Setting">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-cog"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<div class="title">Inner Content Pattern</div>
+											<ul class="patterns">
+												<li class="pattern1" data-menu="wrapperpattern"></li>
+												<li class="pattern2" data-menu="wrapperpattern"></li>
+												<li class="pattern3" data-menu="wrapperpattern"></li>
+												<li class="pattern4" data-menu="wrapperpattern"></li>
+												<li class="pattern5" data-menu="wrapperpattern"></li>
+												<li class="pattern6" data-menu="wrapperpattern"></li>
+												<li class="pattern7" data-menu="wrapperpattern"></li>
+												<li class="pattern8" data-menu="wrapperpattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Layout</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small" data-layout="default">Default</button> 
+												<button class="btn btn-small active" data-layout="boxed">Boxed</button> 
+												<button class="btn btn-small" data-layout="fixed">Fixed</button>
+											</div>
+											<ul class="patterns" style="margin-top:10px">
+												<li class="body1" data-menu="bodypattern"></li>
+												<li class="body2" data-menu="bodypattern"></li>
+												<li class="body3" data-menu="bodypattern"></li>
+												<li class="body4" data-menu="bodypattern"></li>
+												<li class="body5" data-menu="bodypattern"></li>
+												<li class="body6" data-menu="bodypattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Menu Type</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small active" data-menustyle="fancy">Fancy</button> 
+												<button class="btn btn-small" data-menustyle="simple">Simple</button>
+											</div>
+										</div>
+									</div>
+									<div id="dropdown-search" class="dropdown">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-search"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<form>
+												<input name="search" type="text" class="span12" placeholder="Enter keyword...">
+											</form>
+										</div>
+									</div>
+									<a href="#" class="menu" id="menu-phone" data-menu="mobile"><i class="icon iconfa-tasks"></i></a>
+								</div>
+                                <!-- End Header Panel -->
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- End Main Header -->
+                
+                <!-- Start Sidebar -->
+                <div id="sidebar">
+
+                    <!-- Start Profile Panel -->
+                    <div class="profile" data-detach="profile">
+                        <div class="profile-pic">
+							<div class="btn-group">
+								<img src="img/avatar/40x40/avatar5.png" class="dropdown-toggle" data-toggle="dropdown">
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="cion iconfa-pencil"></i> Edit Profile</a></li>
+									<li><a href="#"><i class="cion iconfa-cog"></i>  Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="cion iconfa-off"></i> Logout</a></li>
+								</ul>
+							</div>
+							<span class="caret"></span>
+						</div>
+                        <div class="profile-info">
+                            <span class="name">John Doe</span>
+                            <span class="job">Web Designer</span>
+						</div>
+                        <div class="profile-panel">
+                            <!-- Start Messages -->
+                            <div class="profile-panel-menu" id="panel-message">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-envelope"></i> 
+                                    <span class="text">Messages</span>
+                                    <span class="label label-important">13</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Your Message</li>
+                                    <div class="dropdown-menu-item" data-scroll="viewport">
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar1.png">
+                                            <div class="detail">
+                                                <span class="name">Jane Anderson</span>
+                                                <span class="message">Hi!.. How are you?...</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <img src="img/avatar/40x40/avatar2.png">
+                                            <div class="detail">
+                                                <span class="name">Johan Ahmad</span>
+                                                <span class="message">Hello john... I need your help</span>
+                                                <span class="datetime">Today 1.20am</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar3.png">
+                                            <div class="detail">
+                                                <span class="name">James Kimi</span>
+                                                <span class="message">Hey men. Meet me at this place asd asda asd</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar4.png">
+                                            <div class="detail">
+                                                <span class="name">Amanda Lim</span>
+                                                <span class="message">Good day john!</span>
+                                                <span class="datetime">yesterday 10.17am</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">More Message</a></li>
+                                </ul>
+                            </div><!-- End Messages -->
+                            
+                            <!-- Start Notification -->
+                            <div class="profile-panel-menu" id="panel-notification">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-bell"></i>
+                                    <span class="text">Notifications</span>
+                                    <span class="label label-important">30</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Notifications</li>
+                                    <div class="dropdown-menu-item">
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-alarm-clock-blue"></i>
+                                            <div class="detail">
+                                                <span class="message">Schedule backup complete</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <i class="icon iconfugue16-database"></i>
+                                            <div class="detail">
+                                                <span class="message">Check your database configurations</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-user-silhouette"></i>
+                                            <div class="detail">
+                                                <span class="message">Someone is trying to access your accound</span>
+                                                <span class="datetime">1 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-cheque"></i>
+                                            <div class="detail">
+                                                <span class="message">Cheque is sent</span>
+                                                <span class="datetime">3 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">Clear All</a></li>
+                                </ul>
+                            </div><!-- End Notification -->
+                        </div>
+                    </div><!-- End Profile Panel -->
+                    
+                    <!-- Start Main Menu -->
+                    <ul class="nav-mainmenu" id="nav-mainmenu">
+      
+                        <!-- Start GENERALS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#generals" class="active"><span class="icon iconfa-home"></span><span class="text">Generals</span><span class="badge pull-right">4</span></a>
+                            <!-- Start GENERALS Sub Menu -->
+                            <ul class="nav-submenu collapse in" id="generals">
+                                <li><a href="dashboard.html"><span class="icon iconfugue16-dashboard"></span> Dashboard</a></li>
+                                <li><a href="typography.html"><span class="icon iconfugue16-edit"></span> Typography</a></li>
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#generals" href="#icons" class="active"><span class="icon iconfugue16-bamboos"></span> Icons<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse in" id="icons">
+                                        <li><a href="icon-glyph.html"><span class="icon iconfugue16-edit-code"></span> Glyph icons</a></li>
+                                        <li><a href="icon-fugue.html"><span class="icon iconfugue16-edit-code"></span> Fugue Icon 16x16</a></li>
+                                        <li><a href="icon-elusive.html" class="active"><span class="icon iconfugue16-edit-code"></span> Elusive Icon</a></li>
+                                        <li><a href="icon-fontawesome.html"><span class="icon iconfugue16-edit-code"></span> Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="grids.html"><span class="icon iconfugue16-edit-alignment-justify-distribute"></span> Grids</a></li>
+                            </ul>
+                            <!-- End GENERALS Sub Menu -->
+                        </li>
+                        <!-- End GENERALS Menu -->
+                        
+                        <!-- Start COMPONENTS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#components"><span class="icon iconfa-beaker"></span><span class="text">Components</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="components">
+                                <li><a href="bootstrap.html"><span class="icon iconfugue16-application-ab"></span> Bootstrap</a></li>
+								<li><a href="jquery-ui.html"><span class="icon iconfugue16-abacus"></span> Jquery UI</a></li>
+                                <li><a href="widget.html"><span class="icon iconfugue16-application-resize-full"></span> Widgets</a></li>
+                                <li><a href="calendar.html"><span class="icon iconfugue16-calendar"></span> Calendar</a></li>
+                                <li><a href="gallery.html"><span class="icon iconfugue16-picture"></span> Images Gallery</a></li>
+                            </ul>
+                        </li>
+                        <!-- End COMPONENTS Menu -->
+                        
+                        <!-- Start FORMS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#forms"><span class="icon iconfa-reorder"></span><span class="text">Forms</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="forms">
+                                <li><a href="form-elements.html"><span class="icon iconfugue16-application-form"></span> Elements</a></li>
+                                <li><a href="form-layout.html"><span class="icon iconfugue16-application-detail"></span> Layout</a></li>
+                                <li><a href="form-validation.html"><span class="icon iconfugue16-application-ab"></span> Validation</a></li>
+                                <li><a href="file-upload.html"><span class="icon iconfugue16-inbox"></span> File Upload</a></li>
+                                <li><a href="form-wizard.html"><span class="icon iconfugue16-wand-hat"></span> Wizards</a></li>
+                            </ul>
+                        </li>
+                        <!-- End FORMS Menu -->
+                        
+                        <!-- Start STATICTICS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#statictics"><span class="icon iconfa-bar-chart"></span><span class="text">Statictics</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="statictics">
+                                <li><a href="chart-summary.html"><span class="icon iconfugue16-chart-up"></span> Custom Statistics</a></li>
+                                <li><a href="charts.html"><span class="icon iconfugue16-chart"></span> Charts</a></li>
+                            </ul>
+                        </li>
+                        <!-- End STATICTICS Menu -->
+                        
+                        <!-- Start PAGES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#pages"><span class="icon iconfa-paste"></span><span class="text">Pages</span><span class="badge pull-right">3</span></a>
+                            <!-- Start PAGES Sub Menu -->
+                            <ul class="nav-submenu collapse" id="pages">
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#page" href="#error-page"><span class="icon iconfugue16-exclamation"></span> Error Pages<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="error-page">
+                                        <li><a href="403.html"><span class="icon iconfugue16-edit-code"></span> 403 Page</a></li>
+                                        <li><a href="404.html"><span class="icon iconfugue16-edit-code"></span> 404 Page</a></li>
+                                        <li><a href="500.html"><span class="icon iconfugue16-edit-code"></span> 500 Page</a></li>
+                                        <li><a href="503.html"><span class="icon iconfugue16-edit-code"></span> 503 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-profile.html"><span class="icon iconfugue16-user-black"></span> Profile Page</a></li>
+                                <li><a href="page-invoice.html"><span class="icon iconfugue16-cheque"></span> Invoice Page</a></li>
+                            </ul><!-- End PAGES Sub Menu -->
+                        </li>
+                        <!-- End PAGES Menu -->
+                        
+                        <!-- Start TABLES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#tables"><span class="icon iconfa-table"></span><span class="text">Tables</span><span class="badge pull-right">3</span></a>
+                            <ul class="nav-submenu collapse" id="tables">
+                                <li><a href="table-static.html"><span class="icon iconfugue16-table"></span> Static Table</a></li>
+                                <li><a href="table-dynamic.html"><span class="icon iconfugue16-table--plus"></span> Dynamic Table</a></li>
+                                <li><a href="table-responsive.html"><span class="icon iconfugue16-table--pencil"></span> Responsive Table</a></li>
+                            </ul>
+                        </li>
+                        <!-- End TABLES Menu -->
+                        
+                        <!-- Start BONUS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#extras"><span class="icon iconfa-gift"></span><span class="text">Bonus</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="extras">
+                                <li><a href="custom-widget.html"><span class="icon iconfugue16-fire"></span> Custom Widget</a></li>
+                                <li><a href="contact-list.html"><span class="icon iconfugue16-card-address"></span> Contact List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Start BONUS Menu -->
+                        
+                    </ul><!-- End Main Menu -->
+
+                </div><!-- End Sidebar -->
+                
+                <!-- Start Main Content -->
+                <div id="main-content">
+                    <p>&nbsp;</p>
+
+                    <!-- Start Breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Admindo</a></li>
+                        <li><a href="#">Generals</a></li>
+						<li><a href="#">Icons</a></li>
+						<li><a href="#">Elusive Icons</a></li>
+                    </ul><!-- End Breadcrumb -->
+
+                    <h3><a href="http://aristath.github.com/elusive-iconfont/" target="_new" title="Go to aristath.github.com/elusive-iconfont">Elusive Icons</a> <small>Elusive Icons is a webfont that can be used with any of your projects. Bootstrap-based, Foundation-based or even your custom projects!.</small></h3>
+                    <hr class="style1">
+					
+					<div class="row-fluid">
+                        <!-- Start Elusive Icons -->
+                        <div class="span12">
+							<h4>Default Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconelusive-glass"></i> iconelusive-glass</li>
+								<li><i class="iconelusive-music"></i> iconelusive-music</li>
+								<li><i class="iconelusive-search"></i> iconelusive-search</li>
+								<li><i class="iconelusive-envelope"></i> iconelusive-envelope</li>
+								<li><i class="iconelusive-heart"></i> iconelusive-heart</li>
+								<li><i class="iconelusive-star"></i> iconelusive-star</li>
+								<li><i class="iconelusive-star-empty"></i> iconelusive-star-empty</li>
+								<li><i class="iconelusive-user"></i> iconelusive-user</li>
+								<li><i class="iconelusive-film"></i> iconelusive-film</li>
+								<li><i class="iconelusive-th-large"></i> iconelusive-th-large</li>
+								<li><i class="iconelusive-th"></i> iconelusive-th</li>
+								<li><i class="iconelusive-th-list"></i> iconelusive-th-list</li>
+								<li><i class="iconelusive-ok"></i> iconelusive-ok</li>
+								<li><i class="iconelusive-remove"></i> iconelusive-remove</li>
+								<li><i class="iconelusive-zoom-in"></i> iconelusive-zoom-in</li>
+								<li><i class="iconelusive-zoom-out"></i> iconelusive-zoom-out</li>
+								<li><i class="iconelusive-off"></i> iconelusive-off</li>
+								<li><i class="iconelusive-signal"></i> iconelusive-signal</li>
+								<li><i class="iconelusive-cog"></i> iconelusive-cog</li>
+								<li><i class="iconelusive-trash"></i> iconelusive-trash</li>
+								<li><i class="iconelusive-home"></i> iconelusive-home</li>
+								<li><i class="iconelusive-file"></i> iconelusive-file</li>
+								<li><i class="iconelusive-time"></i> iconelusive-time</li>
+								<li><i class="iconelusive-road"></i> iconelusive-road</li>
+								<li><i class="iconelusive-download-alt"></i> iconelusive-download-alt</li>
+								<li><i class="iconelusive-download"></i> iconelusive-download</li>
+								<li><i class="iconelusive-upload"></i> iconelusive-upload</li>
+								<li><i class="iconelusive-inbox"></i> iconelusive-inbox</li>
+								
+								<li><i class="iconelusive-play-circle"></i> iconelusive-play-circle</li>
+								<li><i class="iconelusive-repeat"></i> iconelusive-repeat</li>
+								<li><i class="iconelusive-refresh"></i> iconelusive-refresh</li>
+								<li><i class="iconelusive-list-alt"></i> iconelusive-list-alt</li>
+								<li><i class="iconelusive-lock"></i> iconelusive-lock</li>
+								<li><i class="iconelusive-flag"></i> iconelusive-flag</li>
+								<li><i class="iconelusive-headphones"></i> iconelusive-headphones</li>
+								<li><i class="iconelusive-volume-off"></i> iconelusive-volume-off</li>
+								<li><i class="iconelusive-volume-down"></i> iconelusive-volume-down</li>
+								<li><i class="iconelusive-volume-up"></i> iconelusive-volume-up</li>
+								<li><i class="iconelusive-qrcode"></i> iconelusive-qrcode</li>
+								<li><i class="iconelusive-barcode"></i> iconelusive-barcode</li>
+								<li><i class="iconelusive-tag"></i> iconelusive-tag</li>
+								<li><i class="iconelusive-tags"></i> iconelusive-tags</li>
+								<li><i class="iconelusive-book"></i> iconelusive-book</li>
+								<li><i class="iconelusive-bookmark"></i> iconelusive-bookmark</li>
+								<li><i class="iconelusive-print"></i> iconelusive-print</li>
+								<li><i class="iconelusive-camera"></i> iconelusive-camera</li>
+								<li><i class="iconelusive-font"></i> iconelusive-font</li>
+								<li><i class="iconelusive-bold"></i> iconelusive-bold</li>
+								<li><i class="iconelusive-italic"></i> iconelusive-italic</li>
+								<li><i class="iconelusive-text-height"></i> iconelusive-text-height</li>
+								<li><i class="iconelusive-text-width"></i> iconelusive-text-width</li>
+								<li><i class="iconelusive-align-left"></i> iconelusive-align-left</li>
+								<li><i class="iconelusive-align-center"></i> iconelusive-align-center</li>
+								<li><i class="iconelusive-align-right"></i> iconelusive-align-right</li>
+								<li><i class="iconelusive-align-justify"></i> iconelusive-align-justify</li>
+								<li><i class="iconelusive-list"></i> iconelusive-list</li>
+								
+								<li><i class="iconelusive-indent-left"></i> iconelusive-indent-left</li>
+								<li><i class="iconelusive-indent-right"></i> iconelusive-indent-right</li>
+								<li><i class="iconelusive-facetime-video"></i> iconelusive-facetime-video</li>
+								<li><i class="iconelusive-picture"></i> iconelusive-picture</li>
+								<li><i class="iconelusive-pencil"></i> iconelusive-pencil</li>
+								<li><i class="iconelusive-map-marker"></i> iconelusive-map-marker</li>
+								<li><i class="iconelusive-adjust"></i> iconelusive-adjust</li>
+								<li><i class="iconelusive-tint"></i> iconelusive-tint</li>
+								<li><i class="iconelusive-edit"></i> iconelusive-edit</li>
+								<li><i class="iconelusive-share"></i> iconelusive-share</li>
+								<li><i class="iconelusive-check"></i> iconelusive-check</li>
+								<li><i class="iconelusive-move"></i> iconelusive-move</li>
+								<li><i class="iconelusive-step-backward"></i> iconelusive-step-backward</li>
+								<li><i class="iconelusive-fast-backward"></i> iconelusive-fast-backward</li>
+								<li><i class="iconelusive-backward"></i> iconelusive-backward</li>
+								<li><i class="iconelusive-play"></i> iconelusive-play</li>
+								<li><i class="iconelusive-pause"></i> iconelusive-pause</li>
+								<li><i class="iconelusive-stop"></i> iconelusive-stop</li>
+								<li><i class="iconelusive-forward"></i> iconelusive-forward</li>
+								<li><i class="iconelusive-fast-forward"></i> iconelusive-fast-forward</li>
+								<li><i class="iconelusive-step-forward"></i> iconelusive-step-forward</li>
+								<li><i class="iconelusive-eject"></i> iconelusive-eject</li>
+								<li><i class="iconelusive-chevron-left"></i> iconelusive-chevron-left</li>
+								<li><i class="iconelusive-chevron-right"></i> iconelusive-chevron-right</li>
+								<li><i class="iconelusive-plus-sign"></i> iconelusive-plus-sign</li>
+								<li><i class="iconelusive-minus-sign"></i> iconelusive-minus-sign</li>
+								<li><i class="iconelusive-remove-sign"></i> iconelusive-remove-sign</li>
+								<li><i class="iconelusive-ok-sign"></i> iconelusive-ok-sign</li>
+								
+								<li><i class="iconelusive-question-sign"></i> iconelusive-question-sign</li>
+								<li><i class="iconelusive-info-sign"></i> iconelusive-info-sign</li>
+								<li><i class="iconelusive-screenshot"></i> iconelusive-screenshot</li>
+								<li><i class="iconelusive-remove-circle"></i> iconelusive-remove-circle</li>
+								<li><i class="iconelusive-ok-circle"></i> iconelusive-ok-circle</li>
+								<li><i class="iconelusive-ban-circle"></i> iconelusive-ban-circle</li>
+								<li><i class="iconelusive-arrow-left"></i> iconelusive-arrow-left</li>
+								<li><i class="iconelusive-arrow-right"></i> iconelusive-arrow-right</li>
+								<li><i class="iconelusive-arrow-up"></i> iconelusive-arrow-up</li>
+								<li><i class="iconelusive-arrow-down"></i> iconelusive-arrow-down</li>
+								<li><i class="iconelusive-share-alt"></i> iconelusive-share-alt</li>
+								<li><i class="iconelusive-resize-full"></i> iconelusive-resize-full</li>
+								<li><i class="iconelusive-resize-small"></i> iconelusive-resize-small</li>
+								<li><i class="iconelusive-plus"></i> iconelusive-plus</li>
+								<li><i class="iconelusive-minus"></i> iconelusive-minus</li>
+								<li><i class="iconelusive-asterisk"></i> iconelusive-asterisk</li>
+								<li><i class="iconelusive-exclamation-sign"></i> iconelusive-exclamation-sign</li>
+								<li><i class="iconelusive-gift"></i> iconelusive-gift</li>
+								<li><i class="iconelusive-leaf"></i> iconelusive-leaf</li>
+								<li><i class="iconelusive-fire"></i> iconelusive-fire</li>
+								<li><i class="iconelusive-eye-open"></i> iconelusive-eye-open</li>
+								<li><i class="iconelusive-eye-close"></i> iconelusive-eye-close</li>
+								<li><i class="iconelusive-warning-sign"></i> iconelusive-warning-sign</li>
+								<li><i class="iconelusive-plane"></i> iconelusive-plane</li>
+								<li><i class="iconelusive-calendar"></i> iconelusive-calendar</li>
+								<li><i class="iconelusive-random"></i> iconelusive-random</li>
+								<li><i class="iconelusive-comment"></i> iconelusive-comment</li>
+								<li><i class="iconelusive-magnet"></i> iconelusive-magnet</li>
+								
+								<li><i class="iconelusive-chevron-up"></i> iconelusive-chevron-up</li>
+								<li><i class="iconelusive-chevron-down"></i> iconelusive-chevron-down</li>
+								<li><i class="iconelusive-retweet"></i> iconelusive-retweet</li>
+								<li><i class="iconelusive-shopping-cart"></i> iconelusive-shopping-cart</li>
+								<li><i class="iconelusive-folder-close"></i> iconelusive-folder-close</li>
+								<li><i class="iconelusive-folder-open"></i> iconelusive-folder-open</li>
+								<li><i class="iconelusive-resize-vertical"></i> iconelusive-resize-vertical</li>
+								<li><i class="iconelusive-resize-horizontal"></i> iconelusive-resize-horizontal</li>
+								<li><i class="iconelusive-hdd"></i> iconelusive-hdd</li>
+								<li><i class="iconelusive-bullhorn"></i> iconelusive-bullhorn</li>
+								<li><i class="iconelusive-bell"></i> iconelusive-bell</li>
+								<li><i class="iconelusive-certificate"></i> iconelusive-certificate</li>
+								<li><i class="iconelusive-thumbs-up"></i> iconelusive-thumbs-up</li>
+								<li><i class="iconelusive-thumbs-down"></i> iconelusive-thumbs-down</li>
+								<li><i class="iconelusive-hand-right"></i> iconelusive-hand-right</li>
+								<li><i class="iconelusive-hand-left"></i> iconelusive-hand-left</li>
+								<li><i class="iconelusive-hand-up"></i> iconelusive-hand-up</li>
+								<li><i class="iconelusive-hand-down"></i> iconelusive-hand-down</li>
+								<li><i class="iconelusive-circle-arrow-right"></i> iconelusive-circle-arrow-right</li>
+								<li><i class="iconelusive-circle-arrow-left"></i> iconelusive-circle-arrow-left</li>
+								<li><i class="iconelusive-circle-arrow-up"></i> iconelusive-circle-arrow-up</li>
+								<li><i class="iconelusive-circle-arrow-down"></i> iconelusive-circle-arrow-down</li>
+								<li><i class="iconelusive-globe"></i> iconelusive-globe</li>
+								<li><i class="iconelusive-wrench"></i> iconelusive-wrench</li>
+								<li><i class="iconelusive-tasks"></i> iconelusive-tasks</li>
+								<li><i class="iconelusive-filter"></i> iconelusive-filter</li>
+								<li><i class="iconelusive-briefcase"></i> iconelusive-briefcase</li>
+								<li><i class="iconelusive-fullscreen"></i> iconelusive-fullscreen</li>
+							</ul>
+                        </div><!-- End Elusive Icons -->
+                    </div>
+					
+					<hr>
+						
+                    <div class="row-fluid">
+                        <!-- Start Elusive Icons -->
+                        <div class="span12">
+							<h4>Extra Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconelusive-facebook"></i> iconelusive-facebook</li>
+								<li><i class="iconelusive-twitter"></i> iconelusive-twitter</li>
+								<li><i class="iconelusive-googleplus"></i> iconelusive-googleplus</li>
+								<li><i class="iconelusive-linkedin"></i> iconelusive-linkedin</li>
+								<li><i class="iconelusive-pinterest"></i> iconelusive-pinterest</li>
+								<li><i class="iconelusive-foursquare"></i> iconelusive-foursquare</li>
+								<li><i class="iconelusive-youtube"></i> iconelusive-youtube</li>
+								<li><i class="iconelusive-vimeo"></i> iconelusive-vimeo</li>
+								<li><i class="iconelusive-skype"></i> iconelusive-skype</li>
+								<li><i class="iconelusive-picasa"></i> iconelusive-picasa</li>
+								<li><i class="iconelusive-stumbleupon"></i> iconelusive-stumbleupon</li>
+								<li><i class="iconelusive-digg"></i> iconelusive-digg</li>
+								<li><i class="iconelusive-tumblr"></i> iconelusive-tumblr</li>
+								<li><i class="iconelusive-github"></i> iconelusive-github</li>
+								<li><i class="iconelusive-github-text"></i> iconelusive-github-text</li>
+								<li><i class="iconelusive-friendfeed"></i> iconelusive-friendfeed</li>
+								<li><i class="iconelusive-friendfeed-rect"></i> iconelusive-friendfeed-rect</li>
+								<li><i class="iconelusive-wordpress"></i> iconelusive-wordpress</li>
+								<li><i class="iconelusive-slideshare"></i> iconelusive-slideshare</li>
+								<li><i class="iconelusive-reddit"></i> iconelusive-reddit</li>
+								<li><i class="iconelusive-dribble"></i> iconelusive-dribble</li>
+								<li><i class="iconelusive-behance"></i> iconelusive-behance</li>
+								<li><i class="iconelusive-deviantart"></i> iconelusive-deviantart</li>
+								<li><i class="iconelusive-delicious"></i> iconelusive-delicious</li>
+							</ul>
+                        </div><!-- End Elusive Icons -->
+                    </div>
+					
+					<hr>
+						
+                    <div class="row-fluid">
+                        <!-- Start Elusive Icons -->
+                        <div class="span12">
+							<h4>General Use Icons</h4>
+							<ul class="iconsample">
+								<li><i class="iconelusive-website"></i> iconelusive-website</li>
+								<li><i class="iconelusive-website-alt"></i> iconelusive-website-alt</li>
+								<li><i class="iconelusive-fontsize"></i> iconelusive-fontsize</li>
+								<li><i class="iconelusive-view-mode"></i> iconelusive-view-mode</li>
+								<li><i class="iconelusive-wrench-alt"></i> iconelusive-wrench-alt</li>
+								<li><i class="iconelusive-video-chat"></i> iconelusive-video-chat</li>
+								<li><i class="iconelusive-video-alt"></i> iconelusive-video-alt</li>
+								<li><i class="iconelusive-star-alt"></i> iconelusive-star-alt</li>
+								<li><i class="iconelusive-video"></i> iconelusive-video</li>
+								<li><i class="iconelusive-unlock"></i> iconelusive-unlock</li>
+								<li><i class="iconelusive-unlock-alt"></i> iconelusive-unlock-alt</li>
+								<li><i class="iconelusive-trash-alt"></i> iconelusive-trash-alt</li>
+								<li><i class="iconelusive-torso"></i> iconelusive-torso</li>
+								<li><i class="iconelusive-reverse-alt"></i> iconelusive-reverse-alt</li>
+								<li><i class="iconelusive-stop-alt"></i> iconelusive-stop-alt</li>
+								<li><i class="iconelusive-play-alt"></i> iconelusive-play-alt</li>
+								<li><i class="iconelusive-pause-alt"></i> iconelusive-pause-alt</li>
+								<li><i class="iconelusive-record"></i> iconelusive-record</li>
+								<li><i class="iconelusive-repeat-alt"></i> iconelusive-repeat-alt</li>
+								<li><i class="iconelusive-mic"></i> iconelusive-mic</li>
+								<li><i class="iconelusive-mic-alt"></i> iconelusive-mic-alt</li>
+								<li><i class="iconelusive-speaker"></i> iconelusive-speaker</li>
+								<li><i class="iconelusive-smiley"></i> iconelusive-smiley</li>
+								<li><i class="iconelusive-smiley-alt"></i> iconelusive-smiley-alt</li>
+								<li><i class="iconelusive-search-alt"></i> iconelusive-search-alt</li>
+								<li><i class="iconelusive-screen"></i> iconelusive-screen</li>
+								<li><i class="iconelusive-screen-alt"></i> iconelusive-screen-alt</li>
+								<li><i class="iconelusive-time-alt"></i> iconelusive-time-alt</li>
+								<li><i class="iconelusive-shopping-cart-sign"></i> iconelusive-shopping-cart-sign</li>
+								<li><i class="iconelusive-rss"></i> iconelusive-rss</li>
+								<li><i class="iconelusive-quotes"></i> iconelusive-quotes</li>
+								<li><i class="iconelusive-quotes-alt"></i> iconelusive-quotes-alt</li>
+								<li><i class="iconelusive-photo"></i> iconelusive-photo</li>
+								<li><i class="iconelusive-photo-alt"></i> iconelusive-photo-alt</li>
+						  
+								<li><i class="iconelusive-wheelchair"></i> iconelusive-wheelchair</li>
+								<li><i class="iconelusive-universal-access"></i> iconelusive-universal-access</li>
+								<li><i class="iconelusive-question"></i> iconelusive-question</li>
+								<li><i class="iconelusive-phone-alt"></i> iconelusive-phone-alt</li>
+								<li><i class="iconelusive-phone"></i> iconelusive-phone</li>
+								<li><i class="iconelusive-person"></i> iconelusive-person</li>
+								<li><i class="iconelusive-pencil-alt"></i> iconelusive-pencil-alt</li>
+								<li><i class="iconelusive-path"></i> iconelusive-path</li>
+								<li><i class="iconelusive-paper-clip-alt"></i> iconelusive-paper-clip-alt</li>
+								<li><i class="iconelusive-paper-clip"></i> iconelusive-paper-clip</li>
+								<li><i class="iconelusive-network"></i> iconelusive-network</li>
+								<li><i class="iconelusive-error-alt"></i> iconelusive-error-alt</li>
+								<li><i class="iconelusive-error"></i> iconelusive-error</li>
+								<li><i class="iconelusive-map-marker-alt"></i> iconelusive-map-marker-alt</li>
+								<li><i class="iconelusive-male"></i> iconelusive-male</li>
+								<li><i class="iconelusive-mail-alt"></i> iconelusive-mail-alt</li>
+								<li><i class="iconelusive-lock-alt"></i> iconelusive-lock-alt</li>
+								<li><i class="iconelusive-laptop-alt"></i> iconelusive-laptop-alt</li>
+								<li><i class="iconelusive-laptop"></i> iconelusive-laptop</li>
+								<li><i class="iconelusive-key"></i> iconelusive-key</li>
+								<li><i class="iconelusive-iphone-home"></i> iconelusive-iphone-home</li>
+								<li><i class="iconelusive-instagram"></i> iconelusive-instagram</li>
+								<li><i class="iconelusive-inbox-alt"></i> iconelusive-inbox-alt</li>
+								<li><i class="iconelusive-idea-alt"></i> iconelusive-idea-alt</li>
+								<li><i class="iconelusive-idea"></i> iconelusive-idea</li>
+								<li><i class="iconelusive-home-alt"></i> iconelusive-home-alt</li>
+								<li><i class="iconelusive-heart-empty"></i> iconelusive-heart-empty</li>
+								<li><i class="iconelusive-heart-alt"></i> iconelusive-heart-alt</li>
+								<li><i class="iconelusive-hearing-impaired"></i> iconelusive-hearing-impaired</li>
+								<li><i class="iconelusive-guidedog"></i> iconelusive-guidedog</li>
+								<li><i class="iconelusive-group-alt"></i> iconelusive-group-alt</li>
+								<li><i class="iconelusive-group"></i> iconelusive-group</li>
+								<li><i class="iconelusive-graph-alt"></i> iconelusive-graph-alt</li>
+								<li><i class="iconelusive-graph"></i> iconelusive-graph</li>
+								<li><i class="iconelusive-globe-alt"></i> iconelusive-globe-alt</li>
+								<li><i class="iconelusive-glasses"></i> iconelusive-glasses</li>
+								<li><i class="iconelusive-forward-alt"></i> iconelusive-forward-alt</li>
+								<li><i class="iconelusive-folder-sign"></i> iconelusive-folder-sign</li>
+								<li><i class="iconelusive-folder"></i> iconelusive-folder</li>
+								<li><i class="iconelusive-flickr"></i> iconelusive-flickr</li>
+								<li><i class="iconelusive-flag-alt"></i> iconelusive-flag-alt</li>
+								<li><i class="iconelusive-file-new-alt"></i> iconelusive-file-new-alt</li>
+								<li><i class="iconelusive-file-new"></i> iconelusive-file-new</li>
+								<li><i class="iconelusive-file-edit-alt"></i> iconelusive-file-edit-alt</li>
+								<li><i class="iconelusive-file-edit"></i> iconelusive-file-edit</li>
+								<li><i class="iconelusive-file-alt"></i> iconelusive-file-alt</li>
+								<li><i class="iconelusive-female"></i> iconelusive-female</li>
+								<li><i class="iconelusive-inbox-box"></i> iconelusive-inbox-box</li>
+								<li><i class="iconelusive-dashboard"></i> iconelusive-dashboard</li>
+								<li><i class="iconelusive-credit-card"></i> iconelusive-credit-card</li>
+								<li><i class="iconelusive-compass-alt"></i> iconelusive-compass-alt</li>
+								<li><i class="iconelusive-compass"></i> iconelusive-compass</li>
+								<li><i class="iconelusive-comment-alt"></i> iconelusive-comment-alt</li>
+								<li><i class="iconelusive-child"></i> iconelusive-child</li>
+								<li><i class="iconelusive-check-empty"></i> iconelusive-check-empty</li>
+								<li><i class="iconelusive-cc"></i> iconelusive-cc</li>
+								<li><i class="iconelusive-calendar-sign"></i> iconelusive-calendar-sign</li>
+								<li><i class="iconelusive-blind"></i> iconelusive-blind</li>
+								<li><i class="iconelusive-asl"></i> iconelusive-asl</li>
+								<li><i class="iconelusive-cogs"></i> iconelusive-cogs</li>
+								<li><i class="iconelusive-cog-alt"></i> iconelusive-cog-alt</li>
+								<li><i class="iconelusive-cloud-alt"></i> iconelusive-cloud-alt</li>
+								<li><i class="iconelusive-cloud"></i> iconelusive-cloud</li>
+								<li><i class="iconelusive-braille"></i> iconelusive-braille</li>
+								<li><i class="iconelusive-bookmark-empty"></i> iconelusive-bookmark-empty</li>
+								<li><i class="iconelusive-blogger"></i> iconelusive-blogger</li>
+								<li><i class="iconelusive-adult"></i> iconelusive-adult</li>
+								<li><i class="iconelusive-address-book"></i> iconelusive-address-book</li>
+								<li><i class="iconelusive-address-book-alt"></i> iconelusive-address-book-alt</li>
+								<li><i class="iconelusive-w3c"></i> iconelusive-w3c</li>
+								<li><i class="iconelusive-css"></i> iconelusive-css</li>
+						  </ul>
+                        </div><!-- End Elusive Icons -->
+						<p>&nbsp;</p>
+                    </div>
+
+                </div><!-- End Main Content-->
+            
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        
+        <!-- Plugins -->
+		<script src="js/jasny-bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/plugins/jquery.placeholder.min.js"></script>
+		<script src="js/application.js"></script>
+		<script>
+		$(function() {
+			/* Twitter Bootstrap Tooltip
+			 *
+			 * Link Tooltips
+			/*====================================================================*/
+			$('[rel="tooltip"]').tooltip({
+				placement : 'top'
+			});
+		});
+		</script>
+    </body>
+</html>

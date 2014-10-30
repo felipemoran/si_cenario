@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Admindo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- ===================== TOUCH ICONS ===================== -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+
+		<!-- ===================== MASTER CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+		<!-- ===================== ICONS CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/icon/fugue.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/elusive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icon/font-awesome.min.css">
+			
+        <!-- ===================== SITE CSS ===================== -->
+        <link rel="stylesheet" type="text/css" href="css/default.min.css">
+        <link rel="stylesheet" type="text/css" href="css/default.responsive.min.css">
+        
+        <!-- ===================== PLUGINS CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/plugins/jquery.snippet.css">
+        
+		<!-- ===================== JQUERY UI CSS ===================== -->
+		<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.min.css">
+		
+        <script src="js/vendors/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="body5">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper" class="boxed">
+            <div id="wrapper-inner" class="pattern7">
+                
+                <!-- Start Main Header -->
+                <div id="main-header">
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="title">
+                                	<h1>Admindo <small>v1.4</small></h1>
+                                </div>
+                                <!-- Start Header Panel -->
+                                <div class="header-panel">
+									<div id="dropdown-patterns" class="dropdown" rel="tooltip" data-placement="left" title="Theme Setting">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-cog"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<div class="title">Inner Content Pattern</div>
+											<ul class="patterns">
+												<li class="pattern1" data-menu="wrapperpattern"></li>
+												<li class="pattern2" data-menu="wrapperpattern"></li>
+												<li class="pattern3" data-menu="wrapperpattern"></li>
+												<li class="pattern4" data-menu="wrapperpattern"></li>
+												<li class="pattern5" data-menu="wrapperpattern"></li>
+												<li class="pattern6" data-menu="wrapperpattern"></li>
+												<li class="pattern7" data-menu="wrapperpattern"></li>
+												<li class="pattern8" data-menu="wrapperpattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Layout</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small" data-layout="default">Default</button> 
+												<button class="btn btn-small active" data-layout="boxed">Boxed</button> 
+												<button class="btn btn-small" data-layout="fixed">Fixed</button>
+											</div>
+											<ul class="patterns" style="margin-top:10px">
+												<li class="body1" data-menu="bodypattern"></li>
+												<li class="body2" data-menu="bodypattern"></li>
+												<li class="body3" data-menu="bodypattern"></li>
+												<li class="body4" data-menu="bodypattern"></li>
+												<li class="body5" data-menu="bodypattern"></li>
+												<li class="body6" data-menu="bodypattern"></li>
+											</ul>
+											<hr>
+											<div class="title">Admindo Menu Type</div>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-small active" data-menustyle="fancy">Fancy</button> 
+												<button class="btn btn-small" data-menustyle="simple">Simple</button>
+											</div>
+										</div>
+									</div>
+									<div id="dropdown-search" class="dropdown">
+										<a href="#" class="menu dropdown-toggle" data-toggle="dropdown"><i class="icon iconfa-search"></i></a>
+										<div class="dropdown-menu pull-right" role="menu">
+											<form>
+												<input name="search" type="text" class="span12" placeholder="Enter keyword...">
+											</form>
+										</div>
+									</div>
+									<a href="#" class="menu" id="menu-phone" data-menu="mobile"><i class="icon iconfa-tasks"></i></a>
+								</div>
+                                <!-- End Header Panel -->
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- End Main Header -->
+                
+                <!-- Start Sidebar -->
+                <div id="sidebar">
+
+                    <!-- Start Profile Panel -->
+                    <div class="profile" data-detach="profile">
+                        <div class="profile-pic">
+							<div class="btn-group">
+								<img src="img/avatar/40x40/avatar5.png" class="dropdown-toggle" data-toggle="dropdown">
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="cion iconfa-pencil"></i> Edit Profile</a></li>
+									<li><a href="#"><i class="cion iconfa-cog"></i>  Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="cion iconfa-off"></i> Logout</a></li>
+								</ul>
+							</div>
+							<span class="caret"></span>
+						</div>
+                        <div class="profile-info">
+                            <span class="name">John Doe</span>
+                            <span class="job">Web Designer</span>
+						</div>
+                        <div class="profile-panel">
+                            <!-- Start Messages -->
+                            <div class="profile-panel-menu" id="panel-message">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-envelope"></i> 
+                                    <span class="text">Messages</span>
+                                    <span class="label label-important">13</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Your Message</li>
+                                    <div class="dropdown-menu-item" data-scroll="viewport">
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar1.png">
+                                            <div class="detail">
+                                                <span class="name">Jane Anderson</span>
+                                                <span class="message">Hi!.. How are you?...</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <img src="img/avatar/40x40/avatar2.png">
+                                            <div class="detail">
+                                                <span class="name">Johan Ahmad</span>
+                                                <span class="message">Hello john... I need your help</span>
+                                                <span class="datetime">Today 1.20am</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar3.png">
+                                            <div class="detail">
+                                                <span class="name">James Kimi</span>
+                                                <span class="message">Hey men. Meet me at this place asd asda asd</span>
+                                                <span class="datetime">Today 3.50pm</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <img src="img/avatar/40x40/avatar4.png">
+                                            <div class="detail">
+                                                <span class="name">Amanda Lim</span>
+                                                <span class="message">Good day john!</span>
+                                                <span class="datetime">yesterday 10.17am</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">More Message</a></li>
+                                </ul>
+                            </div><!-- End Messages -->
+                            
+                            <!-- Start Notification -->
+                            <div class="profile-panel-menu" id="panel-notification">
+                                <a href="#" data-toggle="dropdown" class="menu">
+                                    <i class="icon icon-bell"></i>
+                                    <span class="text">Notifications</span>
+                                    <span class="label label-important">30</span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="header">Notifications</li>
+                                    <div class="dropdown-menu-item">
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-alarm-clock-blue"></i>
+                                            <div class="detail">
+                                                <span class="message">Schedule backup complete</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="unread"><a href="#">
+                                            <i class="icon iconfugue16-database"></i>
+                                            <div class="detail">
+                                                <span class="message">Check your database configurations</span>
+                                                <span class="datetime">15 Minute ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-user-silhouette"></i>
+                                            <div class="detail">
+                                                <span class="message">Someone is trying to access your accound</span>
+                                                <span class="datetime">1 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <i class="icon iconfugue16-cheque"></i>
+                                            <div class="detail">
+                                                <span class="message">Cheque is sent</span>
+                                                <span class="datetime">3 Hour ago</span>
+                                            </div>
+                                        </a></li>
+                                        <li class="loader"><img src="img/spinner/103.gif"></li>
+                                    </div>
+                                    <li class="footer"><a href="#">Clear All</a></li>
+                                </ul>
+                            </div><!-- End Notification -->
+                        </div>
+                    </div><!-- End Profile Panel -->
+                    
+                    <!-- Start Main Menu -->
+                    <ul class="nav-mainmenu" id="nav-mainmenu">
+      
+                        <!-- Start GENERALS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#generals"><span class="icon iconfa-home"></span><span class="text">Generals</span><span class="badge pull-right">4</span></a>
+                            <!-- Start GENERALS Sub Menu -->
+                            <ul class="nav-submenu collapse" id="generals">
+                                <li><a href="dashboard.html"><span class="icon iconfugue16-dashboard"></span> Dashboard</a></li>
+                                <li><a href="typography.html"><span class="icon iconfugue16-edit"></span> Typography</a></li>
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#generals" href="#icons"><span class="icon iconfugue16-bamboos"></span> Icons<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="icons">
+                                        <li><a href="icon-glyph.html"><span class="icon iconfugue16-edit-code"></span> Glyph icons</a></li>
+                                        <li><a href="icon-fugue.html"><span class="icon iconfugue16-edit-code"></span> Fugue Icon 16x16</a></li>
+                                        <li><a href="icon-elusive.html"><span class="icon iconfugue16-edit-code"></span> Elusive Icon</a></li>
+                                        <li><a href="icon-fontawesome.html"><span class="icon iconfugue16-edit-code"></span> Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="grids.html"><span class="icon iconfugue16-edit-alignment-justify-distribute"></span> Grids</a></li>
+                            </ul>
+                            <!-- End GENERALS Sub Menu -->
+                        </li>
+                        <!-- End GENERALS Menu -->
+                        
+                        <!-- Start COMPONENTS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#components" class="active"><span class="icon iconfa-beaker"></span><span class="text">Components</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse in" id="components">
+                                <li><a href="bootstrap.html"><span class="icon iconfugue16-application-ab"></span> Bootstrap</a></li>
+								<li><a href="jquery-ui.html" class="active"><span class="icon iconfugue16-abacus"></span> Jquery UI</a></li>
+                                <li><a href="widget.html"><span class="icon iconfugue16-application-resize-full"></span> Widgets</a></li>
+                                <li><a href="calendar.html"><span class="icon iconfugue16-calendar"></span> Calendar</a></li>
+                                <li><a href="gallery.html"><span class="icon iconfugue16-picture"></span> Images Gallery</a></li>
+                            </ul>
+                        </li>
+                        <!-- End COMPONENTS Menu -->
+                        
+                        <!-- Start FORMS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#forms"><span class="icon iconfa-reorder"></span><span class="text">Forms</span><span class="badge pull-right">5</span></a>
+                            <ul class="nav-submenu collapse" id="forms">
+                                <li><a href="form-elements.html"><span class="icon iconfugue16-application-form"></span> Elements</a></li>
+                                <li><a href="form-layout.html"><span class="icon iconfugue16-application-detail"></span> Layout</a></li>
+                                <li><a href="form-validation.html"><span class="icon iconfugue16-application-ab"></span> Validation</a></li>
+                                <li><a href="file-upload.html"><span class="icon iconfugue16-inbox"></span> File Upload</a></li>
+                                <li><a href="form-wizard.html"><span class="icon iconfugue16-wand-hat"></span> Wizards</a></li>
+                            </ul>
+                        </li>
+                        <!-- End FORMS Menu -->
+                        
+                        <!-- Start STATICTICS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#statictics"><span class="icon iconfa-bar-chart"></span><span class="text">Statictics</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="statictics">
+                                <li><a href="chart-summary.html"><span class="icon iconfugue16-chart-up"></span> Custom Statistics</a></li>
+                                <li><a href="charts.html"><span class="icon iconfugue16-chart"></span> Charts</a></li>
+                            </ul>
+                        </li>
+                        <!-- End STATICTICS Menu -->
+                        
+                        <!-- Start PAGES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#pages"><span class="icon iconfa-paste"></span><span class="text">Pages</span><span class="badge pull-right">3</span></a>
+                            <!-- Start PAGES Sub Menu -->
+                            <ul class="nav-submenu collapse" id="pages">
+                                <li class="accordion-group">
+                                    <a data-toggle="collapse" data-parent="#page" href="#error-page"><span class="icon iconfugue16-exclamation"></span> Error Pages<span class="caret pull-right"></span></a>
+                                    <ul class="nav-subitem collapse" id="error-page">
+                                        <li><a href="403.html"><span class="icon iconfugue16-edit-code"></span> 403 Page</a></li>
+                                        <li><a href="404.html"><span class="icon iconfugue16-edit-code"></span> 404 Page</a></li>
+                                        <li><a href="500.html"><span class="icon iconfugue16-edit-code"></span> 500 Page</a></li>
+                                        <li><a href="503.html"><span class="icon iconfugue16-edit-code"></span> 503 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page-profile.html"><span class="icon iconfugue16-user-black"></span> Profile Page</a></li>
+                                <li><a href="page-invoice.html"><span class="icon iconfugue16-cheque"></span> Invoice Page</a></li>
+                            </ul><!-- End PAGES Sub Menu -->
+                        </li>
+                        <!-- End PAGES Menu -->
+                        
+                        <!-- Start TABLES Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#tables"><span class="icon iconfa-table"></span><span class="text">Tables</span><span class="badge pull-right">3</span></a>
+                            <ul class="nav-submenu collapse" id="tables">
+                                <li><a href="table-static.html"><span class="icon iconfugue16-table"></span> Static Table</a></li>
+                                <li><a href="table-dynamic.html"><span class="icon iconfugue16-table--plus"></span> Dynamic Table</a></li>
+                                <li><a href="table-responsive.html"><span class="icon iconfugue16-table--pencil"></span> Responsive Table</a></li>
+                            </ul>
+                        </li>
+                        <!-- End TABLES Menu -->
+                        
+                        <!-- Start BONUS Menu -->
+                        <li class="accordion-group">
+                            <a data-toggle="collapse" data-parent="#nav-mainmenu" href="#extras"><span class="icon iconfa-gift"></span><span class="text">Bonus</span><span class="badge pull-right">2</span></a>
+                            <ul class="nav-submenu collapse" id="extras">
+                                <li><a href="custom-widget.html"><span class="icon iconfugue16-fire"></span> Custom Widget</a></li>
+                                <li><a href="contact-list.html"><span class="icon iconfugue16-card-address"></span> Contact List</a></li>
+                            </ul>
+                        </li>
+                        <!-- Start BONUS Menu -->
+                        
+                    </ul><!-- End Main Menu -->
+
+                </div><!-- End Sidebar -->
+                
+                <!-- Start Main Content -->
+                <div id="main-content">
+                    <p>&nbsp;</p>
+
+                    <!-- Start Breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Admindo</a></li>
+                        <li><a href="#">Components</a></li>
+						<li><a href="#">Jquery UI</a></li>
+                    </ul><!-- End Breadcrumb -->
+
+                    <h3>Jquery UI <small> Library that provides abstractions for low-level interaction and animation.</small></h3>
+                    <hr class="style1">
+                    
+					<div class="row-fluid">
+                    	<div class="span12">
+                        
+                            <div class="row-fluid">
+                                <!-- Start Accordian -->
+                                <div class="span6">
+                                    <h4>Basic Accordion</h4>
+                                    <div id="accordion1">
+                                        <h3>Section 1</h3>
+                                        <div>
+                                            <p>
+                                            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                            </p>
+                                        </div>
+                                        <h3>Section 2</h3>
+                                        <div>
+                                            <p>
+                                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                            suscipit faucibus urna.
+                                            </p>
+                                        </div>
+                                        <h3>Section 3</h3>
+                                        <div>
+                                            <p>
+                                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                            </p>
+                                            <ul>
+                                                <li>List item one</li>
+                                                <li>List item two</li>
+                                                <li>List item three</li>
+                                            </ul>
+                                        </div>
+                                        <h3>Section 4</h3>
+                                        <div>
+                                            <p>
+                                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                            mauris vel est.
+                                            </p>
+                                            <p>
+                                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                            inceptos himenaeos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Accordian -->
+                                
+                                <!-- Start Widget Accordian -->
+                                <div class="span6">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-align-justify"></i> Widget With Accordion</span>
+                                        </div>
+                                        <div class="widget-content no-padding">
+                                            <div class="widget-content-inner">
+                                                <div id="accordion1">
+                                                    <h3>Section 1</h3>
+                                                    <div>
+                                                        <p>
+                                                        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                                        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                                        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                                        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                                        </p>
+                                                    </div>
+                                                    <h3>Section 2</h3>
+                                                    <div>
+                                                        <p>
+                                                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                                        suscipit faucibus urna.
+                                                        </p>
+                                                    </div>
+                                                    <h3>Section 3</h3>
+                                                    <div>
+                                                        <p>
+                                                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                                        </p>
+                                                        <ul>
+                                                            <li>List item one</li>
+                                                            <li>List item two</li>
+                                                            <li>List item three</li>
+                                                        </ul>
+                                                    </div>
+                                                    <h3>Section 4</h3>
+                                                    <div>
+                                                        <p>
+                                                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                                        mauris vel est.
+                                                        </p>
+                                                        <p>
+                                                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                                        inceptos himenaeos.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Widget Accordian -->
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="row-fluid">
+                                <!-- Start Datepicker -->
+                                <div class="span6">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-calendar"></i> Datepicker</span>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="widget-content-inner">
+                                            	<p>Basic Datepicker</p>
+                                            	<input type="text" name="date5" class="span10" placeholder="Click to pick a date">
+                                            </div>
+                                            <div class="widget-content-inner">
+                                            	<p>Datepicker With Timepicker</p>
+                                            	<input type="text" name="date1" class="span10" placeholder="Click to pick a date">
+                                            </div>
+                                            <div class="widget-content-inner">
+                                            	<p>Datepicker Multiple Month</p>
+												<input type="text" name="date4" class="span10" placeholder="Click to pick a date">
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Datepicker -->
+                                
+                                 <!-- Start Datepicker -->
+                                <div class="span6">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-time"></i> Time Picker</span>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="widget-content-inner">
+                                            	<p>Basic Timepicker</p>
+                                            	<input type="text" name="time1" class="span10" placeholder="Click to pick a time">
+                                            </div>
+                                            <div class="widget-content-inner">
+                                            	<p>Timepicker With Second</p>
+                                            	<input type="text" name="time2" class="span10" placeholder="Click to pick a time">
+                                            </div>
+                                            <div class="widget-content-inner">
+                                            	<p>Timepicker Zone</p>
+                                            	<input type="text" name="time3" class="span10" placeholder="Click to pick a time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Datepicker -->
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="row-fluid">
+                                <!-- Start Menu -->
+                                <div class="span6">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-th"></i> Menu</span>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="widget-content-inner">
+                                            	<ul id="menu" style="width:70%;">
+                                                    <li><a href="#">Addyston</a></li>
+                                                    <li>
+                                                        <a href="#">Delphi</a>
+                                                        <ul>
+                                                            <li class="ui-state-disabled"><a href="#">Ada</a></li>
+                                                            <li><a href="#">Saarland</a></li>
+                                                            <li><a href="#">Salzburg</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Saarland</a></li>
+                                                    <li>
+                                                        <a href="#">Salzburg</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">Delphi</a>
+                                                                <ul>
+                                                                    <li><a href="#">Ada</a></li>
+                                                                    <li><a href="#">Saarland</a></li>
+                                                                    <li><a href="#">Salzburg</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Delphi</a>
+                                                                <ul>
+                                                                    <li><a href="#">Ada</a></li>
+                                                                    <li><a href="#">Saarland</a></li>
+                                                                    <li><a href="#">Salzburg</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#">Perch</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ui-state-disabled"><a href="#">Amesville</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Menu -->
+                                
+                                <!-- Start Autocomplete -->
+                                <div class="span6">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-repeat-alt"></i> Autocomplete</span>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="widget-content-inner">
+                                            	<p>Type at lease 1 character</p>
+                                            	<div class="ui-widget">
+    												 <input type="text" id="tags" class="input-block-level">
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Autocomplete -->
+                            </div>
+                    	
+                        	<hr>
+                            
+                        	<div class="row-fluid">
+                                <!-- Start Slider -->
+                                <div class="span12">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-random"></i> Slider</span>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="widget-content-inner">
+                                            	<p>Default Slider</p>
+                                            	<div id="slider1"></div>
+                                            </div>
+                                            <div class="widget-content-inner">
+                                             	<p>Range Slider With Tooltip</p>
+                                            	<div id="slider2"></div>
+                                            </div>
+                                            <div class="widget-content-inner">
+                                             	<p>Single Vertical Slider</p>
+                                            	<div id="slider3"></div>
+                                            </div>
+                                            <div class="widget-content-inner">
+                                             	<p>Multiple Vertical Slider</p>
+                                            	<div id="eq" class="jui-vertical-slider">
+                                                    <span class="bar">88</span>
+                                                    <span class="bar">77</span>
+                                                    <span class="bar">55</span>
+                                                    <span class="bar">38</span>
+                                                    <span class="bar">40</span>
+                                                    <span class="bar">45</span>
+                                                    <span class="bar">70</span>
+                                                    <span class="bar">88</span>
+                                                    <span class="bar">77</span>
+                                                    <span class="bar">55</span>
+                                                    <span class="bar">38</span>
+                                                    <span class="bar">40</span>
+                                                    <span class="bar">45</span>
+                                                    <span class="bar">70</span>
+                                                    <span class="bar">88</span>
+                                                    <span class="bar">77</span>
+                                                    <span class="bar">55</span>
+													<span class="bar">38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Slider -->
+                            </div>
+							
+							<hr>
+							
+							<div class="row-fluid">
+                                <!-- Start Widget Tabs -->
+                                <div class="span6">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-list"></i> Widget Tabs</span>
+                                        </div>
+                                        <div class="widget-content no-padding">
+                                            <div class="widget-content-inner">
+                                            	<div id="tabs1">
+													<ul>
+														<li><a href="#tabs-1">Nunc tincidunt</a></li>
+														<li><a href="#tabs-2">Proin dolor</a></li>
+														<li><a href="#tabs-3">Aenean lacinia</a></li>
+													</ul>
+													<div id="tabs-1">
+														<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat.</p>
+													</div>
+													<div id="tabs-2">
+														<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis.</p>
+													</div>
+													<div id="tabs-3">
+														<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium.</p>
+													</div>
+												</div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+								<!-- End Widget Tabs -->
+								
+								<!-- Start Basic Tabs -->
+								<div class="span6">
+									<h4>Basic Tabs</h4>
+									<div id="tabs2">
+										<ul>
+											<li><a href="#tabs-1">Nunc tincidunt</a></li>
+											<li><a href="#tabs-2">Proin dolor</a></li>
+											<li><a href="#tabs-3">Aenean lacinia</a></li>
+										</ul>
+										<div id="tabs-1">
+											<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat.</p>
+										</div>
+										<div id="tabs-2">
+											<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis.</p>
+										</div>
+										<div id="tabs-3">
+											<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium.</p>
+										</div>
+									</div>
+								</div>
+								<!-- End Basic Tabs -->
+							</div>
+							
+							<hr>
+							
+							<div class="row-fluid">
+                                <!-- Start Dialog -->
+                                <div class="span12">
+                                    <div class="widget dark">
+                                        <div class="widget-head">
+                                        	<span class="title"><i class="icon iconfa-photo"></i> Dialog</span>
+                                        </div>
+                                        <div class="widget-content">
+                                            <div class="widget-content-inner" style="text-align:center;">
+                                            	<button class="btn btn-info" id="btn-dialog">Default Dialog</button>
+												<button class="btn btn-warning" id="btn-dialogmodal">Dialog With Modal</button>
+												<button class="btn btn-danger" id="btn-dialoganim">Dialog Animation</button>
+												
+												<div id="dialog1" title="Default Dialog">
+													<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+												</div>
+												<div id="dialog2" title="Dialog With Modal">
+													<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+												</div>
+												<div id="dialog3" title="Dialog Animation">
+													<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+												</div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+								<!-- End Dialog -->
+							</div><br>
+                        </div>
+                	</div>
+                
+                </div>
+                <!-- End Main Content -->
+            
+            </div>
+        </div>
+        
+        <!-- Vendors -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        
+        <!-- Plugins -->
+        <script src="js/plugins/jquery.timepicker.min.js"></script>
+        <script src="js/plugins/jqueryui.extend.min.js"></script>
+        
+        <!-- Site -->
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/jasny-bootstrap.min.js"></script>
+		<script src="js/plugins/jquery.placeholder.min.js"></script>
+		<script src="js/application.js"></script>
+        <script>
+		$(function() {
+			$('[rel="tooltip"]').tooltip({
+				placement : 'top'
+			});
+		});
+		
+		/* Jquery UI Accordian
+		/*====================================================================*/
+		$(function() {
+			$("#accordion1,#accordion2").accordion();
+		});
+		
+		/* Jquery UI Autocomplete
+		/*====================================================================*/
+		$(function() {
+			var availableTags = [
+				"ActionScript",
+				"AppleScript",
+				"Asp",
+				"BASIC",
+				"C",
+				"C++",
+				"Clojure",
+				"COBOL",
+				"ColdFusion",
+				"Erlang",
+				"Fortran",
+				"Groovy",
+				"Haskell",
+				"Java",
+				"JavaScript",
+				"Lisp",
+				"Perl",
+				"PHP",
+				"Python",
+				"Ruby",
+				"Scala",
+				"Scheme"
+			];
+			$("#tags").autocomplete({
+				source: availableTags
+			});
+		});
+		
+		/* Jquery UI Datepicker
+		/*====================================================================*/
+		$(function () {
+			// Date
+			$('input[name="date1"]').datetimepicker();
+			$('input[name="date5"]').datepicker();
+			$('input[name="date4"]').datepicker({
+				showButtonPanel: true,
+				numberOfMonths: 3
+			});
+			
+			// Time
+			$('input[name="time1"]').timepicker();
+			$('input[name="time2"]').timepicker({
+				showSecond: true
+			});
+			$('input[name="time3"]').timepicker({
+				showTimezone: true
+			});
+		});
+		
+		/* Jquery UI Menu
+		/*====================================================================*/
+		$(function() {
+        	$("#menu").menu();
+    	});
+		
+		/* Jquery Slider
+		/*====================================================================*/
+		$(function() {
+			var slider1 = $("#slider1").slider();
+		});
+		$(function () {
+			var slider2 = $("#slider2").slider({
+				range: true,
+            	min: 0,
+            	max: 500,
+				values: [ 75, 300 ],
+				start: function( event, ui ) {
+					$(this).find('.ui-slider-handle.ui-state-hover')
+					.append('<span class="ui-slider-tooltip">'+ui.value+'</span>');
+				},
+				slide: function( event, ui ) {
+					$(this).find('.ui-slider-tooltip').text(ui.value);
+				},
+				stop: function( event, ui ) {
+					$(this).find('.ui-slider-tooltip').remove();
+				}
+			});
+		});
+		$(function() {
+			$("#slider3").slider({
+				orientation: "vertical",
+				range: true,
+				values: [ 17, 67 ]
+			});
+		});
+		$(function() {
+			$( "#eq > span" ).each(function() {
+				// read initial values from markup and remove that
+				var value = parseInt( $( this ).text(), 10 );
+				$( this ).empty().slider({
+					value: value,
+					range: "min",
+					animate: true,
+					orientation: "vertical",
+					start: function( event, ui ) {
+						$(this).find('.ui-slider-handle.ui-state-hover')
+						.append('<span class="ui-slider-tooltip">'+ui.value+'</span>');
+					},
+					slide: function( event, ui ) {
+						$(this).find('.ui-slider-tooltip').text(ui.value);
+					},
+					stop: function( event, ui ) {
+						$(this).find('.ui-slider-tooltip').remove();
+					}
+				});
+			});
+		});
+		
+		/* Jquery UI Dialog Box
+		/*====================================================================*/
+		$(function() {
+			$("#dialog1").dialog({
+				autoOpen: false
+			});
+			$("#dialog2").dialog({
+				autoOpen: false,
+				modal: true
+			});
+			$("#dialog3").dialog({
+				autoOpen: false,
+				show: "blind",
+				hide: "explode"
+			});
+			$('#btn-dialog').click(function() {
+				$("#dialog1").dialog('open');
+			});
+			$('#btn-dialogmodal').click(function() {
+				$("#dialog2").dialog('open');;
+			});
+			$('#btn-dialoganim').click(function() {
+				$("#dialog3").dialog('open');
+			});
+    	});
+		
+		/* Jquery UI Tabs
+		/*====================================================================*/
+		$(function() {
+			$("#tabs1,#tabs2").tabs({
+				collapsible: true
+			});
+		});
+		</script>
+    </body>
+</html>
