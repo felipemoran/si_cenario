@@ -34,3 +34,29 @@ class Projeto(models.Model):
     def __unicode__(self):
         return self.nome
 
+
+class Nucleo(models.Model):
+    class Meta:
+        verbose_name = "Nucleo"
+        verbose_name_plural = "Nucleos"
+
+    def __unicode__(self):
+        pass
+
+
+class Membro(models.Model):
+    class Meta:
+        verbose_name = "Membro"
+        verbose_name_plural = "Membros"
+
+    nome = models.CharField("Nome", max_length=64, default='ERRADO')
+    sobrenome = models.CharField("Sobrenome", max_length=64, default='ERRADO')
+    email = models.EmailField(null=False, default='ERRADO')
+    #verificar classe de referencia
+    nucleo = models.ForeignKey(Nucleo, blank=True, null=True)
+    login = models.CharField("Login", max_length=64, default='ERRADO')
+    password = models.CharField("Password", max_length=64, default='ERRADO')
+
+
+    def __unicode__(self):
+        pass

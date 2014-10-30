@@ -6,3 +6,11 @@ class ProjetoForm(forms.ModelForm):
         model = Projeto
 
 
+class MembroForm(forms.ModelForm):
+    class Meta:
+        model = Membro
+        widgets = {
+            'password': forms.PasswordInput(),
+        }
+
+

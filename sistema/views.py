@@ -42,3 +42,13 @@ def projeto_editar(request, projeto_id):
 
     return render(request, 'projeto_cadastrar.html', locals())
 
+
+def cadastra_usuario(request):
+    form_membro = MembroForm()
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+        novo_membro = MembroForm(request.POST)
+        novo_membro.save()
+
+    return render(request, 'cadastra_usuario.html', locals())

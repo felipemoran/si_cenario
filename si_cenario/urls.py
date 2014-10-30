@@ -13,4 +13,6 @@ urlpatterns = patterns('',
     url(r'^projeto_cadastrar/$', 'sistema.views.projeto_cadastrar'),
     url(r'^projeto_editar/(?P<projeto_id>[0-9]+)/$', 'sistema.views.projeto_editar'),
 
+    url(r'^cadastra_usuario/$','sistema.views.cadastra_usuario')
+
 )
