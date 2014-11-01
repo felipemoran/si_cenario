@@ -16,6 +16,10 @@ def home(request):
     return render(request, 'home.html', locals())
 
 
+def projeto_lista(request):
+    return render(request, 'projeto_lista.html', locals())
+
+
 def projeto_cadastrar(request):
     novo_projeto = ProjetoForm()
 
@@ -41,6 +45,13 @@ def projeto_editar(request, projeto_id):
     lista_projetos = Projeto.objects.all()
 
     return render(request, 'projeto_cadastrar.html', locals())
+
+
+def projeto_deletar(request, projeto_id):
+    projeto = Projeto.objects.get(id=projeto_id)
+    projeto.delete()
+
+    return HttpResponseRedirect("/home/")
 
 
 def cadastra_usuario(request):

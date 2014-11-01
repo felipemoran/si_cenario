@@ -21,8 +21,8 @@ ETAPA_CHOICE = (
 class Projeto(models.Model):
     nome = models.CharField("Nome", max_length=50)
     data_de_inicio = models.DateField()
-    status = models.CharField("Status", max_length=50, choices=STATUS_CHOICE)
-    etapa = models.CharField("Etapa", max_length=50, choices=ETAPA_CHOICE)
+    status = models.CharField("Status", max_length=50, choices=STATUS_CHOICE, blank=True, null=True)
+    etapa = models.CharField("Etapa", max_length=50, choices=ETAPA_CHOICE, blank=True, null=True)
     # membro = models.ManyToManyField(Membro)
     descricao = models.TextField()
 
@@ -35,13 +35,13 @@ class Projeto(models.Model):
         return self.nome
 
 
-class Nucleo(models.Model):
-    class Meta:
-        verbose_name = "Nucleo"
-        verbose_name_plural = "Nucleos"
+# class Nucleo(models.Model):
+#     class Meta:
+#         verbose_name = "Nucleo"
+#         verbose_name_plural = "Nucleos"
 
-    def __unicode__(self):
-        pass
+#     def __unicode__(self):
+#         pass
 
 
 class Membro(models.Model):
