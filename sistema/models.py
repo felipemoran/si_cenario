@@ -26,7 +26,6 @@ class Projeto(models.Model):
     # membro = models.ManyToManyField(Membro)
     descricao = models.TextField()
 
-
     class Meta:
         verbose_name = "Projeto"
         verbose_name_plural = "Projetos"
@@ -49,14 +48,13 @@ class Membro(models.Model):
         verbose_name = "Membro"
         verbose_name_plural = "Membros"
 
+    usuario = models.OneToOneField(User)
     nome = models.CharField("Nome", max_length=64)
     sobrenome = models.CharField("Sobrenome", max_length=64)
     email = models.EmailField(null=False)
     #verificar classe de referencia
-    nucleo = models.ForeignKey(Nucleo, blank=True, null=True)
-    login = models.CharField("Login", max_length=64)
-    password = models.CharField("Password", max_length=64)
-
 
     def __unicode__(self):
         return self.nome
+
+

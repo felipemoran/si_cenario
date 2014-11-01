@@ -55,14 +55,46 @@ def projeto_deletar(request, projeto_id):
 
 
 def cadastra_usuario(request):
-    form_membro = MembroForm()
-    if request.method == 'GET':
-        pass
-    elif request.method == 'POST':
-        novo_membro = MembroForm(request.POST)
-        print '----------'
-        print novo_membro
-        if novo_membro.is_valid():
-            novo_membro.save()
-
+    cadastro = True
+    membro_form = MembroForm()
+    if request.method == 'POST':
+        login = request.POST['login']
+        senha = request.POST['senha']
+        confirmacao_senha = request.POST['confirmacao_senha']
+        numero_usuario = User.objects.filter(username__iexact = login).count()
+        if numero_usuario == 0:
+            if confirmacao_senha == senha:
+                membro_form = MembroForm(request.POST)
+                if membro_form.is_valid():
+                    user = User.objects.create_user(login, confirmacao_senha, senha)
+                    user.save()
+                    membro = membro_form.save(commit = False)
+                    membro.usuario = user
+                    membro.save()
+                    return HttpResponse('<script>alert("Usuário cadastrado com sucesso"); history.back()</script>')
+            else:
+                return HttpResponse('<script>alert("Senhas não coincidem"); history.back()</script>')
+        else:
+            return HttpResponse('<script>alert("Login já existente"); history.back()</script>')
     return render(request, 'cadastra_usuario.html', locals())
+
+def atualiza_usuario(request, usuario_id):
+    membro = Membro.objects.get(id = usuario_id)
+    membro_form = MembroForm(instance = membro)
+    if request.method == 'POST':
+        membro_form = MembroForm(request.POST, instance=membro)
+        if membro_form.is_valid():
+            membro_form.save()
+            return HttpResponse('<script>alert("Usuário atualizado com sucesso"); history.back()</script>')
+    return render(request, 'cadastra_usuario.html', locals())
+
+def deleta_usuario(request, usuario_id):
+    membro = Membro.objects.get(id = usuario_id)
+    user = membro.usuario
+    membro.delete()
+    user.delete()
+    return HttpResponse('<script>alert("O usuário foi deletado"); history.back()</script>')
+
+def perfil_usuario(request, usuario_id):
+    membro = Membro.objects.get(id = usuario_id)
+    return render(request, 'perfil_usuario.html', locals())

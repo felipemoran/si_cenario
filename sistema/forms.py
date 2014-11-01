@@ -17,8 +17,4 @@ class ProjetoForm(metaForm):
 class MembroForm(forms.ModelForm):
     class Meta:
         model = Membro
-        widgets = {
-            'password': forms.PasswordInput(),
-        }
-
-
+        exclude = ('usuario',)
