@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block principal %}
+
+<!-- Tabela dos projetos com imagens, filtro, etc-->
+
+<!-- Start -->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- Start Gallery Images -->
+        <h2><center>Projetos em Andamento</center></h2><br>
+        <div class="widget dark">
+            <div class="widget-panel">
+                <div class="widget-panel-inner">
+                    <div class="row-fluid">
+                        <div class="span12">Núcleo :
+                        <div class="btn-group" data-toggle="buttons-radio" id="filter-button">
+                            <button class="btn active" data-group="all">Todos</button>
+                            {% for nucleo in lista_nucleo %}
+                            <button class="btn" data-group="fruit"></button>
+                            {% endfor %}
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-content">
+                <div class="widget-content-inner">
+                    <div id="gallery" class="gallery">
+                        <div class="item" data-groups='["fruit"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image1.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image1.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["fruit"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image2.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image2.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["fruit"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image3.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image3.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["leaf"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image4.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image4.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["flower"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image5.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image5.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["flower"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image6.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image6.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["fruit"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image7.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image7.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["flower"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image8.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image8.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["fruit"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image9.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image9.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["fruit"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image10.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image10.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["flower"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image11.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image11.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                        <div class="item" data-groups='["leaf"]'>
+                            <div class="item-btn">
+                                <div class="item-btn-inner">
+                                    <a href="img/gallery/image12.jpg" data-gallery="chocolat" rel="image"><i class="icon iconfa-search"></i></a>
+                                    <a href="#"><i class="icon iconfa-download"></i></a>
+                                </div>
+                            </div>
+                            <img src="img/gallery/260x180/image12.jpg" alt="" height="145" width="230" />
+                            <span class="description">Lorem ipsum dolor sit amet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery Images -->
+
+    </div>
+</div><!-- End -->
+
+
+
+{% endblock %}

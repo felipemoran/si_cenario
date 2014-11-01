@@ -1,44 +1,38 @@
 {% extends "base.html" %}
 {% block principal %}
-    <h1>Projeto</h1>
-
-<form method='POST'> {% csrf_token %}
-
-{% for campo in novo_projeto %}
 
 
-{{ campo.errors}} <br>
-{{ campo.label }} {{ campo }} <br>
-
-{% endfor %}
-
-<button type='submit'>Enviar</button> <br><br>
+<h2>Projeto  <small>Cadastre um novo projeto.</small></h2>
 
 
-</form>
+<!-- Start Form Wizard -->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget dark">
+            <div class="widget-head"></div>
+            <div class="widget-content no-padding">
+                <div class="widget-content-inner">
+                    <form id="custom1" class="form-horizontal">
+                        <fieldset title="Step 1">
+                            {% for campo in novo_projeto %}
+                            <div class="control-group">
+                            {{ campo.errors}}
+                                <label class="control-label">{{ campo.label }}</label>
+                                <div class="controls">
+                                   {{ campo }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </fieldset><br>
+                        <input type="submit" class="btn btn-primary finish pull-right" value="Enviar" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Form Wizard -->
 
-<table>
-    <tr>
-        <th>Nome</th>
-        <th>Etapa</th>
-        <th>Status</th>
-        <th>Descrição</th>
-        <th>Data de Início</th>
-    </tr>
-{% for projeto in lista_projetos %}
-
-    <tr>
-        <td>{{ projeto.nome }}</td>
-        <td>{{ projeto.etapa }}</td>
-        <td>{{ projeto.status }}</td>
-        <td>{{ projeto.descricao }}</td>
-        <td>{{ projeto.data_de_inicio }}</td>
-    </tr>
-
-{% endfor %}
-
-</table>
 
 
 {% endblock %}
-
