@@ -2,16 +2,36 @@
 {% block principal %}
 
 <div><h1>Aqui vai o conteúdo</h1></div>
-<div><p><form method="POST" action="/cadastra_usuario/" data-ajax="false">
+<div><p><form method="POST" data-ajax="false">
 {%csrf_token%}
 
-{% for field in form_membro  %}
+{% for field in membro_form  %}
 {{field.errors}}
 <label>{{field.label}}</label>
 <div class="controls">
     {{field}}
 </div>
 {% endfor %}
+
+{%if cadastro == True%}
+
+<label>Login:</label>
+<div class="controls">
+    <input type="text" name="login">
+</div>
+
+<label>Senha:</label>
+<div class="controls">
+    <input type="password" name="senha">
+</div>
+
+<label>Confirmação de senha:</label>
+<div class="controls">
+    <input type="password" name="confirmacao_senha">
+</div>
+
+{% endif %}
+
 
 <button type = "submit">Cadastrar</button>
 
