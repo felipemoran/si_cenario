@@ -54,6 +54,7 @@ class Membro(models.Model):
     email = models.EmailField(null=False)
     #verificar classe de referencia ou nao
 
+
     def __unicode__(self):
         return self.nome
 
