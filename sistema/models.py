@@ -52,7 +52,7 @@ class Membro(models.Model):
     nome = models.CharField("Nome", max_length=64)
     sobrenome = models.CharField("Sobrenome", max_length=64)
     email = models.EmailField(null=False)
-    #verificar classe de referencia - mais um teste
+    #verificar classe de referencia - mais um teste - testando
     def __unicode__(self):
         return self.nome
 
