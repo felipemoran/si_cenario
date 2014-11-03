@@ -53,10 +53,10 @@ class Membro(models.Model):
     sobrenome = models.CharField("Sobrenome", max_length=64)
     email = models.EmailField(null=False)
 
+
     #verificar classe
+
 
 
     def __unicode__(self):
         return self.nome
-
-
