@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     # URLs de Projeto
     url(r'^projeto_lista/$', 'sistema.views.projeto_lista'),
     url(r'^projeto_cadastrar/$', 'sistema.views.projeto_cadastrar'),
+    url(r'^projeto_perfil/(?P<projeto_id>[0-9]+)/$', 'sistema.views.projeto_perfil'),
     url(r'^projeto_editar/(?P<projeto_id>[0-9]+)/$', 'sistema.views.projeto_editar'),
     url(r'^projeto_deletar/(?P<projeto_id>[0-9]+)/$', 'sistema.views.projeto_deletar'),
 
