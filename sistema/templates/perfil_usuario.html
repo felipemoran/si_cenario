@@ -12,8 +12,13 @@
                                         <div class="span12">
                                             <br>
                                             <span class="name">{{membro.nome}}</span>
-                                            <button class="btn pull-right"><i class="icon icon-envelope"></i>Message</button>
-                                            <button class="btn btn-info pull-right"><i class="icon icon-white icon-briefcase"></i> Hire Me</button>
+
+                                                <a href="mailto:{{membro.email}}"><button class="btn pull-right"><i class="icon icon-envelope">
+
+                                                </i>E-mail</button>
+
+                                                </a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -22,7 +27,7 @@
                                     <div class="row-fluid">
                                         <div class="span12">
                                             <div class="profile-photo">
-                                                <img src="img/avatar/avatar3.png" class="img-polaroid">
+                                                <img src="/static/img/default_avatar.png" class="img-polaroid">
                                                 <div class="profile-info">
                                                     <span><i class="icon icon-white  iconelusive-user"></i> {{membro.sobrenome}}, {{membro.nome}}</span>
                                                     <span><i class="icon icon-white iconelusive-mail-alt"></i> {{membro.email}}</span>
@@ -35,12 +40,12 @@
                                 <div class="profile-content">
                                     <div class="row-fluid">
                                         <div class="span9">
-                                            <h3>About Me</h3>
+                                            <h3>Sobre Mim</h3>
 
 
                                             <hr>
 
-                                            <h3>My Skill Set</h3>
+                                            <h3>Projetos</h3>
 
                                             <hr>
 
