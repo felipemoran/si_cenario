@@ -23,4 +23,7 @@ urlpatterns = patterns('',
     url(r'^deleta_usuario/(?P<usuario_id>[0-9]+)/$', 'sistema.views.deleta_usuario'),
     url(r'^perfil_usuario/(?P<usuario_id>[0-9]+)/$', 'sistema.views.perfil_usuario'),
 
+    #URLs de Nucleo
+    url(r'^cadastra_nucleo/$', 'sistema.views.cadastra_nucleo'),
+
 )

@@ -12,7 +12,8 @@
             <div class="widget-head"></div>
             <div class="widget-content no-padding">
                 <div class="widget-content-inner">
-                    <form id="custom1" class="form-horizontal">
+                    <form id="custom1" class="form-horizontal" method='POST' data-ajax='false'> {%csrf_token%}
+                    {{form.non_field_errors}}
                         <fieldset title="Step 1">
                             {% for campo in novo_projeto %}
                             <div class="control-group">

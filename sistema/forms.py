@@ -1,5 +1,7 @@
 from models import *
 from django import forms
+from django.forms.widgets import CheckboxSelectMultiple
+from django.forms.models import ModelMultipleChoiceField
 
 
 class metaForm(forms.ModelForm):
@@ -9,12 +11,25 @@ class metaForm(forms.ModelForm):
             field.widget.attrs['class'] = 'span12'
 
 
+class CustomSelectMultiple(ModelMultipleChoiceField):
+    def label_from_instance(self, obj):
+        return "%s %s " %(obj.nome, obj.sobrenome)
+
+
 class ProjetoForm(metaForm):
     class Meta:
         model = Projeto
+        # exclude = ('membros',)
+    # membros = CustomSelectMultiple(widget=forms.CheckboxSelectMultiple, queryset=Membro.objects.all())
 
 
 class MembroForm(forms.ModelForm):
     class Meta:
         model = Membro
         exclude = ('usuario',)
+
+
+class NucleoForm(forms.ModelForm):
+    class Meta:
+        model = Nucleo
+

@@ -22,11 +22,12 @@ def projeto_lista(request):
 
 def projeto_cadastrar(request):
     novo_projeto = ProjetoForm()
-
     if request.method == 'POST':
         novo_projeto = ProjetoForm(request.POST)
+        print novo_projeto
         if novo_projeto.is_valid():
             novo_projeto.save()
+            return HttpResponse('<script>alert("Projeto cadastrado com sucesso"); location.replace("/projeto_cadastrar/")</script>')
 
     lista_projetos = Projeto.objects.all()
 
@@ -41,6 +42,7 @@ def projeto_editar(request, projeto_id):
         novo_projeto = ProjetoForm(request.POST, instance=projeto)
         if novo_projeto.is_valid():
             novo_projeto.save()
+            return HttpResponse('<script>alert("Projeto atualizado com sucesso"); history.back()</script>')
 
     lista_projetos = Projeto.objects.all()
 
@@ -98,3 +100,11 @@ def deleta_usuario(request, usuario_id):
 def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     return render(request, 'perfil_usuario.html', locals())
+
+
+def cadastra_nucleo(request):
+    nucleo = NucleoForm()
+
+    return render(request, 'cadastra_nucleo.html', locals())
+
+

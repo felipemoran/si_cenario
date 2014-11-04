@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block principal %}
+
+<div>
+<form>
+    {%for campo in nucleo %}
+    {{campo.errors}}
+    {{campo.label}}
+    {{campo}}
+    {%endfor%}
+</form>
+</div>
+
+{% endblock %}
