@@ -23,7 +23,7 @@ class ProjetoForm(metaForm):
     # membros = CustomSelectMultiple(widget=forms.CheckboxSelectMultiple, queryset=Membro.objects.all())
 
 
-class MembroForm(forms.ModelForm):
+class MembroForm(metaForm):
     class Meta:
         model = Membro
         exclude = ('usuario',)

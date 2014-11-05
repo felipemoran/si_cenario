@@ -40,32 +40,12 @@
                                 <div class="profile-content">
                                     <div class="row-fluid">
                                         <div class="span9">
-                                            <h3>Cargos</h3>
-                                            <a href="/cadastra_cargo/{{membro.id}}"><button>Adicionar</button></a>
-
-                                            <table>
-                                            {% if lista_cargos %}
-                                                <tr>
-                                                    <th>Núcleo</th>
-                                                    <th>Cargo</th>
-                                                    <th>Projeto</th>
-                                                </tr>
-                                                {% for cargo in lista_cargos %}
-                                                    <tr>
-                                                        <td>{{ cargo.nucleo.nome }}</td>
-                                                        <td>{{ cargo.cargo }}</td>
-                                                        <td>{{ cargo.projeto.nome }}</td>
-                                                    </tr>
-                                                {% endfor %}
-                                            {% endif %}
-                                            </table>
-                                            <hr>
-                                            <h3>Sobre Mim</h3>
+                                            <h3>Projetos atuais</h3>
 
 
                                             <hr>
 
-                                            <h3>Projetos</h3>
+                                            <h3>Projetos antigos</h3>
 
                                             <hr>
 

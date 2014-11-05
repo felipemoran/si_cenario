@@ -1,40 +1,61 @@
 {% extends 'base.html' %}
 {% block principal %}
 
-<div><h1>Aqui vai o conteúdo</h1></div>
+<div><h1>Cadastro de Usuário</h1></div>
 <div><p><form method="POST" data-ajax="false">
 {%csrf_token%}
 
-{% for field in membro_form  %}
-{{field.errors}}
-<label>{{field.label}}</label>
+<!-- Start HTML5 Form Validation -->
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="widget dark">
+                                        <div class="widget-head"><span class="title">Complete as informações abaixo</span></div>
+                                        <div class="widget-content no-padding">
+                                            <div class="widget-content-inner">
+                                                <form class="form-horizontal">
+                                                    <div class="control-group">
+                                                    {% for field in membro_form  %}
+                                                    {{field.errors}}
+                                                        <label class="control-label">{{field.label}}</label>
+                                                        <div class="controls">
+                                                            {{field}}
+                                                        </div>
+                                                    {% endfor %}
+                                                    {%if cadastro == True%}
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <label>Login:</label>
 <div class="controls">
-    {{field}}
-</div>
-{% endfor %}
-
-{%if cadastro == True%}
-
-<label>Login:</label>
-<div class="controls">
-    <input type="text" name="login">
+    <input class = "span12" type="text" name="login">
 </div>
 
 <label>Senha:</label>
 <div class="controls">
-    <input type="password" name="senha">
+    <input class = "span12" type="password" name="senha">
 </div>
 
 <label>Confirmação de senha:</label>
 <div class="controls">
-    <input type="password" name="confirmacao_senha">
+    <input class = "span12" type="password" name="confirmacao_senha">
 </div>
 
 {% endif %}
 
 
 <button type = "submit">Cadastrar</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div><!-- End HTML5 Form Validation -->
+
+
 
 </form></p></div>
 
 {% endblock %}
+
+
