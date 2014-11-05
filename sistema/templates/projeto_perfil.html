@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block principal %}
+
+
+<h2>Projeto  <small>Perfil de projetos</small></h2>
+<hr class="style1">
+
+<!-- Start Main Content -->
+<div class="row-fluid">
+    <div class="span12">
+
+        <!-- Página de perfil do projeto -->
+        <div id="profile-page-wrapper">
+
+            <div class="profile-page-header">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <span class="name"> {{ projeto.nome }} </span>
+                        <!-- Botão que redireciona para outra página -->
+                        <a href="/projeto_editar/{{ projeto.id }}"><button class="btn btn-info pull-right"><i class="icon icon-white iconfa-cogs"></i> Editar Projeto</button></a>
+                        <!-- Fim do código do botão -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-page-photo">
+                <div class="row-fluid">
+                    <div class="span12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="widget">
+                                    <div class="widget-content">
+                                        <div class="widget-content-inner">
+                                            <h4>Geral</h4>
+                                            <div class="progress-summary">
+                                                <!-- (((STATUS))) - Troca icone para cada status -->
+                                                {% if projeto.status == "Em dia" %}
+                                                <div class="title"><i class=" iconfugue16-chart-up-color"></i> Status: <span class="name"> {{ projeto.status }} </span></div>
+                                                {% else %}
+                                                <div class="title"><i class="  iconfugue16-chart-down-color"></i> Status: <span class="name"> {{ projeto.status }} </span></div>
+                                                {% endif %}
+                                                <!-- Fim status -->
+                                                <br>
+                                                <!-- (((ETAPA))) - Troca icone para cada etapa -->
+                                                {% if projeto.etapa == "Analise Tecnica" %}
+                                                <div class="title"><i class="  iconfugue16-blueprint--pencil"></i> Etapa: <span class="name"> {{ projeto.etapa }} </span></div>
+
+                                                <div class="progress rounded mini progress-striped active">
+                                                    <div class="bar bar-warning" style="width: 20%;"></div>
+                                                </div>
+                                                <div class="value"> 20% / 100%</div>
+                                                {% endif %}
+                                                {% if projeto.etapa == "Planejamento" %}
+                                                <div class="title"><i class="  iconfugue16-light-bulb-off"></i> Etapa: <span class="name"> {{ projeto.etapa }} </span></div>
+
+                                                <div class="progress rounded mini progress-striped active">
+                                                    <div class="bar bar-warning" style="width: 40%;"></div>
+                                                </div>
+                                                <div class="value"> 40% / 100%</div>
+                                                {% endif %}
+                                                {% if projeto.etapa == "Execucao" %}
+                                                <div class="title"><i class="  iconfugue16-hammer"></i> Etapa: <span class="name"> {{ projeto.etapa }} </span></div>
+
+                                                <div class="progress rounded mini progress-striped active">
+                                                    <div class="bar bar-warning" style="width: 60%;"></div>
+                                                </div>
+                                                <div class="value"> 60% / 100%</div>
+                                                {% endif %}
+                                                {% if projeto.etapa == "Suporte Tecnico" %}
+                                                <div class="title"><i class="  iconfugue16-wrench"></i> Etapa: <span class="name"> {{ projeto.etapa }} </span></div>
+
+                                                <div class="progress rounded mini progress-striped active">
+                                                    <div class="bar bar-warning" style="width: 80%;"></div>
+                                                </div>
+                                                <div class="value"> 80% / 100%</div>
+                                                {% endif %}
+                                                {% if projeto.etapa == "Finalizado" %}
+                                                <div class="title"><i class="  iconfugue16-tick"></i> Etapa: <span class="name"> {{ projeto.etapa }} </span></div>
+
+                                                <div class="progress rounded mini progress-striped active">
+                                                    <div class="bar bar-warning" style="width: 100%;"></div>
+                                                </div>
+                                                <div class="value"> 100% / 100%</div>
+                                                {% endif %}
+                                                <!-- Fim etapa -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span9">
+                        <h3>Descrição</h3>
+                        <span class="name"> {{ projeto.descricao }} </span>
+
+                        <hr>
+
+                        <h3>Membros</h3>
+
+                        <!-- Aqui vai os membros alocados no projeto -->
+
+                        <div>Gerente: Nome do Gerente</div><br>
+                        <div>Participantes: Nome dos Participantes</div>
+
+                        <button class="btn pull-right"><i class="icon icon-envelope"></i> Mensagem para o gerente</button></div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Fim da página de perfil do projeto -->
+
+    </div>
+</div><!-- End -->
+
+{% endblock %}

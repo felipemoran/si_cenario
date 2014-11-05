@@ -5,16 +5,16 @@ from django.contrib.auth.models import User
 
 
 STATUS_CHOICE = (
-    ("em_dia", "Em dia"),
-    ("atrasado", "Atrasado"),
+    ("Em dia", "Em dia"),
+    ("Atrasado", "Atrasado"),
     )
 
 ETAPA_CHOICE = (
-    ("analise_tecnica", "Análise Tecnica"),
-    ("finalizado", "Finalizado"),
-    ("planejamento", "Planejamento"),
-    ("execucao", "Execucao"),
-    ("suporte_tecnico", "Suporte Tecnico"),
+    ("Analise Tecnica", "Análise Técnica"),         # Não está aceitando "Análise Técnica"
+    ("Planejamento", "Planejamento"),
+    ("Execucao", "Execução"),       # Não está aceitando "Execução"
+    ("Suporte Tecnico", "Suporte Técnico"),
+    ("Finalizado", "Finalizado"),
     )
 
 CARGO_CHOICE = (
@@ -41,12 +41,11 @@ class Membro(models.Model):
 
 class Projeto(models.Model):
     nome = models.CharField("Nome", max_length=50)
-    data_de_inicio = models.DateField(blank=True, null=True)
-    data_de_termino = models.DateField(blank=True, null=True)
+    data_de_inicio = models.DateField("Data de início")
     status = models.CharField("Status", max_length=50, choices=STATUS_CHOICE, blank=True, null=True)
     etapa = models.CharField("Etapa", max_length=50, choices=ETAPA_CHOICE, blank=True, null=True)
-    membros = models.ManyToManyField(Membro, blank=True, null=True)
-    descricao = models.TextField()
+    # membro = models.ManyToManyField(Membro)
+    descricao = models.TextField("Descrição")
 
 
     class Meta:
