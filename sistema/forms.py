@@ -33,3 +33,8 @@ class NucleoForm(forms.ModelForm):
     class Meta:
         model = Nucleo
 
+class CargoForm(forms.ModelForm):
+    class Meta:
+        model = Cargo
+        exclude = ('membro',)
+

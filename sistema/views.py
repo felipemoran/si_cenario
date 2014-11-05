@@ -99,6 +99,10 @@ def deleta_usuario(request, usuario_id):
 
 def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
+    try:
+        lista_cargos = Cargo.objects.filter(membro=membro)
+    except:
+        lista_cargos = False
     return render(request, 'perfil_usuario.html', locals())
 
 
@@ -107,4 +111,16 @@ def cadastra_nucleo(request):
 
     return render(request, 'cadastra_nucleo.html', locals())
 
+
+def cadastra_cargo(request, usuario_id):
+    membro = Membro.objects.get(id=usuario_id)
+    cargo_form = CargoForm()
+    if request.method == 'POST':
+        cargo_form = CargoForm(request.POST)
+        if cargo_form.is_valid():
+            cargo = cargo_form.save(commit = False)
+            cargo.membro = membro
+            cargo.save()
+            return HttpResponse('<script>alert("Cargo cadastrado com sucesso"); history.back()</script>')
+    return render(request, 'cadastra_cargo.html', locals())
 

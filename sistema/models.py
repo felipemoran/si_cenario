@@ -10,7 +10,7 @@ STATUS_CHOICE = (
     )
 
 ETAPA_CHOICE = (
-    ("analise_tecnica", "Analise Tecnica"),
+    ("analise_tecnica", "Análise Tecnica"),
     ("finalizado", "Finalizado"),
     ("planejamento", "Planejamento"),
     ("execucao", "Execucao"),
@@ -29,7 +29,7 @@ class Membro(models.Model):
     usuario = models.OneToOneField(User)
     nome = models.CharField("Nome", max_length=64)
     sobrenome = models.CharField("Sobrenome", max_length=64)
-    email = models.EmailField(null=False)
+    email = models.EmailField(null=False, unique=True)
 
     class Meta:
         verbose_name = "Membro"
@@ -47,6 +47,7 @@ class Projeto(models.Model):
     etapa = models.CharField("Etapa", max_length=50, choices=ETAPA_CHOICE, blank=True, null=True)
     membros = models.ManyToManyField(Membro, blank=True, null=True)
     descricao = models.TextField()
+
 
     class Meta:
         verbose_name = "Projeto"
@@ -72,6 +73,7 @@ class Cargo(models.Model):
     cargo = models.CharField("Cargo", choices=CARGO_CHOICE, max_length=50)
     membro = models.ForeignKey(Membro)
     nucleo = models.ForeignKey(Nucleo)
+    projeto = models.ForeignKey(Projeto, blank=True, null=True)
 
     class Meta:
         verbose_name = "Cargo"

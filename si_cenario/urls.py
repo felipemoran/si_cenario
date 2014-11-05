@@ -26,4 +26,8 @@ urlpatterns = patterns('',
     #URLs de Nucleo
     url(r'^cadastra_nucleo/$', 'sistema.views.cadastra_nucleo'),
 
+    #URLs de Cargo
+    url(r'^cadastra_cargo/(?P<usuario_id>[0-9]+)/$', 'sistema.views.cadastra_cargo'),
+
+
 )

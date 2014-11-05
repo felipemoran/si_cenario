@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block principal %}
+<h1>Olá cargo!</h1>
+<form method='POST'> {%csrf_token%}
+{{campo_form.non_field_errors}}
+    {% for campo in cargo_form %}
+        {{ campo.errors }} <br>
+        {{ campo.label }}: {{ campo }}
+    {% endfor %}
+    <br>
+    <button type='submit'>Enviar</button>
+</form>
+{% endblock %}
