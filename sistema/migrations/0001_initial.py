@@ -16,9 +16,10 @@ class Migration(migrations.Migration):
             name='Membro',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('nome', models.CharField(max_length=50, verbose_name=b'Nome')),
-                ('sobrenome', models.CharField(max_length=50, verbose_name=b'Sobrenome')),
-                ('coordenador', models.BooleanField(default=False)),
+                ('nome', models.CharField(max_length=64, verbose_name=b'Nome')),
+                ('sobrenome', models.CharField(max_length=64, verbose_name=b'Sobrenome')),
+                ('email', models.EmailField(max_length=75)),
+                ('usuario', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'verbose_name': 'Membro',
@@ -27,44 +28,19 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='Nucleo',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('nome', models.CharField(max_length=50, verbose_name=b'Nome')),
-            ],
-            options={
-                'verbose_name': 'Nucleo',
-                'verbose_name_plural': 'Nucleos',
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
             name='Projeto',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('nome', models.CharField(max_length=50, verbose_name=b'Nome')),
-                ('data_inicio', models.DateField()),
-                ('status', models.CharField(max_length=50, verbose_name=b'Status', choices=[(b'em_dia', b'Em dia'), (b'atrasado', b'Atrasado')])),
-                ('etapa', models.CharField(max_length=50, verbose_name=b'Etapa', choices=[(b'planejamento', b'Planejamento'), (b'execucao', b'Execu\xc3\xa7\xc3\xa3o'), (b'analise_tecnica', b'An\xc3\xa1lise t\xc3\xa9cnica')])),
+                ('data_de_inicio', models.DateField()),
+                ('status', models.CharField(blank=True, max_length=50, null=True, verbose_name=b'Status', choices=[(b'em_dia', b'Em dia'), (b'atrasado', b'Atrasado')])),
+                ('etapa', models.CharField(blank=True, max_length=50, null=True, verbose_name=b'Etapa', choices=[(b'analise_tecnica', b'Analise Tecnica'), (b'finalizado', b'Finalizado'), (b'planejamento', b'Planejamento'), (b'execucao', b'Execucao'), (b'suporte_tecnico', b'Suporte Tecnico')])),
                 ('descricao', models.TextField()),
-                ('membro', models.ManyToManyField(to='sistema.Membro')),
             ],
             options={
                 'verbose_name': 'Projeto',
                 'verbose_name_plural': 'Projetos',
             },
             bases=(models.Model,),
-        ),
-        migrations.AddField(
-            model_name='membro',
-            name='nucleo',
-            field=models.ForeignKey(to='sistema.Nucleo'),
-            preserve_default=True,
-        ),
-        migrations.AddField(
-            model_name='membro',
-            name='usuario',
-            field=models.ForeignKey(to=settings.AUTH_USER_MODEL),
-            preserve_default=True,
         ),
     ]

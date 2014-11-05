@@ -12,7 +12,7 @@
             <div class="widget-head"></div>
             <div class="widget-content no-padding">
                 <div class="widget-content-inner">
-                    <form id="custom1" class="form-horizontal">
+                    <form method='POST' id="custom1" class="form-horizontal"> {% csrf_token %}
                         <fieldset title="Step 1">
                             {% for campo in novo_projeto %}
                             <div class="control-group">
@@ -32,6 +32,31 @@
     </div>
 </div>
 <!-- End Form Wizard -->
+
+<!-- teste -->
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Etapa</th>
+        <th>Status</th>
+        <th>Descrição</th>
+        <th>Data de Início</th>
+    </tr>
+{% for projeto in lista_projetos %}
+
+    <tr>
+        <td>{{ projeto.nome }}</td>
+        <td>{{ projeto.etapa }}</td>
+        <td>{{ projeto.status }}</td>
+        <td>{{ projeto.descricao }}</td>
+        <td>{{ projeto.data_de_inicio }}</td>
+        <td><a href="/projeto_editar/{{ projeto.id }}">Atualizar</a></td>
+        <td><a href="/projeto_deletar/{{ projeto.id }}">Deletar</a></td>
+    </tr>
+
+{% endfor %}
+
+</table>
 
 
 
