@@ -25,7 +25,10 @@ urlpatterns = patterns('',
     url(r'^perfil_usuario/(?P<usuario_id>[0-9]+)/$', 'sistema.views.perfil_usuario'),
 
     #URLs de Nucleo
-    url(r'^cadastra_nucleo/$', 'sistema.views.cadastra_nucleo'),
+    url(r'^cadastrar_nucleo/$', 'sistema.views.cadastrar_nucleo'),
+    url(r'^atualizar_nucleo/(?P<nucleo_id>[0-9]+)/$', 'sistema.views.atualizar_nucleo'),
+    url(r'^apagar_nucleo/(?P<nucleo_id>[0-9]+)/$', 'sistema.views.apagar_nucleo'),
+    url(r'^ver_nucleos/$', 'sistema.views.ver_nucleos'),
 
     #URLs de Cargo
     url(r'^cadastra_cargo/(?P<usuario_id>[0-9]+)/$', 'sistema.views.cadastra_cargo'),

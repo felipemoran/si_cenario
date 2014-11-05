@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{%block principal %}
+
+<!-- Start Datatable -->
+<div class="row-fluid">
+	<div class="span12">
+		<div class="widget dark">
+			<div class="widget-head">
+				<span class="title">Núcleos cadastrados</span>
+				<div class="toolbar">
+					<div class="btn-group">
+						<a href="#" class="btn" data-toggle="dropdown">With Selected <span class="caret"></span></a>
+						<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+							<li><a tabindex="-1" href="#"><i class="icon-eye-open"></i> View</a></li>
+							<li><a tabindex="-1" href="#"><i class="icon-trash"></i> Delete</a></li>
+						</ul>
+					</div>
+					<button class="btn"><i class="icon-white icon-cog"></i></button>
+				</div>
+			</div>
+			<div class="widget-content no-padding">
+				<div class="widget-content-inner">
+					<table class="table table-hover" id="table1">
+						<thead>
+							<th>Nome</th>
+
+							<th></th>
+						</thead>
+						<tbody>
+						{%for nucleo in lista_nucleo%}
+						<tr class="odd gradeX">
+								<td>{{nucleo.nome}}</td>
+						<td class="center">
+						<div class="tr-action">
+							<div class="tr-action-inner">
+								<div class="btn-group">
+								<a href="/atualizar_nucleo/{{nucleo.id}}" class="btn"><i class="icon icon-pencil"></i></a>
+								<a href="/apagar_nucleo/{{nucleo.id}}" class="btn"><i class="icon icon-trash"></i></a>
+								</div>
+							</div>
+						</div>
+						</td>
+						</tr>
+						{%endfor%}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End Datatable -->
+
+{%endblock%}

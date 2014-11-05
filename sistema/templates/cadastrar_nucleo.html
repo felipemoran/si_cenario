@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{%block principal %}
+<div class="widget dark">
+<div class="widget-head"><span class="title"></span></div>
+	<div class="widget-content">
+		<div class="widget-content-inner">
+			<form method = "POST">
+			{%csrf_token%}
+			{{nucleo_form.non_field_errors}}
+				<fieldset>
+					<legend>{{texto}}</legend>
+					{%for campo in nucleo_form%}
+					{{campo.errors}}
+					{{campo.label}}
+					{{campo}}
+					{%endfor%}
+				</fieldset>
+				<button type = "submit">Enviar</button>
+			</form>
+		</div>
+	</div>
+</div>
+{%endblock%}

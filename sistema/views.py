@@ -116,10 +116,37 @@ def perfil_usuario(request, usuario_id):
     return render(request, 'perfil_usuario.html', locals())
 
 
-def cadastra_nucleo(request):
-    nucleo = NucleoForm()
+def cadastrar_nucleo(request):
+    nucleo_form = NucleoForm()
+    if request.method == "POST":
+        nucleo_form = NucleoForm(request.POST)
+        if nucleo_form.is_valid():
+            nucleo_form.save()
+            return HttpResponse('<script>alert("Núcleo cadastrado com sucesso"); location.replace("/cadastrar_nucleo/")</script>')
 
-    return render(request, 'cadastra_nucleo.html', locals())
+    texto = "Cadastro de um novo núcleo"
+    return render(request, 'cadastrar_nucleo.html', locals())
+
+def atualizar_nucleo(request, nucleo_id):
+    nucleo = Nucleo.objects.get(id = nucleo_id)
+    nucleo_form = NucleoForm(instance = nucleo)
+    if request.method == "POST":
+        nucleo_form = NucleoForm(request.POST, instance = nucleo)
+        if nucleo_form.is_valid():
+            nucleo_form.save()
+            return HttpResponse('<script>alert("Núcleo atualizado com sucesso"); location.replace("/ver_nucleos/")</script>')
+
+    texto = "Atualizar núcleo"
+    return render(request, 'cadastrar_nucleo.html', locals())
+
+def apagar_nucleo(requst, nucleo_id):
+    nucleo = Nucleo.objects.get(id = nucleo_id)
+    nucleo.delete()
+    return HttpResponse('<script>location.replace("/ver_nucleos/")</script>')
+
+def ver_nucleos(request):
+    lista_nucleo = Nucleo.objects.all()
+    return render(request, 'ver_nucleos.html', locals())
 
 
 def cadastra_cargo(request, usuario_id):
