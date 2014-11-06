@@ -110,6 +110,7 @@ def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     return render(request, 'perfil_usuario.html', locals())
 
+#Paulo
 '''
 def login_fazer(request):
     if request.method == 'GET':
@@ -146,7 +147,7 @@ def login_fazer(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('<script>alert("Deu certo!"); history.back()</script>')
+                    return HttpResponse('<script>alert("Usuário logado!"); history.back()</script>')
                     #return redirect('/cadastra_usuario')# Redirect to a success page.
                 else:
                     return HttpResponse('<script>alert("Usuário inativo!"); history.back()</script>')

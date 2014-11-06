@@ -2,24 +2,46 @@
 {% block principal %}
 
 <div><p><form method="POST" data-ajax="false">{%csrf_token%}
-<label>Login:</label>
-<div class="controls">
-    <input class = "span12" type="text" name="login">
-</div>
 
-<label>Senha:</label>
-<div class="controls">
-    <input class = "span12" type="password" name="senha">
-</div>
+    <!-- Start Login -->
+                <div id="login-content">
 
-<button type = "submit">Cadastrar</button>
+                    <div class="row-fluid">
+                        <div class="span8 offset2">
 
-</div>
-</form>
-</p>
-</div>
+                            <div class="widget">
+                                <div class="widget-content no-padding">
+                                    <div class="widget-content-inner">
 
+                                        <div class="paper-ring"></div>
 
+                                        <!-- Start Login Form -->
+                                        <div class="login-area">
+                                            <h3><i class="icon iconfa-lock"></i> Faça o login</h3><hr>
+
+                                            <form name="form-login" action="dashboard.html">
+                                                <input name="login" type="text" placeholder="Login" class="input-block-level" data-validation-engine="validate[required]">
+                                                <input name="senha" type="password" placeholder="Senha" class="input-block-level" data-validation-engine="validate[required]">
+                                                <br>
+                                                <button type = "submit">Logar</button>
+                                                <div class="clearfix"></div>
+                                            </form>
+                                        </div>
+                                        <!-- End Login Form -->
+
+                                        <!-- Start Register Area -->
+                                        <div class="register-area">
+                                            <h3>Criar uma conta</h3><hr>
+                                            <a href="http://localhost:8000/cadastra_usuario/" class="btn btn-success btn-block">Criar uma conta</a>
+                                        </div>
+                                        <!-- End Register Area -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- End Login-->
 {% endblock %}
 
 
