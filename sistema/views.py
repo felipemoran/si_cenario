@@ -109,3 +109,54 @@ def deleta_usuario(request, usuario_id):
 def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     return render(request, 'perfil_usuario.html', locals())
+
+'''
+def login_fazer(request):
+    if request.method == 'GET':
+        login_form = LoginForm()
+    else:
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            login = login_form.cleaned_data['login']
+            senha = login_form.cleaned_data['senha']
+            user = authenticate(username=login, password=senha)
+            if user is not None:
+                if user.is_active:
+                    login(request,user)
+                    request.session.set_expiry(0) #nao sei o que essa linha faz
+                    return redirect('/cadastra_usuario') #aqui, na realidade, deveria redirecionar para o perfil do usuário logado mas preciso saber como pegar no banco o id do usuário que logou
+                else:
+                    messages.warning(request, _(u'Usuário inativo.'))
+            else:
+                messages.warning(request, _(u'Tente outro usuário e/ou senha.'))
+        else:
+            messages.warning(request, _('Preencha os campos corretamente.'))
+    return render('login_fazer.html', locals(), context_instance=RequestContext(request))
+    '''
+
+def login_fazer(request):
+    if request.method == 'GET':
+        login_form = LoginForm()
+    else:
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            username = request.POST['login']
+            password = request.POST['senha']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponse('<script>alert("Deu certo!"); history.back()</script>')
+                    #return redirect('/cadastra_usuario')# Redirect to a success page.
+                else:
+                    return HttpResponse('<script>alert("Usuário inativo!"); history.back()</script>')
+            else:
+                return HttpResponse('<script>alert("Usuário e/ou senha incorretos!"); history.back()</script>')
+        else:
+            messages.warning(request, _('Preencha os campos corretamente.'))
+    return render(request, 'login_fazer.html', locals())
+
+
+def logout_fazer(request):
+    logout(request)
+    return HttpResponseRedirect('/')

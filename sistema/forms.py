@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from models import *
 from django import forms
 
@@ -18,3 +19,7 @@ class MembroForm(metaForm):
     class Meta:
         model = Membro
         exclude = ('usuario',)
+
+class LoginForm(forms.Form):
+    login = forms.CharField(label=(u'Usuário'), widget=forms.TextInput(attrs={'class':'text'}))
+    senha = forms.CharField(label=(u'Senha'), widget=forms.PasswordInput(attrs={'class':'text'}))

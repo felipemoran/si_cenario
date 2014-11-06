@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block principal %}
+
+<div><p><form method="POST" data-ajax="false">{%csrf_token%}
+<label>Login:</label>
+<div class="controls">
+    <input class = "span12" type="text" name="login">
+</div>
+
+<label>Senha:</label>
+<div class="controls">
+    <input class = "span12" type="password" name="senha">
+</div>
+
+<button type = "submit">Cadastrar</button>
+
+</div>
+</form>
+</p>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
