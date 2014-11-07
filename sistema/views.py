@@ -69,7 +69,7 @@ def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
     if request.method == 'POST':
-        print "____________________"
+        print "____________________" #arrumar aqui #paulo
         login = request.POST['login']
         print login
         senha = request.POST['senha']
@@ -84,6 +84,7 @@ def cadastra_usuario(request):
                     membro = membro_form.save(commit = False)
                     membro.usuario = user
                     membro.save()
+                    #mudar para os redirecionamentos adequados
                     return HttpResponse('<script>alert("Usuário cadastrado com sucesso"); history.back()</script>')
             else:
                 return HttpResponse('<script>alert("Senhas não coincidem"); history.back()</script>')
@@ -155,9 +156,9 @@ def login_fazer(request):
                     return HttpResponse('<script>alert("Usuário logado!"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
                     #return redirect('/cadastra_usuario')# Redirect to a success page.
                 else:
-                    return HttpResponse('<script>alert("Usuário inativo!"); history.back()</script>')
+                    return HttpResponse('<script>alert("Usuário inativo!"); location.request("/login_fazer/")</script>')
             else:
-                return HttpResponse('<script>alert("Usuário e/ou senha incorretos!"); history.back()</script>')
+                return HttpResponse('<script>alert("Usuário e/ou senha incorretos!"); location.request("/login_fazer/")</script>')
         else:
             messages.warning(request, _('Preencha os campos corretamente.'))
     return render(request, 'login_fazer.html', locals())
