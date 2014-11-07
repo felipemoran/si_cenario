@@ -15,7 +15,7 @@ from sistema.forms import *
 def home(request):
     return render(request, 'home.html', locals())
 
-
+@login_required
 def projeto_lista(request):
     lista_projetos = Projeto.objects.all()
 
@@ -69,7 +69,9 @@ def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
     if request.method == 'POST':
+        print "____________________"
         login = request.POST['login']
+        print login
         senha = request.POST['senha']
         confirmacao_senha = request.POST['confirmacao_senha']
         numero_usuario = User.objects.filter(username__iexact = login).count()
@@ -150,7 +152,7 @@ def login_fazer(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('<script>alert("Usuário logado!"); history.back()</script>')
+                    return HttpResponse('<script>alert("Usuário logado!"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
                     #return redirect('/cadastra_usuario')# Redirect to a success page.
                 else:
                     return HttpResponse('<script>alert("Usuário inativo!"); history.back()</script>')
@@ -163,5 +165,5 @@ def login_fazer(request):
 @login_required
 def logout_fazer(request):
     logout(request)
-    return HttpResponse('<script>alert("Logout efetuado!"); history.back()</script>')
+    return HttpResponse('<script>alert("Logout efetuado!"); location.request("/login_fazer/")</script>')
 
