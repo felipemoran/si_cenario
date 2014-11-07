@@ -21,7 +21,7 @@ def projeto_lista(request):
 
     return render(request, 'projeto_lista.html', locals())
 
-
+@login_required
 def projeto_cadastrar(request):
     novo_projeto = ProjetoForm()
     if request.method == 'POST':
@@ -35,7 +35,7 @@ def projeto_cadastrar(request):
 
     return render(request, 'projeto_cadastrar.html', locals())
 
-
+@login_required
 def projeto_editar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     novo_projeto = ProjetoForm(instance=projeto)
@@ -50,14 +50,14 @@ def projeto_editar(request, projeto_id):
 
     return render(request, 'projeto_cadastrar.html', locals())
 
-
+@login_required
 def projeto_perfil(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     nome_projeto = projeto.nome
 
     return render(request, 'projeto_perfil.html', locals())
 
-
+@login_required
 def projeto_deletar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     projeto.delete()
@@ -89,6 +89,7 @@ def cadastra_usuario(request):
             return HttpResponse('<script>alert("Login já existente"); history.back()</script>')
     return render(request, 'cadastra_usuario.html', locals())
 
+@login_required
 def atualiza_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     membro_form = MembroForm(instance = membro)
@@ -99,6 +100,7 @@ def atualiza_usuario(request, usuario_id):
             return HttpResponse('<script>alert("Usuário atualizado com sucesso"); history.back()</script>')
     return render(request, 'cadastra_usuario.html', locals())
 
+@login_required
 def deleta_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     user = membro.usuario
@@ -106,6 +108,7 @@ def deleta_usuario(request, usuario_id):
     user.delete()
     return HttpResponse('<script>alert("O usuário foi deletado"); history.back()</script>')
 
+@login_required
 def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     return render(request, 'perfil_usuario.html', locals())
@@ -157,7 +160,8 @@ def login_fazer(request):
             messages.warning(request, _('Preencha os campos corretamente.'))
     return render(request, 'login_fazer.html', locals())
 
-
+@login_required
 def logout_fazer(request):
     logout(request)
-    return HttpResponseRedirect('/')
+    return HttpResponse('<script>alert("Logout efetuado!"); history.back()</script>')
+
