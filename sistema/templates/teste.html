@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block principal%}
+
+
+<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+            <!-- DataTables -->
+            <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.table table-hover').dataTable();
+    } );
+</script>
+
+
+<h2> Suas RDs</h2>
+    {% if nao_pago != 0 %}                          <!--Rd's nao pagas-->
+    <div class="widget dark">
+    <div class="widget-head">
+            <span class="title">RDs não pagas</span>
+            <div class="toolbar">
+                <div class="btn-group">
+                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                        <li><a tabindex="-1" href="#"><i class="icon-eye-open"></i> Ver</a></li>
+                        <li><a tabindex="-1" href="#"><i class="icon-trash"></i> Apagar</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <div class="widget-content no-padding">
+        <div class="widget-content-inner">
+            <table class="table table-hover" id="table1">
+                <thead>
+                    <tr>
+                        <th>Pago</th>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Codigo</th>
+                        <th>Area</th>
+                        <th>Nome do Projeto</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rd in rds2 %}
+                    <tr class="even gradeC">
+                        <td><input disabled="true" type="checkbox" data-style="checkbox" {%if rd.pago%}checked{%endif%}/></td>
+                        <td>{{ rd.nome_sobrenome }}</td>
+                        <td>{{ rd.valor }}</td>
+                        <td>{{ rd.data_pedido }}</td>
+                        <td>{{ rd.codigo }}</td>
+                        <td>{{ rd.area }}</td>
+                        <td>{{ rd.nome_projeto }}</td>
+                        <td class="center">
+                            <div class="tr-action">
+                                <div class="tr-action-inner">
+                                    <div class="btn-group">
+                                    <a href="/visualizar_rd/{{rd.id}}" class="btn"><i class="icon icon-eye-open"></i></a>
+                                    <a href="/editar_rd/{{rd.id}}" class="btn"><i class="icon icon-pencil"></i></a>
+                                    <a href="/imprimir_rd/{{rd.id}}" class="btn"><i class="icon icon-print"></i></a>
+                                    <a href="/deletar_rd/{{rd.id}}" class="btn" ><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr class="even gradeC">
+                        <td><input disabled="true" type="checkbox" data-style="checkbox" {%if rd.pago%}checked{%endif%}/></td>
+                        <td>Nome 1</td>
+                        <td>1111</td>
+                        <td>01/01/2014</td>
+                        <td>3230987</td>
+                        <td>{{ rd.area }}</td>
+                        <td>{{ rd.nome_projeto }}</td>
+                        <td class="center">
+                            <div class="tr-action">
+                                <div class="tr-action-inner">
+                                    <div class="btn-group">
+                                    <a href="/visualizar_rd/{{rd.id}}" class="btn"><i class="icon icon-eye-open"></i></a>
+                                    <a href="/editar_rd/{{rd.id}}" class="btn"><i class="icon icon-pencil"></i></a>
+                                    <a href="/imprimir_rd/{{rd.id}}" class="btn"><i class="icon icon-print"></i></a>
+                                    <a href="/deletar_rd/{{rd.id}}" class="btn" ><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="even gradeC">
+                        <td><input disabled="true" type="checkbox" data-style="checkbox" {%if rd.pago%}checked{%endif%}/></td>
+                        <td>Nome 2</td>
+                        <td>2222</td>
+                        <td>02/02/2014</td>
+                        <td>9237846</td>
+                        <td>{{ rd.area }}</td>
+                        <td>{{ rd.nome_projeto }}</td>
+                        <td class="center">
+                            <div class="tr-action">
+                                <div class="tr-action-inner">
+                                    <div class="btn-group">
+                                    <a href="/visualizar_rd/{{rd.id}}" class="btn"><i class="icon icon-eye-open"></i></a>
+                                    <a href="/editar_rd/{{rd.id}}" class="btn"><i class="icon icon-pencil"></i></a>
+                                    <a href="/imprimir_rd/{{rd.id}}" class="btn"><i class="icon icon-print"></i></a>
+                                    <a href="/deletar_rd/{{rd.id}}" class="btn" ><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    {% endif %}
+
+{% if pago == 0 and nao_pago == 0 %}                   <!-- Quando nao existem Rd's -->
+<div class="widget dark">
+    <div class="widget-head">
+        <span class="title">Voce nao possui RDs cadastradas</span>
+    </div>
+</div>
+{% endif %}
+
+    {%if pago != 0%}                  <!--Rd's pagas-->
+    <div class="widget dark">
+    <div class="widget-head">
+            <span class="title">RDs pagas</span>
+            <div class="toolbar">
+                <div class="btn-group">
+                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                        <li><a tabindex="-1" href="#"><i class="icon-eye-open"></i> Ver</a></li>
+                        <li><a tabindex="-1" href="#"><i class="icon-trash"></i> Apagar</a></li>
+                </ul>
+                </div>
+
+            </div>
+    </div>
+    <div class="widget-content no-padding">
+        <div class="widget-content-inner">
+            <table class="table table-hover" id="table2">
+                <thead>
+                    <tr>
+                        <th>Pago</th>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Codigo</th>
+                        <th>Area</th>
+                        <th>Sub-Area</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rd in rds %}
+                    <tr class="even gradeC">
+                        <td><input disabled="true" type="checkbox" data-style="checkbox" {%if rd.pago%}checked{%endif%}/></td>
+                        <td>{{ rd.nome_sobrenome }}</td>
+                        <td>{{ rd.valor }}</td>
+                        <td>{{ rd.data_pedido }}</td>
+                        <td>{{ rd.id }}</td>
+                        <td>{{ rd.area }}</td>
+                        <td>{{ rd.subarea }}</td>
+                        <td class="center">
+                            <div class="tr-action">
+                                <div class="tr-action-inner">
+                                    <div class="btn-group">
+                                    <a href="/visualizar_rd/{{rd.id}}" class="btn"><i class="icon icon-eye-open"></i></a>
+                                    <a href="/editar_rd/{{rd.id}}" class="btn"><i class="icon icon-pencil"></i></a>
+                                    <a href="/imprimir_rd/{{rd.id}}" class="btn"><i class="icon icon-print"></i></a>
+                                    <a href="/deletar_rd/{{rd.id}}" class="btn" ><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+{%endif%}
+
+
+<a href="/exportar_rd/" class="btn" >Exportar RD's<i></i></a>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+{% endblock principal%}
+

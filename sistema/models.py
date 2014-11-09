@@ -58,7 +58,7 @@ class Projeto(models.Model):
 
 class Nucleo(models.Model):
     nome = models.CharField("Nome", max_length=32)
-    membros = models.ManyToManyField(Membro, through='Cargo')
+    membros = models.ManyToManyField(Membro, through='Cargo', null=True)
 
     class Meta:
         verbose_name = "Nucleo"

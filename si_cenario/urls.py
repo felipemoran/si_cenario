@@ -10,6 +10,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^home/$', 'sistema.views.home'),
+    url(r'^$', 'sistema.views.home'),
+    url(r'^teste/$', 'sistema.views.teste'),
 
     # URLs de Projeto
     url(r'^projeto_lista/$', 'sistema.views.projeto_lista'),
@@ -23,6 +25,7 @@ urlpatterns = patterns('',
     url(r'^atualiza_usuario/(?P<usuario_id>[0-9]+)/$', 'sistema.views.atualiza_usuario'),
     url(r'^deleta_usuario/(?P<usuario_id>[0-9]+)/$', 'sistema.views.deleta_usuario'),
     url(r'^perfil_usuario/(?P<usuario_id>[0-9]+)/$', 'sistema.views.perfil_usuario'),
+    url(r'^lista_usuario/$', 'sistema.views.lista_usuario'),
 
     #URLs de Nucleo
     url(r'^cadastrar_nucleo/$', 'sistema.views.cadastrar_nucleo'),
@@ -32,6 +35,7 @@ urlpatterns = patterns('',
 
     #URLs de Cargo
     url(r'^cadastra_cargo/(?P<usuario_id>[0-9]+)/$', 'sistema.views.cadastra_cargo'),
+
 
 
 )

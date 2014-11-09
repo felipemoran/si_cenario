@@ -16,6 +16,10 @@ def home(request):
     return render(request, 'home.html', locals())
 
 
+def teste(request):
+    return render(request, 'teste.html', locals())
+
+
 def projeto_lista(request):
     lista_projetos = Projeto.objects.all()
 
@@ -114,6 +118,13 @@ def perfil_usuario(request, usuario_id):
     except:
         lista_cargos = False
     return render(request, 'perfil_usuario.html', locals())
+
+def lista_usuario(request):
+    lista_usuario = Membro.objects.all()
+    lista_usuario_e_projeto = []
+    for usuario in lista_usuario:
+        lista_usuario_e_projeto.append([usuario, Cargo.objects.filter(membro=usuario)])
+    return render(request, 'lista_usuario.html', locals())
 
 
 def cadastrar_nucleo(request):

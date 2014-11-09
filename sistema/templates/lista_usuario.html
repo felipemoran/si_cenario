@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block principal %}
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Projetos</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for mini_lista in lista_usuario_e_projeto %}
+    <tr>
+        <td><a href="/perfil_usuario/{{mini_lista.0.id}}">{{mini_lista.0.nome}} {{mini_lista.0.sobrenome}}</a></td>
+        <td>{% for cargo in mini_lista.1 %}{{cargo.cargo}} - {{cargo.projeto.nome}}, {% endfor %}</td>
+        <td><a href="/atualiza_usuario/{{mini_lista.0.id}}">Atualizar</a></td>
+        <td><a href="/deleta_usuario/{{mini_lista.0.id}}">Deletar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
