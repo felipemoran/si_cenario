@@ -38,4 +38,9 @@ urlpatterns = patterns('',
 
 
 
+    #URLs de Login/Logout
+    url(r'^login_fazer/$', 'sistema.views.login_fazer'),
+    url(r'^logout_fazer/$', 'sistema.views.logout_fazer'),
+    url(r'^accounts/login/$', 'sistema.views.login_fazer'),
+
 )

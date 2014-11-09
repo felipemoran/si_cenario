@@ -20,12 +20,13 @@ def teste(request):
     return render(request, 'teste.html', locals())
 
 
+@login_required
 def projeto_lista(request):
     lista_projetos = Projeto.objects.all()
 
     return render(request, 'projeto_lista.html', locals())
 
-
+@login_required
 def projeto_cadastrar(request):
     novo_projeto = ProjetoForm()
     if request.method == 'POST':
@@ -40,7 +41,7 @@ def projeto_cadastrar(request):
 
     return render(request, 'projeto_cadastrar.html', locals())
 
-
+@login_required
 def projeto_editar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     novo_projeto = ProjetoForm(instance=projeto)
@@ -55,14 +56,14 @@ def projeto_editar(request, projeto_id):
 
     return render(request, 'projeto_cadastrar.html', locals())
 
-
+@login_required
 def projeto_perfil(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     nome_projeto = projeto.nome
 
     return render(request, 'projeto_perfil.html', locals())
 
-
+@login_required
 def projeto_deletar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     projeto.delete()
@@ -74,7 +75,9 @@ def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
     if request.method == 'POST':
+        print "____________________" #arrumar aqui #paulo
         login = request.POST['login']
+        print login
         senha = request.POST['senha']
         confirmacao_senha = request.POST['confirmacao_senha']
         numero_usuario = User.objects.filter(username__iexact = login).count()
@@ -87,6 +90,7 @@ def cadastra_usuario(request):
                     membro = membro_form.save(commit = False)
                     membro.usuario = user
                     membro.save()
+                    #mudar para os redirecionamentos adequados
                     return HttpResponse('<script>alert("Usuário cadastrado com sucesso"); history.back()</script>')
             else:
                 return HttpResponse('<script>alert("Senhas não coincidem"); history.back()</script>')
@@ -94,6 +98,7 @@ def cadastra_usuario(request):
             return HttpResponse('<script>alert("Login já existente"); history.back()</script>')
     return render(request, 'cadastra_usuario.html', locals())
 
+@login_required
 def atualiza_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     membro_form = MembroForm(instance = membro)
@@ -104,6 +109,7 @@ def atualiza_usuario(request, usuario_id):
             return HttpResponse('<script>alert("Usuário atualizado com sucesso"); history.back()</script>')
     return render(request, 'cadastra_usuario.html', locals())
 
+@login_required
 def deleta_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     user = membro.usuario
@@ -111,6 +117,7 @@ def deleta_usuario(request, usuario_id):
     user.delete()
     return HttpResponse('<script>alert("O usuário foi deletado"); history.back()</script>')
 
+@login_required
 def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
     try:
@@ -118,6 +125,7 @@ def perfil_usuario(request, usuario_id):
     except:
         lista_cargos = False
     return render(request, 'perfil_usuario.html', locals())
+
 
 def lista_usuario(request):
     lista_usuario = Membro.objects.all()
@@ -171,4 +179,57 @@ def cadastra_cargo(request, usuario_id):
             cargo.save()
             return HttpResponse('<script>alert("Cargo cadastrado com sucesso"); history.back()</script>')
     return render(request, 'cadastra_cargo.html', locals())
+
+#Paulo
+'''
+def login_fazer(request):
+    if request.method == 'GET':
+        login_form = LoginForm()
+    else:
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            login = login_form.cleaned_data['login']
+            senha = login_form.cleaned_data['senha']
+            user = authenticate(username=login, password=senha)
+            if user is not None:
+                if user.is_active:
+                    login(request,user)
+                    request.session.set_expiry(0) #nao sei o que essa linha faz
+                    return redirect('/cadastra_usuario') #aqui, na realidade, deveria redirecionar para o perfil do usuário logado mas preciso saber como pegar no banco o id do usuário que logou
+                else:
+                    messages.warning(request, _(u'Usuário inativo.'))
+            else:
+                messages.warning(request, _(u'Tente outro usuário e/ou senha.'))
+        else:
+            messages.warning(request, _('Preencha os campos corretamente.'))
+    return render('login_fazer.html', locals(), context_instance=RequestContext(request))
+    '''
+
+def login_fazer(request):
+    if request.method == 'GET':
+        login_form = LoginForm()
+    else:
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            username = request.POST['login']
+            password = request.POST['senha']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponse('<script>alert("Usuário logado!"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
+                    #return redirect('/cadastra_usuario')# Redirect to a success page.
+                else:
+                    return HttpResponse('<script>alert("Usuário inativo!"); location.request("/login_fazer/")</script>')
+            else:
+                return HttpResponse('<script>alert("Usuário e/ou senha incorretos!"); location.request("/login_fazer/")</script>')
+        else:
+            messages.warning(request, _('Preencha os campos corretamente.'))
+    return render(request, 'login_fazer.html', locals())
+
+@login_required
+def logout_fazer(request):
+    logout(request)
+    return HttpResponse('<script>alert("Logout efetuado!"); location.request("/login_fazer/")</script>')
+>>>>>>> b60c351ac1f581bc2d6416d85de596e9a898ac9e
 

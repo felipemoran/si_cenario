@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from models import *
 from django import forms
 from django.forms.widgets import CheckboxSelectMultiple
@@ -34,8 +35,14 @@ class NucleoForm(forms.ModelForm):
         model = Nucleo
         exclude = ('membros',)
 
+
 class CargoForm(forms.ModelForm):
     class Meta:
         model = Cargo
         exclude = ('membro',)
+
+
+class LoginForm(forms.Form):
+    login = forms.CharField(label=(u'Usuário'), widget=forms.TextInput(attrs={'class':'text'}))
+    senha = forms.CharField(label=(u'Senha'), widget=forms.PasswordInput(attrs={'class':'text'}))
 

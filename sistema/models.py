@@ -29,7 +29,7 @@ class Membro(models.Model):
     usuario = models.OneToOneField(User)
     nome = models.CharField("Nome", max_length=64)
     sobrenome = models.CharField("Sobrenome", max_length=64)
-    email = models.EmailField(null=False, unique=True)
+    email = models.EmailField("Email", null=False, unique=True)
 
     class Meta:
         verbose_name = "Membro"
@@ -78,7 +78,6 @@ class Cargo(models.Model):
         verbose_name = "Cargo"
         verbose_name_plural = "Cargos"
 
-    def __unicode__(self):
-        return self.membro.nome + ' - ' + self.nucleo.nome
+
 
 
