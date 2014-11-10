@@ -24,7 +24,7 @@
                             </div>
                             {% endfor %}
                         </fieldset><br>
-                        <input type="submit" class="btn btn-primary finish pull-right" value="Enviar" />
+                        <button type="submit" class="btn btn-primary finish pull-right">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -33,30 +33,6 @@
 </div>
 <!-- End Form Wizard -->
 
-<!-- teste -->
-<table>
-    <tr>
-        <th>Nome</th>
-        <th>Etapa</th>
-        <th>Status</th>
-        <th>Descrição</th>
-        <th>Data de Início</th>
-    </tr>
-{% for projeto in lista_projetos %}
-
-    <tr>
-        <td>{{ projeto.nome }}</td>
-        <td>{{ projeto.etapa }}</td>
-        <td>{{ projeto.status }}</td>
-        <td>{{ projeto.descricao }}</td>
-        <td>{{ projeto.data_de_inicio }}</td>
-        <td><a href="/projeto_editar/{{ projeto.id }}">Atualizar</a></td>
-        <td><a href="/projeto_deletar/{{ projeto.id }}">Deletar</a></td>
-    </tr>
-
-{% endfor %}
-
-</table>
 
 
 

@@ -11,9 +11,9 @@ from datetime import *
 from sistema.models import *
 from sistema.forms import *
 
-
+@login_required
 def home(request):
-    return render(request, 'home.html', locals())
+    return HttpResponseRedirect('/perfil_usuario/%s' %request.user.membro.id)
 
 
 def teste(request):
@@ -60,6 +60,14 @@ def projeto_editar(request, projeto_id):
 def projeto_perfil(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     nome_projeto = projeto.nome
+
+    lista_gerente = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente')
+    if not lista_gerente:
+        gerente_erro = 'Não há nenhum gerente alocado para esse projeto'
+
+    analistas = Cargo.objects.filter(projeto = projeto)
+    if not analistas:
+        analistas_erro = 'Não há nenhum membro alocado para esse projeto'
 
     return render(request, 'projeto_perfil.html', locals())
 
@@ -120,6 +128,7 @@ def deleta_usuario(request, usuario_id):
 @login_required
 def perfil_usuario(request, usuario_id):
     membro = Membro.objects.get(id = usuario_id)
+    lista_cargo = Cargo.objects.filter(membro = membro)
     try:
         lista_cargos = Cargo.objects.filter(membro=membro)
     except:
@@ -180,30 +189,49 @@ def cadastra_cargo(request, usuario_id):
             return HttpResponse('<script>alert("Cargo cadastrado com sucesso"); history.back()</script>')
     return render(request, 'cadastra_cargo.html', locals())
 
+
+def cadastra_cargo2(request, projeto_id):
+    projeto = Projeto.objects.get(id=projeto_id)
+    cargo_form = CargoForm2()
+    if request.method == 'POST':
+        cargo_form = CargoForm2(request.POST)
+        if cargo_form.is_valid():
+            cargo = cargo_form.save(commit = False)
+            cargo.projeto = projeto
+            cargo.save()
+            return HttpResponse('<script>alert("Cargo cadastrado com sucesso"); location.replace("/projeto_perfil/%s")</script>' %str(projeto.id))
+    return render(request, 'cadastra_cargo.html', locals())
+
+
+def deleta_cargo(request, cargo_id):
+    cargo = Cargo.objects.get(id=cargo_id)
+    cargo.delete()
+    return HttpResponse('<script>history.go(-1)</script>')
+
+
+
 #Paulo
-'''
-def login_fazer(request):
-    if request.method == 'GET':
-        login_form = LoginForm()
-    else:
-        login_form = LoginForm(request.POST)
-        if login_form.is_valid():
-            login = login_form.cleaned_data['login']
-            senha = login_form.cleaned_data['senha']
-            user = authenticate(username=login, password=senha)
-            if user is not None:
-                if user.is_active:
-                    login(request,user)
-                    request.session.set_expiry(0) #nao sei o que essa linha faz
-                    return redirect('/cadastra_usuario') #aqui, na realidade, deveria redirecionar para o perfil do usuário logado mas preciso saber como pegar no banco o id do usuário que logou
-                else:
-                    messages.warning(request, _(u'Usuário inativo.'))
-            else:
-                messages.warning(request, _(u'Tente outro usuário e/ou senha.'))
-        else:
-            messages.warning(request, _('Preencha os campos corretamente.'))
-    return render('login_fazer.html', locals(), context_instance=RequestContext(request))
-    '''
+# def login_fazer(request):
+#     if request.method == 'GET':
+#         login_form = LoginForm()
+#     else:
+#         login_form = LoginForm(request.POST)
+#         if login_form.is_valid():
+#             login = login_form.cleaned_data['login']
+#             senha = login_form.cleaned_data['senha']
+#             user = authenticate(username=login, password=senha)
+#             if user is not None:
+#                 if user.is_active:
+#                     login(request,user)
+#                     request.session.set_expiry(0) #nao sei o que essa linha faz
+#                     return redirect('/cadastra_usuario') #aqui, na realidade, deveria redirecionar para o perfil do usuário logado mas preciso saber como pegar no banco o id do usuário que logou
+#                 else:
+#                     messages.warning(request, _(u'Usuário inativo.'))
+#             else:
+#                 messages.warning(request, _(u'Tente outro usuário e/ou senha.'))
+#         else:
+#             messages.warning(request, _('Preencha os campos corretamente.'))
+#     return render('login_fazer.html', locals(), context_instance=RequestContext(request))
 
 def login_fazer(request):
     if request.method == 'GET':
@@ -220,9 +248,9 @@ def login_fazer(request):
                     return HttpResponse('<script>alert("Usuário logado!"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
                     #return redirect('/cadastra_usuario')# Redirect to a success page.
                 else:
-                    return HttpResponse('<script>alert("Usuário inativo!"); location.request("/login_fazer/")</script>')
+                    return HttpResponse('<script>alert("Usuário inativo!"); history.back()</script>')
             else:
-                return HttpResponse('<script>alert("Usuário e/ou senha incorretos!"); location.request("/login_fazer/")</script>')
+                return HttpResponse('<script>alert("Usuário e/ou senha incorretos!"); history.back()</script>')
         else:
             messages.warning(request, _('Preencha os campos corretamente.'))
     return render(request, 'login_fazer.html', locals())
@@ -231,5 +259,5 @@ def login_fazer(request):
 def logout_fazer(request):
     logout(request)
     return HttpResponse('<script>alert("Logout efetuado!"); location.request("/login_fazer/")</script>')
->>>>>>> b60c351ac1f581bc2d6416d85de596e9a898ac9e
+
 

@@ -35,8 +35,8 @@ urlpatterns = patterns('',
 
     #URLs de Cargo
     url(r'^cadastra_cargo/(?P<usuario_id>[0-9]+)/$', 'sistema.views.cadastra_cargo'),
-
-
+    url(r'^deleta_cargo/(?P<cargo_id>[0-9]+)/$', 'sistema.views.deleta_cargo'),
+    url(r'^cadastra_cargo2/(?P<projeto_id>[0-9]+)/$', 'sistema.views.cadastra_cargo2'),
 
     #URLs de Login/Logout
     url(r'^login_fazer/$', 'sistema.views.login_fazer'),

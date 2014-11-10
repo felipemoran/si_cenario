@@ -2,24 +2,19 @@
 {% block principal %}
 
 
-<h2>Projeto  <small>Perfil de projetos</small></h2>
+<h2> {{ projeto.nome }}
+    <a href="/projeto_editar/{{ projeto.id }}">
+        <button class="btn btn-info pull-right" ><i class="icon icon-white iconfa-cogs"></i> Editar Projeto</button>
+    </a>
+</h2>
 <hr class="style1">
-
 <!-- Start Main Content -->
 <div class="row-fluid">
     <div class="span12">
-
         <!-- Página de perfil do projeto -->
         <div id="profile-page-wrapper">
-
             <div class="profile-page-header">
                 <div class="row-fluid">
-                    <div class="span12">
-                        <span class="name"> {{ projeto.nome }} </span>
-                        <!-- Botão que redireciona para outra página -->
-                        <a href="/projeto_editar/{{ projeto.id }}"><button class="btn btn-info pull-right"><i class="icon icon-white iconfa-cogs"></i> Editar Projeto</button></a>
-                        <!-- Fim do código do botão -->
-                    </div>
                 </div>
             </div>
 
@@ -106,12 +101,32 @@
 
                         <h3>Membros</h3>
 
-                        <!-- Aqui vai os membros alocados no projeto -->
+                        <!-- Aqui vão os membros alocados no projeto -->
+                        <div>
+                            <div>
+                                <button class="btn pull-right" style='pos'><i class="icon icon-envelope"></i> Mensagem para o gerente</button>
+                                <br>
+                                <b>Gerente:</b>
+                                <ul class='unstyled' style='padding-left:30px;'>
+                                {% for migue in lista_gerente %}
+                                    <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar do projeto</a></span></li>
+                                {% endfor %}
+                                {{gerente_erro}}
+                                </ul>
+                            </div><br>
 
-                        <div>Gerente: Nome do Gerente</div><br>
-                        <div>Participantes: Nome dos Participantes</div>
+                            <div><b>Participantes:</b>
+                                <ul class='unstyled' style='padding-left:30px;'>
+                                {% for migue in analistas %}
+                                    <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar do projeto</a></span></li>
+                                {% endfor %}
+                                <li>{{analistas_erro}}</li>
+                                </ul>
+                                <a href="/cadastra_cargo2/{{projeto.id}}"><button class="btn pull-right"><i class="icon icon-user"></i> Adicionar membro ao projeto</button></a>
 
-                        <button class="btn pull-right"><i class="icon icon-envelope"></i> Mensagem para o gerente</button></div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>

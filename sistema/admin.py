@@ -5,3 +5,4 @@ from models import *
 admin.site.register(Membro)
 admin.site.register(Projeto)
 admin.site.register(Nucleo)
+admin.site.register(Cargo)

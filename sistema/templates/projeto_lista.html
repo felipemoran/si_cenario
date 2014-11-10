@@ -4,8 +4,18 @@
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.js"></script>
 <script>
+
     $(document).ready( function () {
-        $('#table').DataTable();
+        var oTable1 = $('#table').dataTable({
+            "aoColumnDefs": [
+                { "bSortable": false, "aTargets": [ 3 ] },
+                ],
+            "sDom": '<"top"><"bottom"><"clear">'
+        });
+        $("tfoot input").keyup( function () {
+                oTable1.fnFilter( this.value, $("tfoot input").index(this) );
+            });
+        // $('#table').DataTable();
     } );
 </script>
 
@@ -34,7 +44,6 @@
                             <table class="table table-hover" data-responsive='table' id="table">
                                 <thead>
                                     <tr>
-                                        <th></th>
                                         <th>Nome</th>
                                         <th>Núcleo</th>
                                         <th>Gerente</th>
@@ -44,7 +53,6 @@
                                 <tbody>
                                     {% for projeto in lista_projetos %}
                                     <tr class="odd gradeX">
-                                        <td><input type="checkbox" data-style="checkbox" /></td>
                                         <td>{{ projeto.nome }}</td>
                                         <td>Núcleo vem aqui</td>
                                         <td>Nome do gerente vem aqui</td>
@@ -59,6 +67,14 @@
                                     </tr>
                                     {% endfor %}
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th><input type="text" name="search_nome" placeholder="Pesquisar por nome" class="input-block-level" /></th>
+                                        <th><input type="text" name="search_nucleo" placeholder="Pesquisar por núcleo" class="input-block-level" /></th>
+                                        <th><input type="text" name="search_gerente" placeholder="Pesquisar por gerente" class="input-block-level" /></th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>

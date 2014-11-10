@@ -1,13 +1,40 @@
 {% extends "base.html" %}
 {% block principal %}
-<h1>Olá cargo!</h1>
-<form method='POST'> {%csrf_token%}
-{{campo_form.non_field_errors}}
-    {% for campo in cargo_form %}
-        {{ campo.errors }} <br>
-        {{ campo.label }}: {{ campo }}
-    {% endfor %}
-    <br>
-    <button type='submit'>Enviar</button>
-</form>
+
+
+<h2>Cargo  <small>Cadastre um novo cargo.</small></h2>
+
+
+<!-- Start Form Wizard -->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget dark">
+            <div class="widget-head"></div>
+            <div class="widget-content no-padding">
+                <div class="widget-content-inner">
+                    <form method='POST' id="custom1" class="form-horizontal"> {% csrf_token %}
+                        <fieldset title="Step 1">
+                            {% for campo in cargo_form %}
+                            <div class="control-group">
+                            {{ campo.errors}}
+                                <label class="control-label">{{ campo.label }}</label>
+                                <div class="controls">
+                                   {{ campo }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </fieldset><br>
+                        <button type="submit" class="btn btn-primary finish pull-right">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Form Wizard -->
+
+
+
+
+
 {% endblock %}

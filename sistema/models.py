@@ -42,9 +42,9 @@ class Membro(models.Model):
 class Projeto(models.Model):
     nome = models.CharField("Nome", max_length=50)
     data_de_inicio = models.DateField("Data de início")
+    data_de_termino = models.DateField("Data de início", blank=True, null=True)
     status = models.CharField("Status", max_length=50, choices=STATUS_CHOICE, blank=True, null=True)
     etapa = models.CharField("Etapa", max_length=50, choices=ETAPA_CHOICE, blank=True, null=True)
-    # membro = models.ManyToManyField(Membro)
     descricao = models.TextField("Descrição")
 
 
@@ -69,8 +69,8 @@ class Nucleo(models.Model):
 
 
 class Cargo(models.Model):
-    cargo = models.CharField("Cargo", choices=CARGO_CHOICE, max_length=50)
     membro = models.ForeignKey(Membro)
+    cargo = models.CharField("Cargo", choices=CARGO_CHOICE, max_length=50)
     nucleo = models.ForeignKey(Nucleo)
     projeto = models.ForeignKey(Projeto, blank=True, null=True)
 
