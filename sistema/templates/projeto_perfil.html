@@ -106,12 +106,11 @@
                         <!-- Aqui vão os membros alocados no projeto -->
                         <div>
                             <div>
-                                <a href="mailto:{{membro.email}}"><button class="btn pull-right" style='pos'><i class="icon icon-envelope"></i> Mensagem para o gerente</button></a>
-                                <br>
                                 <b>Gerente:</b>
                                 <ul class='unstyled' style='padding-left:30px;'>
                                 {% for migue in lista_gerente %}
                                     <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar do projeto</a></span></li>
+                                <a href="mailto:{{migue.membro.email}}"><button class="btn pull-right" style='pos'><i class="icon icon-envelope"></i> Mensagem para o gerente</button></a>
                                 {% endfor %}
                                 {{gerente_erro}}
                                 </ul>
