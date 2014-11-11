@@ -36,6 +36,8 @@
                                             <h4>Geral</h4>
                                             <div class="progress-summary">
                                                 <!-- (((STATUS))) - Troca icone para cada status -->
+                                                <div class="title"><i class="  iconfugue16-calendar"></i> Data de início: <span class="name"> {{ projeto.data_de_inicio }} </span></div>
+                                                <br>
                                                 {% if projeto.status == "Em dia" %}
                                                 <div class="title"><i class=" iconfugue16-chart-up-color"></i> Status: <span class="name"> {{ projeto.status }} </span></div>
                                                 {% else %}
@@ -104,7 +106,7 @@
                         <!-- Aqui vão os membros alocados no projeto -->
                         <div>
                             <div>
-                                <button class="btn pull-right" style='pos'><i class="icon icon-envelope"></i> Mensagem para o gerente</button>
+                                <a href="mailto:{{membro.email}}"><button class="btn pull-right" style='pos'><i class="icon icon-envelope"></i> Mensagem para o gerente</button></a>
                                 <br>
                                 <b>Gerente:</b>
                                 <ul class='unstyled' style='padding-left:30px;'>

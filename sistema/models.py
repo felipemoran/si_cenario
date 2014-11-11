@@ -42,7 +42,7 @@ class Membro(models.Model):
 class Projeto(models.Model):
     nome = models.CharField("Nome", max_length=50)
     data_de_inicio = models.DateField("Data de início")
-    data_de_termino = models.DateField("Data de início", blank=True, null=True)
+    data_de_termino = models.DateField("Data de término", blank=True, null=True)
     status = models.CharField("Status", max_length=50, choices=STATUS_CHOICE, blank=True, null=True)
     etapa = models.CharField("Etapa", max_length=50, choices=ETAPA_CHOICE, blank=True, null=True)
     descricao = models.TextField("Descrição")
