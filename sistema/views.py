@@ -76,7 +76,7 @@ def projeto_deletar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     projeto.delete()
 
-    return HttpResponseRedirect("/home/")
+    return HttpResponseRedirect("/projeto_lista/")
 
 
 def cadastra_usuario(request):

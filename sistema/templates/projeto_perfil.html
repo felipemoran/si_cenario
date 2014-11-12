@@ -3,6 +3,9 @@
 
 
 <h2> {{ projeto.nome }}
+    <a href="/projeto_deletar/{{ projeto.id }}">
+        <button class="btn btn-info pull-right" ><i class="icon icon-white icon-trash"></i> Deletar Projeto</button>
+    </a>
     <a href="/projeto_editar/{{ projeto.id }}">
         <button class="btn btn-info pull-right" ><i class="icon icon-white iconfa-cogs"></i> Editar Projeto</button>
     </a>
@@ -36,7 +39,7 @@
                                             <h4>Geral</h4>
                                             <div class="progress-summary">
                                                 <!-- (((STATUS))) - Troca icone para cada status -->
-                                                <div class="title"><i class="  iconfugue16-calendar"></i> Data de início: <span class="name"> {{ projeto.data_de_inicio }} </span></div>
+                                                <div class="title"><i class="  iconfugue16-calendar"></i> Data de início:<br><span class="name"> {{ projeto.data_de_inicio }} </span></div>
                                                 <br>
                                                 {% if projeto.status == "Em dia" %}
                                                 <div class="title"><i class=" iconfugue16-chart-up-color"></i> Status: <span class="name"> {{ projeto.status }} </span></div>
@@ -86,6 +89,8 @@
                                                 </div>
                                                 <div class="value"> 100% / 100%</div>
                                                 {% endif %}
+                                                <br>
+                                                <div class="title"><i class="  iconfugue16-calendar"></i> Data de término:<br><span class="name"> {{ projeto.data_de_termino }} </span></div>
                                                 <!-- Fim etapa -->
                                             </div>
                                         </div>
@@ -127,8 +132,6 @@
 
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
