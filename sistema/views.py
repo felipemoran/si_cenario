@@ -83,25 +83,25 @@ def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
     if request.method == 'POST':
-        print "____________________" #arrumar aqui #paulo
         login = request.POST['login']
         print login
         senha = request.POST['senha']
         confirmacao_senha = request.POST['confirmacao_senha']
         numero_usuario = User.objects.filter(username__iexact = login).count()
         if numero_usuario == 0:
-            if confirmacao_senha == senha:
-                membro_form = MembroForm(request.POST)
-                if membro_form.is_valid():
-                    user = User.objects.create_user(login, confirmacao_senha, senha)
-                    user.save()
-                    membro = membro_form.save(commit = False)
-                    membro.usuario = user
-                    membro.save()
-                    #mudar para os redirecionamentos adequados
-                    return HttpResponse('<script>alert("Usuário cadastrado com sucesso"); history.back()</script>')
-            else:
-                return HttpResponse('<script>alert("Senhas não coincidem"); history.back()</script>')
+            if len(login)>=5:
+                if confirmacao_senha == senha and len(confirmacao_senha)>=5:
+                    membro_form = MembroForm(request.POST)
+                    if membro_form.is_valid():
+                        user = User.objects.create_user(login, confirmacao_senha, senha)
+                        user.save()
+                        membro = membro_form.save(commit = False)
+                        membro.usuario = user
+                        membro.save()
+                        return HttpResponse('<script>alert("Usuário cadastrado com sucesso"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
+                else:
+                    return HttpResponse('<script>alert("As senhas devem coincidir. Mínimo 5 caracteres."); history.back()</script>')
+            return HttpResponse('<script>alert("Digite um login válido. Mínimo 5 caracteres."); history.back()</script>')
         else:
             return HttpResponse('<script>alert("Login já existente"); history.back()</script>')
     return render(request, 'cadastra_usuario.html', locals())
@@ -208,31 +208,6 @@ def deleta_cargo(request, cargo_id):
     cargo.delete()
     return HttpResponse('<script>history.go(-1)</script>')
 
-
-
-#Paulo
-# def login_fazer(request):
-#     if request.method == 'GET':
-#         login_form = LoginForm()
-#     else:
-#         login_form = LoginForm(request.POST)
-#         if login_form.is_valid():
-#             login = login_form.cleaned_data['login']
-#             senha = login_form.cleaned_data['senha']
-#             user = authenticate(username=login, password=senha)
-#             if user is not None:
-#                 if user.is_active:
-#                     login(request,user)
-#                     request.session.set_expiry(0) #nao sei o que essa linha faz
-#                     return redirect('/cadastra_usuario') #aqui, na realidade, deveria redirecionar para o perfil do usuário logado mas preciso saber como pegar no banco o id do usuário que logou
-#                 else:
-#                     messages.warning(request, _(u'Usuário inativo.'))
-#             else:
-#                 messages.warning(request, _(u'Tente outro usuário e/ou senha.'))
-#         else:
-#             messages.warning(request, _('Preencha os campos corretamente.'))
-#     return render('login_fazer.html', locals(), context_instance=RequestContext(request))
-
 def login_fazer(request):
     if request.method == 'GET':
         login_form = LoginForm()
@@ -246,7 +221,6 @@ def login_fazer(request):
                 if user.is_active:
                     login(request, user)
                     return HttpResponse('<script>alert("Usuário logado!"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
-                    #return redirect('/cadastra_usuario')# Redirect to a success page.
                 else:
                     return HttpResponse('<script>alert("Usuário inativo!"); history.back()</script>')
             else:
