@@ -3,50 +3,55 @@
 
 <div><h1>Cadastro de Usuário</h1></div>
 
-    <!-- Start HTML5 Form Validation -->
-    <div class="row-fluid">
-        <div class="span12">
-            <div class="widget dark">
-                <div class="widget-head"><span class="title">Complete as informações abaixo</span></div>
-                <div class="widget-content no-padding">
-                    <div class="widget-content-inner">
-                        <form class="form-horizontal" method="POST" data-ajax="false"> {%csrf_token%}
+<!-- Start HTML5 Form Validation -->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget dark">
+            <div class="widget-head"><span class="title">Complete as informações abaixo</span></div>
+            <div class="widget-content no-padding">
+                <div class="widget-content-inner">
+                    <form class="form-horizontal" method="POST" data-ajax="false"> {%csrf_token%}
+                        <div class="control-group">
+                            {% for field in membro_form  %}
                             <div class="control-group">
-                                {% for field in membro_form  %}
-                                    <div class="control-group">
-                                        {{field.errors}}
-                                        <label class="control-label">{{field.label}}</label>
-                                        <div class="controls">
-                                            {{field}}
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                                {%if cadastro == True%}
-                                    <div class="control-group">
-                                        <label class="control-label">Login:</label>
-                                        <div class="controls">
-                                            <input class = "span12" type="text" name="login">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label">Senha:</label>
-                                        <div class="controls">
-                                            <input class = "span12" type="password" name="senha">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label">Confirmação de senha:</label>
-                                        <div class="controls">
-                                            <input class = "span12" type="password" name="confirmacao_senha">
-                                        </div>
-                                    </div>
-
-                                {% endif %}
-
-                                <div class=" pull-right">
-                                    <button type = "submit">Cadastrar</button>
+                                {{field.errors}}
+                                <label class="control-label">{{field.label}}</label>
+                                <div class="controls">
+                                    {{field}}
                                 </div>
                             </div>
+                            {% endfor %}
+                            {%if cadastro == True%}
+                            <div class="control-group">
+                                <label class="control-label">Login:</label>
+                                <div class="controls">
+                                    <input class = "span12" type="text" name="login">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Senha:</label>
+                                <div class="controls">
+                                    <input class = "span12" type="password" name="senha">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Confirmação de senha:</label>
+                                <div class="controls">
+                                    <input class = "span12" type="password" name="confirmacao_senha">
+                                </div>
+                            </div>
+
+                            {% endif %}
+
+                            <div class=" pull-right">
+                                <button type = "submit">
+                                    {%if cadastro == True%}
+                                    Cadastrar{%endif%}
+                                    {%if atualizar == True%}
+                                    Atualizar{%endif%}
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
@@ -55,6 +60,30 @@
         </div>
 
     </div><!-- End HTML5 Form Validation -->
+
+    {%if atualizar == True%}
+    <!-- Start HTML5 Form Validation -->
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget dark">
+                <div class="widget-head"><span class="title">Deletar usuário</span></div>
+                <div class="widget-content no-padding">
+                    <div class="widget-content-inner">
+                        <div class="control-group">
+                            <div><br>
+                                <a href="/deleta_usuario/{{user.membro.id}}/"><button>Deletar</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div><!-- End HTML5 Form Validation -->
+{%endif%}
 
 
 

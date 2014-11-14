@@ -98,7 +98,7 @@ def cadastra_usuario(request):
                         membro = membro_form.save(commit = False)
                         membro.usuario = user
                         membro.save()
-                        return HttpResponse('<script>alert("Usuário cadastrado com sucesso"); location.replace("/perfil_usuario/%s")</script>' %str(user.membro.id))
+                        return HttpResponse('<script>alert("Usuário cadastrado com sucesso. Faça o login."); location.replace("/login_fazer/")</script>')
                 else:
                     return HttpResponse('<script>alert("As senhas devem coincidir. Mínimo 5 caracteres."); history.back()</script>')
             return HttpResponse('<script>alert("Digite um login válido. Mínimo 5 caracteres."); history.back()</script>')
@@ -108,26 +108,36 @@ def cadastra_usuario(request):
 
 @login_required
 def atualiza_usuario(request, usuario_id):
-    membro = Membro.objects.get(id = usuario_id)
-    membro_form = MembroForm(instance = membro)
-    if request.method == 'POST':
-        membro_form = MembroForm(request.POST, instance=membro)
-        if membro_form.is_valid():
-            membro_form.save()
-            return HttpResponse('<script>alert("Usuário atualizado com sucesso"); history.back()</script>')
+    atualizar = True
+    if int(usuario_id) == int(request.user.membro.id): #verificacao de permissao (se o usuario logado e o usuario que se deseja alterar)
+        membro = Membro.objects.get(id = usuario_id)
+        membro_form = MembroForm(instance = membro)
+        if request.method == 'POST':
+            membro_form = MembroForm(request.POST, instance=membro)
+            if membro_form.is_valid():
+                membro_form.save()
+                return HttpResponse('<script>alert("Usuário atualizado com sucesso"); location.replace("/home/")</script>')
+    else:
+        return HttpResponse('<script>alert("ID da solicitação diferente do ID logado."); location.replace("/home/")</script>')
     return render(request, 'cadastra_usuario.html', locals())
 
 @login_required
 def deleta_usuario(request, usuario_id):
-    membro = Membro.objects.get(id = usuario_id)
-    user = membro.usuario
-    membro.delete()
-    user.delete()
-    return HttpResponse('<script>alert("O usuário foi deletado"); history.back()</script>')
+    if int(usuario_id) == int(request.user.membro.id):
+        membro = Membro.objects.get(id = usuario_id)
+        user = membro.usuario
+        membro.delete()
+        user.delete()
+        return HttpResponse('<script>alert("O usuário foi deletado"); location.replace(/home/)</script>')
+    else:
+        return HttpResponse('<script>alert("ID da solicitação diferente do ID logado."); location.replace("/home/")</script>')
 
 @login_required
 def perfil_usuario(request, usuario_id):
-    membro = Membro.objects.get(id = usuario_id)
+    try:
+       membro = Membro.objects.get(id = usuario_id)
+    except:
+        return HttpResponse('<script>alert("Usuário inexistente."); location.replace(/home/)</script>')
     lista_cargo = Cargo.objects.filter(membro = membro)
     try:
         lista_cargos = Cargo.objects.filter(membro=membro)
@@ -167,7 +177,7 @@ def atualizar_nucleo(request, nucleo_id):
     texto = "Atualizar núcleo"
     return render(request, 'cadastrar_nucleo.html', locals())
 
-def apagar_nucleo(requst, nucleo_id):
+def apagar_nucleo(request, nucleo_id):
     nucleo = Nucleo.objects.get(id = nucleo_id)
     nucleo.delete()
     return HttpResponse('<script>location.replace("/ver_nucleos/")</script>')
