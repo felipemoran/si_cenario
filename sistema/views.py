@@ -20,11 +20,7 @@ def teste(request):
     return render(request, 'teste.html', locals())
 
 
-@login_required
-def projeto_lista(request):
-    lista_projetos = Projeto.objects.all()
 
-    return render(request, 'projeto_lista.html', locals())
 
 @login_required
 def projeto_cadastrar(request):
@@ -35,11 +31,21 @@ def projeto_cadastrar(request):
         if novo_projeto.is_valid():
             projeto = novo_projeto.save(commit=False)
             projeto.save()
-            return HttpResponseRedirect('/projeto_perfil/%s' % str(projeto.id))
+            return HttpResponse('<script>alert("Projeto cadastrado com sucesso"); location.replace("/projeto_perfil/%s")</script>' % str(projeto.id))
 
     lista_projetos = Projeto.objects.all()
 
     return render(request, 'projeto_cadastrar.html', locals())
+
+@login_required
+def projeto_lista(request):
+    lista_projetos = Projeto.objects.all()
+    lista_gerente = []
+    lista_geral = []
+    for projeto in lista_projetos:
+        gerente = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente')[0]
+        lista_geral.append([projeto, gerente.membro.nome + ' ' + gerente.membro.sobrenome, gerente.nucleo.nome])
+    return render(request, 'projeto_lista.html', locals())
 
 @login_required
 def projeto_editar(request, projeto_id):
@@ -50,11 +56,12 @@ def projeto_editar(request, projeto_id):
         novo_projeto = ProjetoForm(request.POST, instance=projeto)
         if novo_projeto.is_valid():
             projeto = novo_projeto.save()
-            return HttpResponseRedirect('/projeto_perfil/%s' % str(projeto.id))
+            return HttpResponse('<script>alert("Projeto editado com sucesso"); location.replace("/projeto_perfil/%s")</script>' % str(projeto.id))
 
     lista_projetos = Projeto.objects.all()
 
     return render(request, 'projeto_cadastrar.html', locals())
+
 
 @login_required
 def projeto_perfil(request, projeto_id):
@@ -71,12 +78,14 @@ def projeto_perfil(request, projeto_id):
 
     return render(request, 'projeto_perfil.html', locals())
 
+
 @login_required
 def projeto_deletar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     projeto.delete()
 
-    return HttpResponseRedirect("/projeto_lista/")
+    return HttpResponse('<script>alert("Projeto deletado com sucesso"); location.replace("/projeto_lista/")</script>')
+    # return HttpResponseRedirect("/projeto_lista/")
 
 
 def cadastra_usuario(request):
@@ -199,7 +208,7 @@ def cadastra_cargo2(request, projeto_id):
             cargo = cargo_form.save(commit = False)
             cargo.projeto = projeto
             cargo.save()
-            return HttpResponse('<script>alert("Cargo cadastrado com sucesso"); location.replace("/projeto_perfil/%s")</script>' %str(projeto.id))
+            return HttpResponse('<script>alert("Membro adicionado com sucesso"); location.replace("/projeto_perfil/%s")</script>' %str(projeto.id))
     return render(request, 'cadastra_cargo.html', locals())
 
 

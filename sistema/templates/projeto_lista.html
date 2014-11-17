@@ -51,11 +51,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for projeto in lista_projetos %}
+                                    {% for dupla in lista_geral %}
                                     <tr class="odd gradeX">
-                                        <td>{{ projeto.nome }}</td>
-                                        <td> Núcleo</td>
-                                        <td> Gerente</td>
+                                        <td>{{ dupla.0.nome}}</td>
+                                        <td>{{ dupla.2 }}</td>
+                                        <td>{{ dupla.1 }}</td>
                                         <td class="center">
                                             <div class="tr-action">
                                                 <div class="tr-action-inner">
