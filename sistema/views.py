@@ -20,18 +20,22 @@ def teste(request):
     return render(request, 'teste.html', locals())
 
 
-
-
 @login_required
 def projeto_cadastrar(request):
-    novo_projeto = ProjetoForm()
-    if request.method == 'POST':
-        novo_projeto = ProjetoForm(request.POST)
-        print novo_projeto
-        if novo_projeto.is_valid():
-            projeto = novo_projeto.save(commit=False)
-            projeto.save()
-            return HttpResponse('<script>alert("Projeto cadastrado com sucesso"); location.replace("/projeto_perfil/%s")</script>' % str(projeto.id))
+    membro = request.user.membro
+    projeto = Projeto.objects.all()
+    cargo = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'coordenador')
+    if cargo:
+        novo_projeto = ProjetoForm()
+        if request.method == 'POST':
+            novo_projeto = ProjetoForm(request.POST)
+            print novo_projeto
+            if novo_projeto.is_valid():
+                projeto = novo_projeto.save(commit=False)
+                projeto.save()
+                return HttpResponse('<script>alert("Projeto cadastrado com sucesso"); location.replace("/projeto_perfil/%s")</script>' % str(projeto.id))
+    else:
+        return HttpResponse('<script>alert("Você não tem permissão para cadastrar um projeto."); history.back()</script>')
 
     lista_projetos = Projeto.objects.all()
 
@@ -40,23 +44,35 @@ def projeto_cadastrar(request):
 @login_required
 def projeto_lista(request):
     lista_projetos = Projeto.objects.all()
-    lista_gerente = []
     lista_geral = []
+
     for projeto in lista_projetos:
-        gerente = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente')[0]
-        lista_geral.append([projeto, gerente.membro.nome + ' ' + gerente.membro.sobrenome, gerente.nucleo.nome])
+        gerente_lista = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente')
+        if len(gerente_lista) > 0:
+            gerente = Cargo.objects.get(projeto = projeto, cargo__iexact = 'gerente')
+            lista_geral.append([projeto, gerente.membro.nome + ' ' + gerente.membro.sobrenome, gerente.nucleo.nome])
+        else:
+            lista_geral.append([projeto, 'Gerente não detectado.', 'Núcleo não detectado.'])
     return render(request, 'projeto_lista.html', locals())
 
 @login_required
 def projeto_editar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     novo_projeto = ProjetoForm(instance=projeto)
-
-    if request.method == 'POST':
-        novo_projeto = ProjetoForm(request.POST, instance=projeto)
-        if novo_projeto.is_valid():
-            projeto = novo_projeto.save()
-            return HttpResponse('<script>alert("Projeto editado com sucesso"); location.replace("/projeto_perfil/%s")</script>' % str(projeto.id))
+    membro = request.user.membro
+    projeto2 = Projeto.objects.all()
+    cargo = Cargo.objects.filter(projeto = projeto2, cargo__iexact = 'coordenador')
+    if cargo:
+        if request.method == 'POST':
+            novo_projeto = ProjetoForm(request.POST, instance=projeto)
+            if novo_projeto.is_valid():
+                projeto = novo_projeto.save()
+                return HttpResponse('''
+                    <script>alert("Projeto editado com sucesso");
+                    location.replace("/projeto_perfil/%s")
+                    </script>''' % str(projeto.id))
+        else:
+            return HttpResponse('<script>alert("Você não tem permissão para editar um projeto."); history.back()</script>')
 
     lista_projetos = Projeto.objects.all()
 
@@ -67,11 +83,9 @@ def projeto_editar(request, projeto_id):
 def projeto_perfil(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     nome_projeto = projeto.nome
-
     lista_gerente = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente')
     if not lista_gerente:
         gerente_erro = 'Não há nenhum gerente alocado para esse projeto'
-
     analistas = Cargo.objects.filter(projeto = projeto)
     if not analistas:
         analistas_erro = 'Não há nenhum membro alocado para esse projeto'
@@ -81,11 +95,15 @@ def projeto_perfil(request, projeto_id):
 
 @login_required
 def projeto_deletar(request, projeto_id):
-    projeto = Projeto.objects.get(id=projeto_id)
-    projeto.delete()
-
-    return HttpResponse('<script>alert("Projeto deletado com sucesso"); location.replace("/projeto_lista/")</script>')
-    # return HttpResponseRedirect("/projeto_lista/")
+    membro = request.user.membro
+    projeto = Projeto.objects.all()
+    cargo = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'coordenador')
+    if cargo:
+        projeto = Projeto.objects.get(id=projeto_id)
+        projeto.delete()
+        return HttpResponse('<script>alert("Projeto deletado com sucesso"); location.replace("/projeto_lista/")</script>')
+    else:
+        return HttpResponse('<script>alert("Você não tem permissão para cadastrar um projeto."); history.back()</script>')
 
 
 def cadastra_usuario(request):
@@ -210,15 +228,21 @@ def cadastra_cargo(request, usuario_id):
 
 
 def cadastra_cargo2(request, projeto_id):
+    membro = request.user.membro
     projeto = Projeto.objects.get(id=projeto_id)
+    projeto2 = Projeto.objects.all()
     cargo_form = CargoForm2()
-    if request.method == 'POST':
-        cargo_form = CargoForm2(request.POST)
-        if cargo_form.is_valid():
-            cargo = cargo_form.save(commit = False)
-            cargo.projeto = projeto
-            cargo.save()
-            return HttpResponse('<script>alert("Membro adicionado com sucesso"); location.replace("/projeto_perfil/%s")</script>' %str(projeto.id))
+    cargo = Cargo.objects.filter(projeto = projeto2, cargo__iexact = 'coordenador')
+    if cargo:
+        if request.method == 'POST':
+            cargo_form = CargoForm2(request.POST)
+            if cargo_form.is_valid():
+                cargo = cargo_form.save(commit = False)
+                cargo.projeto = projeto
+                cargo.save()
+                return HttpResponse('<script>alert("Membro adicionado com sucesso"); location.replace("/projeto_perfil/%s")</script>' %str(projeto.id))
+    else:
+        return HttpResponse('<script>alert("Você não tem permissão para adicionar um membro."); history.back()</script>')
     return render(request, 'cadastra_cargo.html', locals())
 
 
