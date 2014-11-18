@@ -110,7 +110,7 @@ def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
     coordenador = False
-    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+    if Cargo.objects.filter(cargo__iexact = 'coordenador', id = request.user.membro.id):
         coordenador = True
     if coordenador:
         if request.method == 'POST':
@@ -136,12 +136,12 @@ def cadastra_usuario(request):
                 return HttpResponse('<script>alert("Login já existente."); history.back()</script>')
     else:
         return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
-    return render(request, 'home.html', locals())
+    return render(request, 'cadastra_usuario.html', locals())
 
 @login_required
 def atualiza_usuario(request, usuario_id):
     atualizar = True
-    lista_cargos = Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id)
+    lista_cargos = Cargo.objects.filter(cargo__iexact = 'coordenador', id = request.user.membro.id)
     if (int(usuario_id) == int(request.user.membro.id)) or lista_cargos:
         membro = Membro.objects.get(id = usuario_id)
         membro_form = MembroForm(instance = membro)
@@ -157,7 +157,7 @@ def atualiza_usuario(request, usuario_id):
 @login_required
 def deleta_usuario(request, usuario_id):
     coordenador = False
-    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+    if Cargo.objects.filter(cargo__iexact = 'coordenador', id = request.user.membro.id):
         coordenador = True
     if coordenador:
         membro = Membro.objects.get(id = usuario_id)
@@ -172,7 +172,7 @@ def deleta_usuario(request, usuario_id):
 def perfil_usuario(request, usuario_id):
     coordenador = False
     projetos_atuais = Cargo.objects.filter()
-    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+    if Cargo.objects.filter(cargo__iexact = 'coordenador', id = request.user.membro.id):
         coordenador = True
     try:
        membro = Membro.objects.get(id = usuario_id)
@@ -189,7 +189,7 @@ def perfil_usuario(request, usuario_id):
 def lista_usuario(request):
     id_atual = request.user.membro.id
     coordenador = False
-    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+    if Cargo.objects.filter(cargo__iexact = 'coordenador', id = request.user.membro.id):
         coordenador = True
     lista_usuario = Membro.objects.all()
     lista_usuario_e_projeto = []
