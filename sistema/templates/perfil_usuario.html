@@ -47,6 +47,16 @@
                                             </div>
                                             <div class='pull-right'>
                                                 <a href="mailto:{{membro.email}}"><button class="btn pull-right"><i class="icon icon-envelope"></i>E-mail</button></a>
+
+                                                {%if coordenador == True%}
+                                                <br>
+                                                <br>
+                                                <p>
+                                                <a href="/deleta_usuario/{{membro.id}}"><button class="btn pull-right"><i class="iconelusive-remove"></i></button></a>
+                                                </p>
+
+                                                {%endif%}
+
                                             </div>
                                         </div>
                                     </div>

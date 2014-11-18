@@ -82,58 +82,70 @@ def projeto_deletar(request, projeto_id):
 def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
-    if request.method == 'POST':
-        login = request.POST['login']
-        print login
-        senha = request.POST['senha']
-        confirmacao_senha = request.POST['confirmacao_senha']
-        numero_usuario = User.objects.filter(username__iexact = login).count()
-        if numero_usuario == 0:
-            if len(login)>=5:
-                if confirmacao_senha == senha and len(confirmacao_senha)>=5:
-                    membro_form = MembroForm(request.POST)
-                    if membro_form.is_valid():
-                        user = User.objects.create_user(login, confirmacao_senha, senha)
-                        user.save()
-                        membro = membro_form.save(commit = False)
-                        membro.usuario = user
-                        membro.save()
-                        return HttpResponse('<script>alert("Usuário cadastrado com sucesso. Faça o login."); location.replace("/login_fazer/")</script>')
-                else:
-                    return HttpResponse('<script>alert("As senhas devem coincidir. Mínimo 5 caracteres."); history.back()</script>')
-            return HttpResponse('<script>alert("Digite um login válido. Mínimo 5 caracteres."); history.back()</script>')
-        else:
-            return HttpResponse('<script>alert("Login já existente"); history.back()</script>')
-    return render(request, 'cadastra_usuario.html', locals())
+    coordenador = False
+    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+        coordenador = True
+    if coordenador:
+        if request.method == 'POST':
+            login = request.POST['login']
+            senha = request.POST['senha']
+            confirmacao_senha = request.POST['confirmacao_senha']
+            numero_usuario = User.objects.filter(username__iexact = login).count()
+            if numero_usuario == 0:
+                if len(login)>=5:
+                    if confirmacao_senha == senha and len(confirmacao_senha)>=5:
+                        membro_form = MembroForm(request.POST)
+                        if membro_form.is_valid():
+                            user = User.objects.create_user(login, confirmacao_senha, senha)
+                            user.save()
+                            membro = membro_form.save(commit = False)
+                            membro.usuario = user
+                            membro.save()
+                            return HttpResponse('<script>alert("Usuário cadastrado com sucesso."); history.back()</script>')
+                    else:
+                        return HttpResponse('<script>alert("As senhas devem coincidir. Mínimo 5 caracteres."); history.back()</script>')
+                return HttpResponse('<script>alert("Digite um login válido. Mínimo 5 caracteres."); history.back()</script>')
+            else:
+                return HttpResponse('<script>alert("Login já existente."); history.back()</script>')
+    else:
+        return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
+    return render(request, 'home.html', locals())
 
 @login_required
 def atualiza_usuario(request, usuario_id):
     atualizar = True
-    if int(usuario_id) == int(request.user.membro.id): #verificacao de permissao (se o usuario logado e o usuario que se deseja alterar)
+    lista_cargos = Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id)
+    if (int(usuario_id) == int(request.user.membro.id)) or lista_cargos:
         membro = Membro.objects.get(id = usuario_id)
         membro_form = MembroForm(instance = membro)
         if request.method == 'POST':
             membro_form = MembroForm(request.POST, instance=membro)
             if membro_form.is_valid():
                 membro_form.save()
-                return HttpResponse('<script>alert("Usuário atualizado com sucesso"); location.replace("/home/")</script>')
+                return HttpResponse('<script>alert("Usuário atualizado com sucesso."); location.replace("/home/")</script>')
     else:
-        return HttpResponse('<script>alert("ID da solicitação diferente do ID logado."); location.replace("/home/")</script>')
+        return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
     return render(request, 'cadastra_usuario.html', locals())
 
 @login_required
 def deleta_usuario(request, usuario_id):
-    if int(usuario_id) == int(request.user.membro.id):
+    coordenador = False
+    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+        coordenador = True
+    if coordenador:
         membro = Membro.objects.get(id = usuario_id)
         user = membro.usuario
         membro.delete()
         user.delete()
-        return HttpResponse('<script>alert("O usuário foi deletado"); location.replace(/home/)</script>')
+        return HttpResponse('<script>alert("O usuário foi deletado com sucesso."); location.replace(/home/)</script>')
     else:
-        return HttpResponse('<script>alert("ID da solicitação diferente do ID logado."); location.replace("/home/")</script>')
+        return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
 
 @login_required
 def perfil_usuario(request, usuario_id):
+    coordenador = False
+    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+        coordenador = True
     try:
        membro = Membro.objects.get(id = usuario_id)
     except:
@@ -147,6 +159,10 @@ def perfil_usuario(request, usuario_id):
 
 
 def lista_usuario(request):
+    id_atual = request.user.membro.id
+    coordenador = False
+    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+        coordenador = True
     lista_usuario = Membro.objects.all()
     lista_usuario_e_projeto = []
     for usuario in lista_usuario:

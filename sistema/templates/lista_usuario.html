@@ -50,8 +50,13 @@
                                             <div class="tr-action">
                                                 <div class="tr-action-inner">
                                                     <a href="/perfil_usuario/{{mini_lista.0.id}}" class="btn btn-info"><i class="icon icon-white  icon-eye-open"></i></a>
+                                                    {%if mini_lista.0.id == id_atual or coordenador%}
                                                     <a href="/atualiza_usuario/{{mini_lista.0.id}}" class="btn btn-info"><i class="icon icon-white  icon-pencil"></i></a>
+                                                    {%endif%}
+                                                    {%if coordenador%}
                                                     <a href="/deleta_usuario/{{mini_lista.0.id}}" class="btn btn-danger"><i class="icon icon-white icon-trash"></i></a>
+                                                    {%endif%}
+
                                                 </div>
                                             </div>
                                         </td>
