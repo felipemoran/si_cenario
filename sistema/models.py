@@ -18,10 +18,10 @@ ETAPA_CHOICE = (
     )
 
 CARGO_CHOICE = (
-    ('gerente', 'Gerente'),
-    ('analista', 'Analista'),
-    ('coordenador', 'Coordenador'),
-    ('trainee', 'Trainee'),
+    ('Gerente', 'Gerente'),
+    ('Analista', 'Analista'),
+    ('Coordenador', 'Coordenador'),
+    ('Trainee', 'Trainee'),
     )
 
 

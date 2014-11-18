@@ -11,6 +11,7 @@ from datetime import *
 from sistema.models import *
 from sistema.forms import *
 
+
 @login_required
 def home(request):
     return HttpResponseRedirect('/perfil_usuario/%s' %request.user.membro.id)
@@ -23,13 +24,11 @@ def teste(request):
 @login_required
 def projeto_cadastrar(request):
     membro = request.user.membro
-    projeto = Projeto.objects.all()
-    cargo = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'coordenador')
+    cargo = Cargo.objects.filter(cargo__iexact = 'coordenador', membro = membro)
     if cargo:
         novo_projeto = ProjetoForm()
         if request.method == 'POST':
             novo_projeto = ProjetoForm(request.POST)
-            print novo_projeto
             if novo_projeto.is_valid():
                 projeto = novo_projeto.save(commit=False)
                 projeto.save()
@@ -60,9 +59,10 @@ def projeto_editar(request, projeto_id):
     projeto = Projeto.objects.get(id=projeto_id)
     novo_projeto = ProjetoForm(instance=projeto)
     membro = request.user.membro
-    projeto2 = Projeto.objects.all()
-    cargo = Cargo.objects.filter(projeto = projeto2, cargo__iexact = 'coordenador')
-    if cargo:
+    #projeto2 = Projeto.objects.all()
+    cargo = Cargo.objects.filter(cargo__iexact = 'coordenador', membro = membro)
+    cargo2 = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente', membro = membro)
+    if cargo or cargo2:
         if request.method == 'POST':
             novo_projeto = ProjetoForm(request.POST, instance=projeto)
             if novo_projeto.is_valid():
@@ -71,8 +71,8 @@ def projeto_editar(request, projeto_id):
                     <script>alert("Projeto editado com sucesso");
                     location.replace("/projeto_perfil/%s")
                     </script>''' % str(projeto.id))
-        else:
-            return HttpResponse('<script>alert("Você não tem permissão para editar um projeto."); history.back()</script>')
+    else:
+        return HttpResponse('<script>alert("Você não tem permissão para editar um projeto."); history.back()</script>')
 
     lista_projetos = Projeto.objects.all()
 
@@ -105,7 +105,7 @@ def projeto_deletar(request, projeto_id):
     else:
         return HttpResponse('<script>alert("Você não tem permissão para cadastrar um projeto."); history.back()</script>')
 
-
+@login_required
 def cadastra_usuario(request):
     cadastro = True
     membro_form = MembroForm()
@@ -197,7 +197,7 @@ def lista_usuario(request):
         lista_usuario_e_projeto.append([usuario, Cargo.objects.filter(membro=usuario)])
 
     '''
-    #Solucao possivel mas ainda nao funciona
+    Solucao possivel mas ainda nao funciona
     lista_nucleos = []
     for elemento in lista_usuario_e_projeto:
         for cargo in elemento[1]:
@@ -240,7 +240,7 @@ def ver_nucleos(request):
     lista_nucleo = Nucleo.objects.all()
     return render(request, 'ver_nucleos.html', locals())
 
-
+@login_required
 def cadastra_cargo(request, usuario_id):
     membro = Membro.objects.get(id=usuario_id)
     cargo_form = CargoForm()
@@ -253,14 +253,14 @@ def cadastra_cargo(request, usuario_id):
             return HttpResponse('<script>alert("Cargo cadastrado com sucesso"); history.back()</script>')
     return render(request, 'cadastra_cargo.html', locals())
 
-
+@login_required
 def cadastra_cargo2(request, projeto_id):
     membro = request.user.membro
     projeto = Projeto.objects.get(id=projeto_id)
-    projeto2 = Projeto.objects.all()
     cargo_form = CargoForm2()
-    cargo = Cargo.objects.filter(projeto = projeto2, cargo__iexact = 'coordenador')
-    if cargo:
+    cargo = Cargo.objects.filter(cargo__iexact = 'coordenador', membro = membro)
+    cargo2 = Cargo.objects.filter(projeto = projeto, cargo__iexact = 'gerente', membro = membro)
+    if cargo or cargo2:
         if request.method == 'POST':
             cargo_form = CargoForm2(request.POST)
             if cargo_form.is_valid():
@@ -272,7 +272,7 @@ def cadastra_cargo2(request, projeto_id):
         return HttpResponse('<script>alert("Você não tem permissão para adicionar um membro."); history.back()</script>')
     return render(request, 'cadastra_cargo.html', locals())
 
-
+@login_required
 def deleta_cargo(request, cargo_id):
     cargo = Cargo.objects.get(id=cargo_id)
     cargo.delete()
