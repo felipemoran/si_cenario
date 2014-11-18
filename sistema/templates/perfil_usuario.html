@@ -150,7 +150,7 @@
                                                                                 </thead>
                                                                                 <tbody>
                                                                                     {% for cargo in lista_cargo %}
-                                                                                    {% if cargo.projeto.etapa != "Finalizado" and cargo.projeto != None %}
+                                                                                    {% if cargo.projeto.etapa != "Finalizado"%}
                                                                                     <tr class="odd gradeX">
                                                                                         <td>{{cargo.projeto.nome}}</td>
                                                                                         <td>{{cargo.cargo}}</td>
@@ -214,7 +214,7 @@
                                                                                 </thead>
                                                                                 <tbody>
                                                                                     {% for cargo in lista_cargo %}
-                                                                                    {% if cargo.projeto.etapa == "Finalizado" and cargo.projeto != None %}
+                                                                                    {% if cargo.projeto.etapa == "Finalizado"%}
                                                                                     <tr class="odd gradeX">
                                                                                         <td>{{cargo.projeto.nome}}</td>
                                                                                         <td>{{cargo.cargo}}</td>

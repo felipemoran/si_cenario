@@ -114,17 +114,17 @@
                                 <b>Gerente:</b>
                                 <ul class='unstyled' style='padding-left:30px;'>
                                 {% for migue in lista_gerente %}
-                                    <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar do projeto</a></span></li>
+                                    <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar o gerente do projeto</a></span></li>
+                                </ul>
                                 <a href="mailto:{{migue.membro.email}}"><button class="btn pull-right" style='pos'><i class="icon icon-envelope"></i> Mensagem para o gerente</button></a>
                                 {% endfor %}
                                 {{gerente_erro}}
-                                </ul>
                             </div><br>
 
                             <div><b>Participantes:</b>
                                 <ul class='unstyled' style='padding-left:30px;'>
                                 {% for migue in analistas %}
-                                    <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar do projeto</a></span></li>
+                                    <li>{{migue.membro.nome}} {{migue.membro.sobrenome}} <span class='pull-right'><a href="/deleta_cargo/{{migue.id}}">Retirar o participante do projeto</a></span></li>
                                 {% endfor %}
                                 <li>{{analistas_erro}}</li>
                                 </ul>

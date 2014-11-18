@@ -11,7 +11,6 @@ from datetime import *
 from sistema.models import *
 from sistema.forms import *
 
-
 @login_required
 def home(request):
     return HttpResponseRedirect('/perfil_usuario/%s' %request.user.membro.id)
@@ -104,6 +103,7 @@ def projeto_deletar(request, projeto_id):
         return HttpResponse('<script>alert("Projeto deletado com sucesso"); location.replace("/projeto_lista/")</script>')
     else:
         return HttpResponse('<script>alert("Você não tem permissão para cadastrar um projeto."); history.back()</script>')
+        return HttpResponse('<script>alert("Você não tem permissão para deletar um projeto."); history.back()</script>')
 
 @login_required
 def cadastra_usuario(request):
@@ -189,56 +189,68 @@ def perfil_usuario(request, usuario_id):
 def lista_usuario(request):
     id_atual = request.user.membro.id
     coordenador = False
-    if Cargo.objects.filter(cargo__iexact = 'coordenador', id = request.user.membro.id):
+    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
         coordenador = True
     lista_usuario = Membro.objects.all()
     lista_usuario_e_projeto = []
-    for usuario in lista_usuario:
-        lista_usuario_e_projeto.append([usuario, Cargo.objects.filter(membro=usuario)])
-
-    '''
-    Solucao possivel mas ainda nao funciona
     lista_nucleos = []
-    for elemento in lista_usuario_e_projeto:
-        for cargo in elemento[1]:
+    for usuario in lista_usuario:
+        cargos = Cargo.objects.filter(membro=usuario);
+        for cargo in cargos:
             if not(cargo.nucleo.nome in lista_nucleos):
                 lista_nucleos.append(cargo.nucleo.nome)
-    '''
+        lista_usuario_e_projeto.append([usuario, lista_nucleos])
 
     return render(request, 'lista_usuario.html', locals())
 
-
+@login_required
 def cadastrar_nucleo(request):
-    nucleo_form = NucleoForm()
-    if request.method == "POST":
-        nucleo_form = NucleoForm(request.POST)
-        if nucleo_form.is_valid():
-            nucleo_form.save()
-            return HttpResponse('<script>alert("Núcleo cadastrado com sucesso"); location.replace("/cadastrar_nucleo/")</script>')
+    usuario = request.user
+    if usuario.is_superuser:
+        nucleo_form = NucleoForm()
+        if request.method == "POST":
+            nucleo_form = NucleoForm(request.POST)
+            if nucleo_form.is_valid():
+                nucleo_form.save()
+                return HttpResponse('<script>alert("Núcleo cadastrado com sucesso"); location.replace("/cadastrar_nucleo/")</script>')
 
-    texto = "Cadastro de um novo núcleo"
-    return render(request, 'cadastrar_nucleo.html', locals())
+        texto = "Cadastro de um novo núcleo"
+        return render(request, 'cadastrar_nucleo.html', locals())
+    else:
+        return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
 
+@login_required
 def atualizar_nucleo(request, nucleo_id):
-    nucleo = Nucleo.objects.get(id = nucleo_id)
-    nucleo_form = NucleoForm(instance = nucleo)
-    if request.method == "POST":
-        nucleo_form = NucleoForm(request.POST, instance = nucleo)
-        if nucleo_form.is_valid():
-            nucleo_form.save()
-            return HttpResponse('<script>alert("Núcleo atualizado com sucesso"); location.replace("/ver_nucleos/")</script>')
+    usuario = request.user
+    if usuario.is_superuser:
+        nucleo = Nucleo.objects.get(id = nucleo_id)
+        nucleo_form = NucleoForm(instance = nucleo)
+        if request.method == "POST":
+            nucleo_form = NucleoForm(request.POST, instance = nucleo)
+            if nucleo_form.is_valid():
+                nucleo_form.save()
+                return HttpResponse('<script>alert("Núcleo atualizado com sucesso"); location.replace("/ver_nucleos/")</script>')
 
-    texto = "Atualizar núcleo"
-    return render(request, 'cadastrar_nucleo.html', locals())
+        texto = "Atualizar núcleo"
+        return render(request, 'cadastrar_nucleo.html', locals())
+    else:
+        return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
 
+@login_required
 def apagar_nucleo(request, nucleo_id):
-    nucleo = Nucleo.objects.get(id = nucleo_id)
-    nucleo.delete()
-    return HttpResponse('<script>location.replace("/ver_nucleos/")</script>')
+    usuario = request.user
+    if usuario.is_superuser:
+        nucleo = Nucleo.objects.get(id = nucleo_id)
+        nucleo.delete()
+        return HttpResponse('<script>location.replace("/ver_nucleos/")</script>')
+    else:
+        return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
 
+@login_required
 def ver_nucleos(request):
     lista_nucleo = Nucleo.objects.all()
     return render(request, 'ver_nucleos.html', locals())
+
 
 @login_required
 def cadastra_cargo(request, usuario_id):
@@ -272,11 +284,20 @@ def cadastra_cargo2(request, projeto_id):
         return HttpResponse('<script>alert("Você não tem permissão para adicionar um membro."); history.back()</script>')
     return render(request, 'cadastra_cargo.html', locals())
 
+
 @login_required
 def deleta_cargo(request, cargo_id):
-    cargo = Cargo.objects.get(id=cargo_id)
-    cargo.delete()
-    return HttpResponse('<script>history.go(-1)</script>')
+    usuario = request.user
+    coordenador = False
+    if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
+        coordenador = True
+    if coordenador or usuario.is_superuser:
+        cargo = Cargo.objects.get(id=cargo_id)
+        cargo.delete()
+        return HttpResponse('<script>history.go(-1)</script>')
+    else:
+        return HttpResponse('<script>alert("Você não tem essa permissão."); history.back()</script>')
+
 
 def login_fazer(request):
     if request.method == 'GET':
@@ -302,6 +323,6 @@ def login_fazer(request):
 @login_required
 def logout_fazer(request):
     logout(request)
-    return HttpResponse('<script>alert("Logout efetuado!"); location.request("/login_fazer/")</script>')
+    return HttpResponse('<script>alert("Logout efetuado!"); location.replace("/login_fazer/")</script>')
 
 
