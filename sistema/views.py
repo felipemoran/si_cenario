@@ -122,7 +122,7 @@ def atualiza_usuario(request, usuario_id):
             membro_form = MembroForm(request.POST, instance=membro)
             if membro_form.is_valid():
                 membro_form.save()
-                return HttpResponse('<script>alert("Usuário atualizado com sucesso."); location.replace("/home/")</script>')
+                return HttpResponse('<script>alert("Usuário atualizado com sucesso."); history.back()</script>')
     else:
         return HttpResponse('<script>alert("Você não tem permissao para essa operação."); location.replace("/home/")</script>')
     return render(request, 'cadastra_usuario.html', locals())
