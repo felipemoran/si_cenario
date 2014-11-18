@@ -45,7 +45,11 @@
                                     {% for mini_lista in lista_usuario_e_projeto %}
                                     <tr class="odd gradeX">
                                         <td>{{mini_lista.0.nome}} {{mini_lista.0.sobrenome}}</td>
+
                                         <td>{% for cargo in mini_lista.1 %}{{cargo.nucleo.nome}}, {% endfor %}</td>
+
+                                        <!--<td>{% for nucleo in lista_nucleos %}{{nucleo}}, {% endfor %}-->
+
                                         <td class="center">
                                             <div class="tr-action">
                                                 <div class="tr-action-inner">

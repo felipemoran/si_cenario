@@ -61,13 +61,13 @@
                                         </div>
                                     </div>
                                 </div>
-
+<!--
                                 <div class="profile-content">
                                     <div class="row-fluid">
                                         <div class="span12">
                                                 <div class="row-fluid">
                                                     <div class="span12">
-                                                        <!-- Start Table Showcase -->
+
                                                         <div class="row-fluid">
                                                             <div class="span12">
                                                                 <div class="widget dark">
@@ -115,20 +115,138 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div><!-- End Table Showcase -->
+                                                        </div>
                                                     </div>
                                                 </div>
-
+-->
 
 
 
                                             <hr>
                                             <h3>Projetos atuais</h3>
 
+                                            <div class="profile-content">
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                                <div class="row-fluid">
+                                                    <div class="span12">
+                                                        <!-- Start Table Showcase -->
+                                                        <div class="row-fluid">
+                                                            <div class="span12">
+                                                                <div class="widget dark">
+                                                                    <div class="widget-head">
+                                                                        <span class="title">Projetos atuais</span>
+                                                                    </div>
+                                                                    <div class="widget-content no-padding">
+                                                                        <div class="widget-content-inner">
+                                                                            <table class="table table-hover" data-responsive='table' id="table">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Projeto</th>
+                                                                                        <th>Cargo</th>
+                                                                                        <th>Núcleo</th>
+                                                                                        <th></th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    {% for cargo in lista_cargo %}
+                                                                                    {% if cargo.projeto.etapa != "Finalizado"%}
+                                                                                    <tr class="odd gradeX">
+                                                                                        <td>{{cargo.projeto.nome}}</td>
+                                                                                        <td>{{cargo.cargo}}</td>
+                                                                                        <td>{{cargo.nucleo.nome}}</td>
+                                                                                        <td class="center">
+                                                                                            <div class="tr-action">
+                                                                                                <div class="tr-action-inner">
+                                                                                                    <a href="/projeto_perfil/{{cargo.projeto.id}}" class="btn btn-info"><i class="icon icon-white  icon-eye-open"></i>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    {%endif%}
+                                                                                    {% endfor %}
+                                                                                </tbody>
+                                                                                <tfoot>
+                                                                                    <tr>
+                                                                                        <th><input type="text" name="search_projeto" placeholder="Pesquisar por projeto" class="input-block-level" /></th>
+                                                                                        <th><input type="text" name="search_cargo" placeholder="Pesquisar por cargo" class="input-block-level" /></th>
+                                                                                        <th><input type="text" name="search_nucleo" placeholder="Pesquisar por núcleo" class="input-block-level" /></th>
+                                                                                        <th></th>
+                                                                                    </tr>
+                                                                                </tfoot>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- End Table Showcase -->
+                                                    </div>
+                                                </div>
+
 
                                             <hr>
 
                                             <h3>Projetos antigos</h3>
+
+                                            <div class="profile-content">
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                                <div class="row-fluid">
+                                                    <div class="span12">
+                                                        <!-- Start Table Showcase -->
+                                                        <div class="row-fluid">
+                                                            <div class="span12">
+                                                                <div class="widget dark">
+                                                                    <div class="widget-head">
+                                                                        <span class="title">Projetos antigos</span>
+                                                                    </div>
+                                                                    <div class="widget-content no-padding">
+                                                                        <div class="widget-content-inner">
+                                                                            <table class="table table-hover" data-responsive='table' id="table">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Projeto</th>
+                                                                                        <th>Cargo</th>
+                                                                                        <th>Núcleo</th>
+                                                                                        <th></th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    {% for cargo in lista_cargo %}
+                                                                                    {% if cargo.projeto.etapa == "Finalizado"%}
+                                                                                    <tr class="odd gradeX">
+                                                                                        <td>{{cargo.projeto.nome}}</td>
+                                                                                        <td>{{cargo.cargo}}</td>
+                                                                                        <td>{{cargo.nucleo.nome}}</td>
+                                                                                        <td class="center">
+                                                                                            <div class="tr-action">
+                                                                                                <div class="tr-action-inner">
+                                                                                                    <a href="/projeto_perfil/{{cargo.projeto.id}}" class="btn btn-info"><i class="icon icon-white  icon-eye-open"></i>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    {%endif%}
+                                                                                    {% endfor %}
+                                                                                </tbody>
+                                                                                <tfoot>
+                                                                                    <tr>
+                                                                                        <th><input type="text" name="search_projeto" placeholder="Pesquisar por projeto" class="input-block-level" /></th>
+                                                                                        <th><input type="text" name="search_cargo" placeholder="Pesquisar por cargo" class="input-block-level" /></th>
+                                                                                        <th><input type="text" name="search_nucleo" placeholder="Pesquisar por núcleo" class="input-block-level" /></th>
+                                                                                        <th></th>
+                                                                                    </tr>
+                                                                                </tfoot>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- End Table Showcase -->
+                                                    </div>
+                                                </div>
 
                                             <hr>
 

@@ -144,6 +144,7 @@ def deleta_usuario(request, usuario_id):
 @login_required
 def perfil_usuario(request, usuario_id):
     coordenador = False
+    projetos_atuais = Cargo.objects.filter()
     if Cargo.objects.filter(cargo = 'coordenador', id = request.user.membro.id):
         coordenador = True
     try:
@@ -167,6 +168,16 @@ def lista_usuario(request):
     lista_usuario_e_projeto = []
     for usuario in lista_usuario:
         lista_usuario_e_projeto.append([usuario, Cargo.objects.filter(membro=usuario)])
+
+    '''
+    #Solucao possivel mas ainda nao funciona
+    lista_nucleos = []
+    for elemento in lista_usuario_e_projeto:
+        for cargo in elemento[1]:
+            if not(cargo.nucleo.nome in lista_nucleos):
+                lista_nucleos.append(cargo.nucleo.nome)
+    '''
+
     return render(request, 'lista_usuario.html', locals())
 
 @login_required
